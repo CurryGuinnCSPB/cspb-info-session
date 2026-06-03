@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "lastReviewed": "TBD",
+    "source": "Placeholder based on CSPB alumni outcomes discussion and current info-session deck, page 5.",
+    "reviewStatus": "Replace with approved public outcomes data and methodology before production.",
+    "riskLevel": "high"
+  },
+  "summary": "CSPB alumni appear across a range of CS-related and CS-adjacent pathways. This mockup shows how outcomes could be presented without promising individual employment results.",
+  "methodologyNote": "Production version should clearly identify the data source, collection date, sample size, LinkedIn-visible limitations if applicable, and what the data does and does not claim.",
+  "panels": [
+    {
+      "id": "cs-related-roles",
+      "title": "CS-related roles",
+      "description": "A summary area for showing how many visible alumni profiles appear to be in CS-related or CS-adjacent roles.",
+      "items": [
+        {
+          "label": "Software engineering",
+          "percent": 42
+        },
+        {
+          "label": "Data / AI / ML",
+          "percent": 18
+        },
+        {
+          "label": "Systems / cloud / cybersecurity",
+          "percent": 14
+        },
+        {
+          "label": "Other technical or CS-adjacent",
+          "percent": 26
+        }
+      ]
+    },
+    {
+      "id": "role-pathways",
+      "title": "Role pathways",
+      "description": "A place to group alumni pathways without flattening the program into a single career promise.",
+      "items": [
+        {
+          "label": "Software development",
+          "percent": 44
+        },
+        {
+          "label": "Technical leadership",
+          "percent": 16
+        },
+        {
+          "label": "Data and analytics",
+          "percent": 15
+        },
+        {
+          "label": "Research, education, or graduate study",
+          "percent": 12
+        },
+        {
+          "label": "Business, product, or entrepreneurship",
+          "percent": 13
+        }
+      ]
+    },
+    {
+      "id": "industry-sectors",
+      "title": "Industry sectors",
+      "description": "A visual area for showing that alumni outcomes span multiple sectors rather than only big tech.",
+      "items": [
+        {
+          "label": "Technology",
+          "percent": 36
+        },
+        {
+          "label": "Education",
+          "percent": 14
+        },
+        {
+          "label": "Aerospace / defense",
+          "percent": 12
+        },
+        {
+          "label": "Finance / healthcare / consulting",
+          "percent": 20
+        },
+        {
+          "label": "Government, nonprofit, and other",
+          "percent": 18
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    "Outcome data should not be framed as a placement guarantee.",
+    "Public version should state when the data was collected and how alumni roles were categorized.",
+    "Charts should be updated only from an approved controlled data source."
+  ]
+}

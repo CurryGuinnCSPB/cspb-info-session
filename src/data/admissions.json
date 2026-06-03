@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "lastReviewed": "TBD",
+    "source": "Current info-session deck, page 9, with production verification required.",
+    "reviewStatus": "Verify against official admissions page before production.",
+    "riskLevel": "high"
+  },
+  "headline": "Admissions requirements",
+  "summary": "The degree program is designed for students who already hold a bachelor's degree and meet the program's academic preparation requirements.",
+  "requirements": [
+    {
+      "id": "bachelors-degree",
+      "title": "Existing bachelor\u2019s degree",
+      "body": "Applicants must already have a bachelor\u2019s degree. Production wording should match the official admissions page exactly."
+    },
+    {
+      "id": "gpa",
+      "title": "Minimum GPA",
+      "body": "The current deck states a minimum 2.75 GPA. Verify this against official admissions materials before publication."
+    },
+    {
+      "id": "math-prerequisite",
+      "title": "Math preparation",
+      "body": "The current deck references CU ALEKS college algebra or calculus/AP calculus with a C-. Confirm current options, costs, and wording before launch."
+    },
+    {
+      "id": "materials",
+      "title": "Application materials",
+      "body": "The current deck lists transcripts and a program questionnaire, with a personal essay optional and highly recommended for extenuating circumstances or low GPA."
+    }
+  ],
+  "checklist": [
+    "Confirm bachelor\u2019s degree status.",
+    "Review GPA requirement.",
+    "Review math prerequisite options.",
+    "Gather all higher education transcripts.",
+    "Complete the program questionnaire.",
+    "Consider the optional personal essay if context would help the application.",
+    "Check the current application deadline before submitting."
+  ],
+  "deadlineNote": "Exact deadlines should be stored in controlled content and reviewed before each admissions cycle.",
+  "feeNote": "The current deck states that applications for the 2026 admission cycle are free. Verify current application fee language before publication."
+}
