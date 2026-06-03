@@ -4,16 +4,15 @@
     "slug": "start-here",
     "title": "Start Here",
     "navLabel": "Start Here",
+    "question": "How should I move through this self-guided info session?",
+    "summary": "Begin with the dashboard, then explore the modules most relevant to your questions.",
     "icon": "compass",
-    "question": "How should I use this self-guided information session?",
-    "summary": "Begin with a quick overview of the site, then choose the modules most relevant to your questions.",
     "sourceSlides": [
-      1,
-      14
+      1
     ],
-    "statusTag": "Start here",
+    "statusTag": "First step",
     "primaryCta": {
-      "label": "Begin the overview",
+      "label": "Go to dashboard",
       "url": "/dashboard/"
     }
   },
@@ -22,15 +21,17 @@
     "slug": "program-overview",
     "title": "Program Overview",
     "navLabel": "Overview",
-    "icon": "university",
     "question": "What is CSPB, and why should I take it seriously?",
-    "summary": "Learn how CSPB fits within CU Boulder, the College of Engineering, and the Department of Computer Science.",
+    "summary": "Get the high-level picture of the program, its academic home, and how it fits into CU Boulder’s online offerings.",
+    "icon": "university",
     "sourceSlides": [
+      1,
+      2,
       3
     ],
     "primaryCta": {
-      "label": "Explore the curriculum",
-      "url": "/modules/curriculum/"
+      "label": "Explore the program",
+      "urlKey": "programHome"
     }
   },
   {
@@ -38,17 +39,15 @@
     "slug": "is-cspb-right-for-me",
     "title": "Is CSPB Right for Me?",
     "navLabel": "Is CSPB Right for Me?",
-    "icon": "user-check",
     "question": "Am I the kind of student this program is built for?",
-    "summary": "See how the program serves degree-holding adults, career changers, upskillers, and students preparing for further study.",
+    "summary": "See who the program is for, what background helps, and how adult learners typically use the degree.",
+    "icon": "user-check",
     "sourceSlides": [
-      4,
-      9,
-      11
+      4
     ],
     "primaryCta": {
       "label": "Check admissions requirements",
-      "url": "/modules/admissions-requirements/"
+      "urlKey": "admissions"
     }
   },
   {
@@ -56,16 +55,17 @@
     "slug": "career-outcomes",
     "title": "Career Outcomes",
     "navLabel": "Career Outcomes",
-    "icon": "chart",
     "question": "What kinds of roles and industries do CSPB alumni move into?",
-    "summary": "Explore alumni role pathways, industry sectors, and career-support resources.",
+    "summary": "Review the kinds of roles, pathways, and opportunity areas associated with the program.",
+    "icon": "chart",
+    "statusTag": "Popular",
     "sourceSlides": [
       5
     ],
-    "statusTag": "Popular",
+    "image": "images/generated/career-outcomes-thumbnail.png",
     "primaryCta": {
       "label": "Explore career support",
-      "url": "/modules/career-outcomes/"
+      "urlKey": "careerServices"
     }
   },
   {
@@ -73,32 +73,33 @@
     "slug": "curriculum",
     "title": "Curriculum",
     "navLabel": "Curriculum",
-    "icon": "book-open",
     "question": "What courses will I take?",
     "summary": "Review required courses, electives, credit hours, and sample academic pathways.",
+    "icon": "book-open",
     "sourceSlides": [
       15
     ],
-    "statusTag": "Core module",
+    "image": "images/generated/curriculum-thumbnail.png",
     "primaryCta": {
       "label": "View curriculum",
-      "url": "/modules/curriculum/"
+      "urlKey": "academics"
     }
   },
   {
     "id": "online-classes",
     "slug": "online-classes",
-    "title": "What Online Classes Are Like",
+    "title": "Online Classes",
     "navLabel": "Online Classes",
+    "question": "What is the online learning experience actually like?",
+    "summary": "See how lectures, course modules, discussions, coding tools, and deadlines work in practice.",
     "icon": "monitor",
-    "question": "How does online learning work in CSPB?",
-    "summary": "Learn about Canvas, asynchronous lectures, Piazza, online exams, office hours, and Mountain Time deadlines.",
     "sourceSlides": [
       7,
       8
     ],
+    "image": "images/generated/online-classes-thumbnail.png",
     "primaryCta": {
-      "label": "See the online format",
+      "label": "See learning details",
       "url": "/modules/online-classes/"
     }
   },
@@ -107,14 +108,15 @@
     "slug": "student-support",
     "title": "Student Support",
     "navLabel": "Student Support",
+    "question": "What kinds of support will I have while I am in the program?",
+    "summary": "Review advising, faculty access, tutoring, career services, and peer/community support.",
     "icon": "life-buoy",
-    "question": "What support will I have as an online CSPB student?",
-    "summary": "Review advising, faculty office hours, career services, tutoring, networking, and peer interaction.",
     "sourceSlides": [
       6
     ],
+    "image": "images/generated/student-support-thumbnail.png",
     "primaryCta": {
-      "label": "Explore support",
+      "label": "See support options",
       "url": "/modules/student-support/"
     }
   },
@@ -123,16 +125,16 @@
     "slug": "admissions-requirements",
     "title": "Admissions Requirements",
     "navLabel": "Admissions",
+    "question": "What do I need in order to apply?",
+    "summary": "Review degree prerequisites, application requirements, and the admissions checklist.",
     "icon": "clipboard-check",
-    "question": "What do I need to apply?",
-    "summary": "Review degree prerequisites, GPA, math preparation, application materials, and deadlines.",
     "sourceSlides": [
       9
     ],
-    "statusTag": "High priority",
+    "image": "images/generated/admissions-thumbnail.png",
     "primaryCta": {
-      "label": "Start your application",
-      "urlKey": "apply"
+      "label": "Official admissions page",
+      "urlKey": "admissions"
     }
   },
   {
@@ -140,15 +142,15 @@
     "slug": "transfer-credit",
     "title": "Transfer Credit",
     "navLabel": "Transfer Credit",
+    "question": "Can I transfer previous coursework into the program?",
+    "summary": "Understand how transfer credit may work and where official evaluation policies apply.",
     "icon": "repeat",
-    "question": "Can previous coursework count toward the degree?",
-    "summary": "Learn how transfer credit is evaluated and what limits apply.",
     "sourceSlides": [
       10
     ],
     "primaryCta": {
-      "label": "Ask about transfer credit",
-      "urlKey": "contactEmail"
+      "label": "Learn about transfer-related planning",
+      "url": "/modules/transfer-credit/"
     }
   },
   {
@@ -156,14 +158,14 @@
     "slug": "non-degree-option",
     "title": "Non-Degree Option",
     "navLabel": "Non-Degree",
+    "question": "Can I start without fully entering the degree program?",
+    "summary": "See how the non-degree option can help students test the program or begin before formal admission.",
     "icon": "route",
-    "question": "Can I take CSPB courses before applying to the degree program?",
-    "summary": "Explore the non-degree option for trying courses, professional development, prerequisites, or GPA strengthening.",
     "sourceSlides": [
       11
     ],
     "primaryCta": {
-      "label": "Explore non-degree",
+      "label": "See non-degree option",
       "urlKey": "nonDegree"
     }
   },
@@ -172,27 +174,28 @@
     "slug": "tuition-fees",
     "title": "Tuition & Fees",
     "navLabel": "Tuition",
+    "question": "What will this cost?",
+    "summary": "Review tuition and cost-related planning, with the understanding that official pages are the source of truth.",
     "icon": "dollar-sign",
-    "question": "What will the program cost?",
-    "summary": "Review tuition and fee categories, with links to official current information.",
     "sourceSlides": [
       12
     ],
     "primaryCta": {
-      "label": "View current tuition",
+      "label": "See cost details",
       "urlKey": "tuition"
     }
   },
   {
-    "id": "apply-talk-to-us",
-    "slug": "apply-talk-to-us",
-    "title": "Apply / Talk to Us",
+    "id": "apply-next-steps",
+    "slug": "apply-next-steps",
+    "title": "Apply / Next Steps",
     "navLabel": "Apply",
+    "question": "What should I do next if I am interested?",
+    "summary": "Apply, request more information, or contact the CSPB team for next-step guidance.",
     "icon": "send",
-    "question": "What should I do next?",
-    "summary": "Apply, schedule an appointment, email the CSPB team, or attend a live information session.",
     "sourceSlides": [
-      13
+      13,
+      14
     ],
     "primaryCta": {
       "label": "Apply now",

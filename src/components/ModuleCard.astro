@@ -5,6 +5,8 @@ const { module } = Astro.props;
 const cta = module.primaryCta || {};
 const href = cta.urlKey ? cta.urlKey : (cta.url || `/modules/${module.slug}/`);
 const label = cta.label || "View module";
+const base = import.meta.env.BASE_URL || "/";
+const imageSrc = module.image ? `${base}${module.image}` : "";
 
 const iconMap = {
   compass: "◎",
@@ -23,25 +25,38 @@ const iconMap = {
 const icon = iconMap[module.icon] || "•";
 ---
 
-<article class="card card-pad group flex h-full min-w-0 flex-col overflow-hidden transition duration-200 hover:-translate-y-1 hover:shadow-xl">
-  <div class="mb-3 flex items-start justify-between gap-4">
-    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-neutral-950 text-xs font-black text-[#cfb87c]">{icon}</div>
-    {module.statusTag && <span class="pill">{module.statusTag}</span>}
-  </div>
+<article class="card group flex h-full min-w-0 flex-col overflow-hidden transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+  {module.image && (
+    <div class="aspect-[16/10] overflow-hidden border-b border-neutral-100 bg-neutral-100">
+      <img
+        src={imageSrc}
+        alt={`${module.title} module illustration`}
+        class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+        loading="lazy"
+      />
+    </div>
+  )}
 
-  <p class="kicker">{module.navLabel}</p>
-  <h2 class="heading-md mt-2">{module.title}</h2>
-  <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">{module.question}</p>
-  <p class="mt-2 line-clamp-2 text-sm leading-6 text-neutral-500">{module.summary}</p>
+  <div class="card-pad flex h-full min-w-0 flex-col">
+    <div class="mb-3 flex items-start justify-between gap-4">
+      <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-neutral-950 text-xs font-black text-[#cfb87c]">{icon}</div>
+      {module.statusTag && <span class="pill">{module.statusTag}</span>}
+    </div>
 
-  <div class="mt-auto pt-5">
-    <a
-      class="focus-ring inline-flex items-center gap-2 rounded-full bg-neutral-950 px-4 py-2 text-sm font-black text-white hover:bg-neutral-800"
-      href={resolveLink(href)}
-      data-event="module_card_click"
-      data-module={module.id}
-    >
-      {label} <span>→</span>
-    </a>
+    <p class="kicker">{module.navLabel}</p>
+    <h2 class="heading-md mt-2">{module.title}</h2>
+    <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">{module.question}</p>
+    <p class="mt-2 line-clamp-2 text-sm leading-6 text-neutral-500">{module.summary}</p>
+
+    <div class="mt-auto pt-5">
+      <a
+        class="focus-ring inline-flex items-center gap-2 rounded-full bg-neutral-950 px-4 py-2 text-sm font-black text-white hover:bg-neutral-800"
+        href={resolveLink(href)}
+        data-event="module_card_click"
+        data-module={module.id}
+      >
+        {label} <span>→</span>
+      </a>
+    </div>
   </div>
 </article>

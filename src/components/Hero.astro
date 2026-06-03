@@ -1,6 +1,8 @@
 ---
 import CTAButton from "./CTAButton.astro";
-import VideoPlaceholder from "./VideoPlaceholder.astro";
+
+const base = import.meta.env.BASE_URL || "/";
+const heroImage = `${base}images/generated/dashboard-hero.png`;
 ---
 
 <section class="hero-panel">
@@ -19,6 +21,14 @@ import VideoPlaceholder from "./VideoPlaceholder.astro";
         <CTAButton href="scheduleAppointment" label="Talk to an advisor" variant="secondary" />
       </div>
     </div>
-    <VideoPlaceholder title="CSPB overview video" duration="2–3 minutes" compact={true} />
+
+    <div class="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/20 p-2 shadow-xl">
+      <img
+        src={heroImage}
+        alt="Illustrated dashboard-style hero image for the CSPB self-guided information session"
+        class="block h-full min-h-60 w-full rounded-[1.1rem] object-cover"
+        loading="eager"
+      />
+    </div>
   </div>
 </section>
