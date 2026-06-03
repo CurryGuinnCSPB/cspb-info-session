@@ -1,11 +1,18 @@
 {
-  "apply": "https://online.colorado.edu/",
-  "scheduleAppointment": "https://example.com/schedule-appointment",
+  "programHome": "https://online.colorado.edu/applied-computer-science-bs",
+  "requestInfo": "https://online.colorado.edu/cspb/learn-more",
+  "apply": "https://online.colorado.edu/applied-computer-science-bs",
+  "scheduleAppointment": "mailto:cspbonline@colorado.edu?subject=CSPB%20appointment%20request",
   "contactEmail": "mailto:cspbonline@colorado.edu",
   "admissions": "https://online.colorado.edu/applied-computer-science-bs/admissions",
+  "academics": "https://online.colorado.edu/applied-computer-science-bs/academics",
+  "cost": "https://online.colorado.edu/applied-computer-science-bs/cost",
+  "tuition": "https://online.colorado.edu/applied-computer-science-bs/cost",
+  "datesDeadlines": "https://online.colorado.edu/applied-computer-science-bs-post-baccalaureate/dates-and-deadlines",
   "nonDegree": "https://online.colorado.edu/applied-computer-science-bs/nondegree-option",
-  "tuition": "https://online.colorado.edu/",
-  "careerServices": "https://www.colorado.edu/engineering/",
+  "people": "https://online.colorado.edu/applied-computer-science-bs/people",
+  "careerServices": "https://www.colorado.edu/engineering/career-services",
+  "departmentPostBacc": "https://www.colorado.edu/cs/students/post-baccalaureate-students",
   "qualtricsForm": "https://cuboulder.qualtrics.com/",
-  "liveSession": "https://example.com/live-info-session"
+  "liveSession": "mailto:cspbonline@colorado.edu?subject=CSPB%20live%20information%20session"
 }
