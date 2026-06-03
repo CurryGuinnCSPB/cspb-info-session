@@ -3,37 +3,20 @@ import CTAButton from "./CTAButton.astro";
 import VideoPlaceholder from "./VideoPlaceholder.astro";
 ---
 
-<section class="relative overflow-hidden rounded-[2.25rem] bg-neutral-950 p-1 mockup-shell-shadow">
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(207,184,124,0.28),transparent_24rem),radial-gradient(circle_at_85%_22%,rgba(52,85,111,0.45),transparent_28rem)]"></div>
-  <div class="relative grid gap-8 rounded-[2rem] bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6 text-white lg:grid-cols-[1fr_430px] lg:p-10">
-    <div class="flex flex-col justify-center">
-      <div class="inline-flex w-fit rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-[#cfb87c]">
+<section class="hero-panel">
+  <div class="hero-inner">
+    <div>
+      <div class="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-[#cfb87c]">
         Self-guided info session
       </div>
-      <h1 class="mt-5 max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
-        Build computer science on top of the degree you already have.
-      </h1>
-      <p class="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
+      <h1 class="heading-xl mt-5">Build computer science on top of the degree you already have.</h1>
+      <p class="lede mt-5">
         Explore CU Boulder’s online Computer Science Post-Baccalaureate Program through a modular information session built around the questions prospective students ask most often.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <CTAButton href="/modules/program-overview/" label="Watch the overview" variant="gold" />
-        <CTAButton href="/modules/curriculum/" label="Explore the curriculum" variant="secondary" />
+        <CTAButton href="/modules/curriculum/" label="Explore curriculum" variant="secondary" />
         <CTAButton href="scheduleAppointment" label="Talk to an advisor" variant="secondary" />
-      </div>
-      <div class="mt-8 grid gap-3 text-sm text-neutral-300 md:grid-cols-3">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-          <p class="font-black text-white">Flexible</p>
-          <p class="mt-1">Designed for online students, including part-time learners.</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-          <p class="font-black text-white">Structured</p>
-          <p class="mt-1">Organized around courses, pathways, requirements, and next steps.</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-          <p class="font-black text-white">Supported</p>
-          <p class="mt-1">Connects prospects to advising, admissions, and program resources.</p>
-        </div>
       </div>
     </div>
     <VideoPlaceholder title="CSPB overview video" duration="2–3 minutes" compact={true} />
