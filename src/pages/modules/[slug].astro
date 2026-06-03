@@ -39,8 +39,8 @@ const isAdmissions = module.id === "admissions-requirements";
         <div>
           <p class="kicker">Module</p>
           <h1 class="heading-xl mt-4">{module.title}</h1>
-          <p class="lede mt-5">{module.question}</p>
-          <div class="mt-7 flex flex-wrap gap-3">
+          <p class="lede mt-4">{module.question}</p>
+          <div class="hero-actions">
             {module.primaryCta?.urlKey && <CTAButton href={module.primaryCta.urlKey} label={module.primaryCta.label} variant="gold" />}
             {module.primaryCta?.url && <CTAButton href={module.primaryCta.url} label={module.primaryCta.label} variant="gold" />}
             <CTAButton href="/dashboard/" label="Back to dashboard" variant="secondary" />
