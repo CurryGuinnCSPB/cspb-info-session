@@ -1,0 +1,22 @@
+---
+import CTAButton from "./CTAButton.astro";
+import VideoPlaceholder from "./VideoPlaceholder.astro";
+---
+
+<section class="grid gap-8 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-neutral-200 lg:grid-cols-[1fr_420px] lg:p-10">
+  <div class="flex flex-col justify-center">
+    <p class="text-sm font-black uppercase tracking-[0.2em] text-yellow-700">Self-guided info session</p>
+    <h1 class="mt-4 max-w-4xl text-4xl font-black tracking-tight text-neutral-950 md:text-6xl">
+      Build computer science on top of the degree you already have.
+    </h1>
+    <p class="mt-5 max-w-3xl text-lg leading-8 text-neutral-600">
+      Explore CU Boulder’s online Computer Science Post-Baccalaureate Program through a modular information session built for prospective students.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <CTAButton href="/modules/program-overview/" label="Watch the overview" />
+      <CTAButton href="/modules/curriculum/" label="Explore the curriculum" variant="secondary" />
+      <CTAButton href="scheduleAppointment" label="Talk to an advisor" variant="secondary" />
+    </div>
+  </div>
+  <VideoPlaceholder title="CSPB overview video" duration="2–3 minutes" />
+</section>

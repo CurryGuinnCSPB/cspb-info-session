@@ -1,1 +1,44 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f7f5ef;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.content-prose p {
+  margin-bottom: 1rem;
+}
+
+.content-prose ul {
+  margin: 0 0 1rem 1.25rem;
+  list-style: disc;
+}
+
+.content-prose li {
+  margin-bottom: 0.35rem;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid #cfb87c;
+  outline-offset: 3px;
+}

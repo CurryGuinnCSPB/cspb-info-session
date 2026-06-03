@@ -1,0 +1,40 @@
+---
+import modules from "../data/modules.json";
+import links from "../data/links.json";
+import { resolveLink } from "../utils/resolveLink.js";
+
+const { active = "" } = Astro.props;
+---
+
+<aside class="hidden min-h-screen w-72 shrink-0 border-r border-neutral-200 bg-neutral-950 p-6 text-white lg:sticky lg:top-0 lg:block">
+  <a href={resolveLink("/dashboard/")} class="focus-ring block">
+    <p class="text-xs font-bold uppercase tracking-[0.2em] text-yellow-400">CU Boulder</p>
+    <h1 class="mt-2 text-xl font-black leading-tight">CSPB Info Session</h1>
+  </a>
+
+  <nav class="mt-8 space-y-1" aria-label="Primary navigation">
+    <a class={`block rounded-2xl px-4 py-3 text-sm font-semibold ${active === "dashboard" ? "bg-white text-neutral-950" : "text-neutral-300 hover:bg-white/10 hover:text-white"}`} href={resolveLink("/dashboard/")}>
+      Start Here
+    </a>
+    {modules.filter((m) => m.id !== "start-here").map((module) => (
+      <a
+        class={`block rounded-2xl px-4 py-3 text-sm font-semibold ${active === module.id ? "bg-white text-neutral-950" : "text-neutral-300 hover:bg-white/10 hover:text-white"}`}
+        href={resolveLink(`/modules/${module.slug}/`)}
+      >
+        {module.navLabel}
+      </a>
+    ))}
+    <a class={`block rounded-2xl px-4 py-3 text-sm font-semibold ${active === "faq" ? "bg-white text-neutral-950" : "text-neutral-300 hover:bg-white/10 hover:text-white"}`} href={resolveLink("/faq/")}>
+      FAQ
+    </a>
+  </nav>
+
+  <div class="mt-8 rounded-3xl bg-white/10 p-4">
+    <p class="text-sm font-bold">Questions?</p>
+    <p class="mt-2 text-sm text-neutral-300">Contact the CSPB team or schedule an appointment.</p>
+    <div class="mt-4 flex flex-col gap-2">
+      <a class="rounded-full bg-yellow-500 px-4 py-2 text-center text-sm font-bold text-neutral-950" href={links.apply}>Apply</a>
+      <a class="rounded-full bg-white px-4 py-2 text-center text-sm font-bold text-neutral-950" href={links.contactEmail}>Email CSPB</a>
+    </div>
+  </div>
+</aside>

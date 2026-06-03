@@ -1,0 +1,56 @@
+---
+import Layout from "../components/Layout.astro";
+import Hero from "../components/Hero.astro";
+import ProofPointStrip from "../components/ProofPointStrip.astro";
+import ModuleGrid from "../components/ModuleGrid.astro";
+import GlobalCTA from "../components/GlobalCTA.astro";
+import FAQAccordion from "../components/FAQAccordion.astro";
+import modules from "../data/modules.json";
+import programFacts from "../data/programFacts.json";
+import faqs from "../data/faqs.json";
+
+const previewFaqs = faqs.slice(0, 3);
+---
+
+<Layout title="CSPB Info Session Dashboard" active="dashboard">
+  <div class="space-y-10">
+    <Hero />
+
+    <section>
+      <div class="mb-4 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="text-sm font-black uppercase tracking-[0.2em] text-yellow-700">At a glance</p>
+          <h2 class="mt-2 text-3xl font-black text-neutral-950">Program highlights</h2>
+        </div>
+        <p class="max-w-2xl text-sm text-neutral-600">
+          These proof points come from the current info-session deck and should be verified before production.
+        </p>
+      </div>
+      <ProofPointStrip facts={programFacts.facts} />
+    </section>
+
+    <section>
+      <div class="mb-5">
+        <p class="text-sm font-black uppercase tracking-[0.2em] text-yellow-700">Choose your path</p>
+        <h2 class="mt-2 text-3xl font-black text-neutral-950">Explore the modules</h2>
+        <p class="mt-2 max-w-3xl text-neutral-600">
+          Move through the modules in order or jump directly to the questions most relevant to you.
+        </p>
+      </div>
+      <ModuleGrid modules={modules.filter((module) => module.id !== "start-here")} />
+    </section>
+
+    <section>
+      <div class="mb-5">
+        <p class="text-sm font-black uppercase tracking-[0.2em] text-yellow-700">FAQ preview</p>
+        <h2 class="mt-2 text-3xl font-black text-neutral-950">Common questions</h2>
+      </div>
+      <FAQAccordion faqs={previewFaqs} />
+      <p class="mt-5">
+        <a class="focus-ring font-bold text-neutral-950 hover:underline" href="../faq/">View all FAQs →</a>
+      </p>
+    </section>
+
+    <GlobalCTA />
+  </div>
+</Layout>

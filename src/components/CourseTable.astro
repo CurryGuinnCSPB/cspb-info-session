@@ -1,0 +1,31 @@
+---
+const { title = "Courses", courses = [], note = "" } = Astro.props;
+---
+
+<section class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+  <h2 class="text-2xl font-black text-neutral-950">{title}</h2>
+  {note && <p class="mt-2 text-sm text-neutral-600">{note}</p>}
+
+  <div class="mt-5 overflow-x-auto">
+    <table class="w-full min-w-[640px] border-collapse text-left text-sm">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="py-3 pr-4 font-bold text-neutral-950">Course</th>
+          <th class="py-3 pr-4 font-bold text-neutral-950">Title</th>
+          <th class="py-3 pr-4 font-bold text-neutral-950">Credits</th>
+          <th class="py-3 pr-4 font-bold text-neutral-950">Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        {courses.map((course) => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 pr-4 font-semibold text-neutral-950">{course.courseNumber}</td>
+            <td class="py-3 pr-4 text-neutral-700">{course.title}</td>
+            <td class="py-3 pr-4 text-neutral-700">{course.credits}</td>
+            <td class="py-3 pr-4 text-neutral-600">{course.availability || "See current schedule"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>

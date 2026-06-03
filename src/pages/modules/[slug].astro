@@ -1,0 +1,110 @@
+---
+import Layout from "../../components/Layout.astro";
+import VideoPlaceholder from "../../components/VideoPlaceholder.astro";
+import GlobalCTA from "../../components/GlobalCTA.astro";
+import CourseTable from "../../components/CourseTable.astro";
+import FAQAccordion from "../../components/FAQAccordion.astro";
+import CTAButton from "../../components/CTAButton.astro";
+import modules from "../../data/modules.json";
+import courses from "../../data/courses.json";
+import faqs from "../../data/faqs.json";
+
+export function getStaticPaths() {
+  return modules
+    .filter((module) => module.id !== "start-here")
+    .map((module) => ({
+      params: { slug: module.slug },
+      props: { module }
+    }));
+}
+
+const { module } = Astro.props;
+const relatedFaqs = faqs.filter((faq) => faq.relatedModules?.includes(module.id));
+const isCareer = module.id === "career-outcomes";
+const isCurriculum = module.id === "curriculum";
+const isAdmissions = module.id === "admissions-requirements";
+---
+
+<Layout title={`${module.title} | CSPB Info Session`} active={module.id}>
+  <article class="space-y-8">
+    <header class="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-neutral-200">
+      <p class="text-sm font-black uppercase tracking-[0.2em] text-yellow-700">Module</p>
+      <h1 class="mt-3 text-5xl font-black tracking-tight text-neutral-950">{module.title}</h1>
+      <p class="mt-4 max-w-3xl text-xl font-semibold text-neutral-700">{module.question}</p>
+      <p class="mt-4 max-w-3xl text-lg leading-8 text-neutral-600">{module.summary}</p>
+      <p class="mt-5 text-sm text-neutral-500">Source slide reference for internal review: {module.sourceSlides?.join(", ")}</p>
+
+      <div class="mt-7 flex flex-wrap gap-3">
+        {module.primaryCta?.urlKey && <CTAButton href={module.primaryCta.urlKey} label={module.primaryCta.label} />}
+        {module.primaryCta?.url && <CTAButton href={module.primaryCta.url} label={module.primaryCta.label} />}
+        <CTAButton href="/dashboard/" label="Back to dashboard" variant="secondary" />
+      </div>
+    </header>
+
+    <VideoPlaceholder title={`${module.title} video`} duration={isCurriculum ? "4–5 minutes" : "2–4 minutes"} />
+
+    {isCareer && (
+      <section class="grid gap-5 lg:grid-cols-3">
+        <article class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+          <h2 class="text-2xl font-black text-neutral-950">CS-related roles</h2>
+          <p class="mt-3 text-sm leading-6 text-neutral-600">
+            Placeholder for alumni outcomes summary. Production wording should identify the dataset, methodology, and limitations.
+          </p>
+          <div class="mt-5 h-40 rounded-2xl bg-neutral-100 p-4 text-sm text-neutral-500">Chart placeholder</div>
+        </article>
+        <article class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+          <h2 class="text-2xl font-black text-neutral-950">Role pathways</h2>
+          <p class="mt-3 text-sm leading-6 text-neutral-600">
+            Placeholder for software engineering, data, AI/ML, systems, cybersecurity, education, and related pathways.
+          </p>
+          <div class="mt-5 h-40 rounded-2xl bg-neutral-100 p-4 text-sm text-neutral-500">Chart placeholder</div>
+        </article>
+        <article class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+          <h2 class="text-2xl font-black text-neutral-950">Industry sectors</h2>
+          <p class="mt-3 text-sm leading-6 text-neutral-600">
+            Placeholder for technology, aerospace, education, finance, healthcare, consulting, government, and other sectors.
+          </p>
+          <div class="mt-5 h-40 rounded-2xl bg-neutral-100 p-4 text-sm text-neutral-500">Chart placeholder</div>
+        </article>
+      </section>
+    )}
+
+    {isCurriculum && (
+      <section class="space-y-6">
+        <CourseTable title="Required courses" courses={courses.required} note="Required course data is from the current information-session deck and should be verified against the official catalog." />
+        <CourseTable title="Elective courses" courses={courses.electives} note={courses.electiveAvailabilityNote} />
+      </section>
+    )}
+
+    {isAdmissions && (
+      <section class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-black text-neutral-950">Application checklist</h2>
+        <ul class="mt-5 space-y-3 text-neutral-700">
+          <li><strong>Existing bachelor’s degree:</strong> required for degree-seeking admission.</li>
+          <li><strong>Minimum GPA:</strong> placeholder from current admissions materials; verify before production.</li>
+          <li><strong>Math preparation:</strong> college algebra/ALEKS or calculus pathway language should be verified.</li>
+          <li><strong>Materials:</strong> transcripts and program questionnaire; optional essay guidance should be verified.</li>
+          <li><strong>Deadline:</strong> store exact current deadline in controlled content before launch.</li>
+        </ul>
+      </section>
+    )}
+
+    {!isCareer && !isCurriculum && !isAdmissions && (
+      <section class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-black text-neutral-950">Module content placeholder</h2>
+        <p class="mt-3 max-w-3xl leading-7 text-neutral-600">
+          This module page is generated from <code>modules.json</code>. Future versions can add custom content, charts, tables, FAQs, or embedded videos for this topic.
+        </p>
+      </section>
+    )}
+
+    {relatedFaqs.length > 0 && (
+      <section>
+        <h2 class="mb-4 text-3xl font-black text-neutral-950">Related questions</h2>
+        <FAQAccordion faqs={relatedFaqs} />
+      </section>
+    )}
+
+    <GlobalCTA />
+  </article>
+</Layout>

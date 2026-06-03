@@ -1,0 +1,8 @@
+---
+import ModuleCard from "./ModuleCard.astro";
+const { modules = [] } = Astro.props;
+---
+
+<section class="grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-label="Information session modules">
+  {modules.map((module) => <ModuleCard module={module} />)}
+</section>

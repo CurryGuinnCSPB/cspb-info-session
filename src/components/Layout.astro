@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+import SidebarNav from "./SidebarNav.astro";
+import MobileNav from "./MobileNav.astro";
+import Footer from "./Footer.astro";
+
+const {
+  title = "CSPB Self-Guided Info Session",
+  description = "A self-guided information session mockup for the CU Boulder Computer Science Post-Baccalaureate Program.",
+  active = "",
+  showSidebar = true
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="min-h-screen lg:flex">
+      {showSidebar && <SidebarNav active={active} />}
+      <div class="min-w-0 flex-1">
+        {showSidebar && <MobileNav />}
+        <main class="px-5 py-8 lg:px-10 lg:py-10">
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>
