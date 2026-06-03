@@ -4,32 +4,36 @@ import CTAButton from "../components/CTAButton.astro";
 ---
 
 <Layout title="CSPB Self-Guided Info Session" showSidebar={false}>
-  <section class="mx-auto grid min-h-[75vh] max-w-6xl items-center gap-10 py-12 lg:grid-cols-[1fr_420px]">
+  <section class="mx-auto grid min-h-[78vh] max-w-7xl items-center gap-10 py-10 lg:grid-cols-[1fr_470px]">
     <div>
-      <p class="text-sm font-black uppercase tracking-[0.2em] text-yellow-700">CU Boulder CSPB</p>
-      <h1 class="mt-4 text-5xl font-black tracking-tight text-neutral-950 md:text-7xl">
-        Self-guided information session
+      <p class="text-sm font-black uppercase tracking-[0.24em] text-[#8b6f24]">CU Boulder CSPB</p>
+      <h1 class="mt-5 max-w-4xl text-5xl font-black tracking-tight text-neutral-950 md:text-7xl">
+        A self-guided info session for prospective CSPB students.
       </h1>
-      <p class="mt-6 max-w-3xl text-lg leading-8 text-neutral-700">
-        Get the core information from the live CSPB information session on your own schedule. Review the program overview, curriculum, online learning format, admissions requirements, tuition, career outcomes, and next steps.
+      <p class="mt-6 max-w-3xl text-xl leading-9 text-neutral-700">
+        Get the core information from the live CSPB information session on your own schedule, with short modules on curriculum, admissions, online learning, tuition, student support, career outcomes, and next steps.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <CTAButton href="/register/" label="Start the info session" />
         <CTAButton href="/dashboard/" label="Continue as returning visitor" variant="secondary" />
       </div>
-      <p class="mt-5 text-sm text-neutral-500">
-        Mockup note: the production version will use CU Boulder Qualtrics for intake before returning visitors to the dashboard.
+      <p class="mt-5 max-w-2xl text-sm leading-6 text-neutral-500">
+        Mockup note: the production version will use CU Boulder Qualtrics for intake before returning visitors to the dashboard. This prototype collects no real information.
       </p>
     </div>
 
-    <aside class="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm">
-      <h2 class="text-2xl font-black text-neutral-950">What you’ll find</h2>
-      <ul class="mt-5 space-y-3 text-sm leading-6 text-neutral-700">
-        <li>Short video-supported modules.</li>
-        <li>Admissions and prerequisite guidance.</li>
-        <li>Curriculum, course, and pacing information.</li>
-        <li>Tuition, transfer credit, and non-degree options.</li>
-        <li>Clear next steps for applying or talking with CSPB.</li>
+    <aside class="glass-card rounded-[2rem] p-7 shadow-xl">
+      <div class="rounded-[1.5rem] bg-neutral-950 p-6 text-white">
+        <p class="text-xs font-black uppercase tracking-[0.2em] text-[#cfb87c]">What this replaces</p>
+        <h2 class="mt-3 text-3xl font-black">The live info session, made browsable.</h2>
+        <p class="mt-4 text-sm leading-6 text-neutral-300">
+          A guided dashboard, short video placeholders, clear written summaries, and CTAs for applying or contacting CSPB.
+        </p>
+      </div>
+      <ul class="mt-6 space-y-3 text-sm leading-6 text-neutral-700">
+        <li class="rounded-2xl bg-white p-4 shadow-sm"><strong>Start with the overview</strong>, then jump to the questions you care about.</li>
+        <li class="rounded-2xl bg-white p-4 shadow-sm"><strong>Review controlled content</strong> like courses, facts, links, and FAQs.</li>
+        <li class="rounded-2xl bg-white p-4 shadow-sm"><strong>Use the mock Qualtrics step</strong> to test the future registration flow.</li>
       </ul>
     </aside>
   </section>

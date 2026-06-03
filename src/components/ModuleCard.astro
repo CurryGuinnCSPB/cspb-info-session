@@ -5,30 +5,52 @@ const { module } = Astro.props;
 const cta = module.primaryCta || {};
 const href = cta.urlKey ? cta.urlKey : (cta.url || `/modules/${module.slug}/`);
 const label = cta.label || "View module";
+
+const iconMap = {
+  compass: "◎",
+  university: "CU",
+  "user-check": "✓",
+  chart: "↗",
+  "book-open": "§",
+  monitor: "▣",
+  "life-buoy": "◌",
+  "clipboard-check": "☑",
+  repeat: "↻",
+  route: "→",
+  "dollar-sign": "$",
+  send: "✉"
+};
+const icon = iconMap[module.icon] || "•";
 ---
 
-<article class="group flex h-full flex-col rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-  <div class="mb-4 flex items-start justify-between gap-4">
-    <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-neutral-100 text-lg font-black text-neutral-900">
-      {module.icon?.slice(0, 1).toUpperCase() || "•"}
+<article class="group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-neutral-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+  <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#cfb87c] via-neutral-300 to-[#34556f] opacity-0 transition group-hover:opacity-100"></div>
+
+  <div class="mb-5 flex items-start justify-between gap-4">
+    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-neutral-950 text-sm font-black text-[#cfb87c] shadow-lg shadow-neutral-950/10">
+      {icon}
     </div>
     {module.statusTag && (
-      <span class="rounded-full bg-yellow-100 px-3 py-1 text-xs font-bold text-neutral-900">
+      <span class="rounded-full bg-[#cfb87c]/25 px-3 py-1 text-xs font-black text-neutral-900">
         {module.statusTag}
       </span>
     )}
   </div>
 
-  <h2 class="text-xl font-bold text-neutral-950">{module.title}</h2>
-  <p class="mt-2 text-sm font-semibold text-neutral-600">{module.question}</p>
+  <p class="text-xs font-black uppercase tracking-[0.16em] text-neutral-400">{module.navLabel}</p>
+  <h2 class="mt-2 text-2xl font-black leading-tight text-neutral-950">{module.title}</h2>
+  <p class="mt-3 text-sm font-bold leading-6 text-neutral-700">{module.question}</p>
   <p class="mt-3 flex-1 text-sm leading-6 text-neutral-600">{module.summary}</p>
 
-  <a
-    class="focus-ring mt-6 inline-flex font-semibold text-neutral-950 group-hover:underline"
-    href={resolveLink(href)}
-    data-event="module_card_click"
-    data-module={module.id}
-  >
-    {label} →
-  </a>
+  <div class="mt-6 flex items-center justify-between gap-3 border-t border-neutral-100 pt-5">
+    <a
+      class="focus-ring inline-flex font-black text-neutral-950 group-hover:underline"
+      href={resolveLink(href)}
+      data-event="module_card_click"
+      data-module={module.id}
+    >
+      {label}
+    </a>
+    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-100 font-black text-neutral-950 transition group-hover:bg-neutral-950 group-hover:text-white">→</span>
+  </div>
 </article>

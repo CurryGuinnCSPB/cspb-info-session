@@ -2,19 +2,24 @@
 const {
   title = "Video placeholder",
   duration = "2–4 minutes",
-  label = "Video module"
+  label = "Video module",
+  compact = false
 } = Astro.props;
 ---
 
-<section class="rounded-3xl border border-neutral-200 bg-neutral-950 p-6 text-white shadow-sm" aria-label={label}>
-  <div class="flex min-h-56 flex-col items-center justify-center rounded-2xl border border-white/15 bg-white/5 p-8 text-center">
-    <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-yellow-500 text-2xl text-neutral-950 shadow">
+<section class={`relative overflow-hidden rounded-[2rem] border border-white/10 bg-neutral-950 text-white shadow-xl ${compact ? "p-4" : "p-6"}`} aria-label={label}>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(207,184,124,0.28),transparent_24rem),radial-gradient(circle_at_80%_80%,rgba(52,85,111,0.28),transparent_22rem)]"></div>
+  <div class="absolute inset-0 subtle-grid opacity-20"></div>
+
+  <div class={`relative flex flex-col items-center justify-center rounded-[1.5rem] border border-white/15 bg-white/7 p-8 text-center ${compact ? "min-h-44" : "min-h-64"}`}>
+    <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#cfb87c] text-2xl text-neutral-950 shadow-xl shadow-[#cfb87c]/20">
       ▶
     </div>
-    <h2 class="text-xl font-bold">{title}</h2>
-    <p class="mt-2 text-sm text-neutral-300">Placeholder video · Target length: {duration}</p>
-    <p class="mt-4 max-w-md text-sm text-neutral-400">
-      Production videos should include captions and transcripts. Exact dates, tuition, and deadlines should live in controlled web text rather than video narration.
+    <p class="text-xs font-black uppercase tracking-[0.2em] text-[#cfb87c]">Video placeholder</p>
+    <h2 class="mt-2 text-2xl font-black leading-tight">{title}</h2>
+    <p class="mt-2 text-sm text-neutral-300">Target length: {duration}</p>
+    <p class="mt-4 max-w-md text-sm leading-6 text-neutral-400">
+      Captions and transcripts will be required for production. Time-sensitive facts should remain in controlled web text.
     </p>
   </div>
 </section>
