@@ -1,0 +1,202 @@
+[
+  {
+    "id": "start-here",
+    "slug": "start-here",
+    "title": "Start Here",
+    "navLabel": "Start Here",
+    "icon": "compass",
+    "question": "How should I use this self-guided information session?",
+    "summary": "Begin with a quick overview of the site, then choose the modules most relevant to your questions.",
+    "sourceSlides": [
+      1,
+      14
+    ],
+    "statusTag": "Start here",
+    "primaryCta": {
+      "label": "Begin the overview",
+      "url": "/dashboard/"
+    }
+  },
+  {
+    "id": "program-overview",
+    "slug": "program-overview",
+    "title": "Program Overview",
+    "navLabel": "Overview",
+    "icon": "university",
+    "question": "What is CSPB, and why should I take it seriously?",
+    "summary": "Learn how CSPB fits within CU Boulder, the College of Engineering, and the Department of Computer Science.",
+    "sourceSlides": [
+      3
+    ],
+    "primaryCta": {
+      "label": "Explore the curriculum",
+      "url": "/modules/curriculum/"
+    }
+  },
+  {
+    "id": "is-cspb-right-for-me",
+    "slug": "is-cspb-right-for-me",
+    "title": "Is CSPB Right for Me?",
+    "navLabel": "Is CSPB Right for Me?",
+    "icon": "user-check",
+    "question": "Am I the kind of student this program is built for?",
+    "summary": "See how the program serves degree-holding adults, career changers, upskillers, and students preparing for further study.",
+    "sourceSlides": [
+      4,
+      9,
+      11
+    ],
+    "primaryCta": {
+      "label": "Check admissions requirements",
+      "url": "/modules/admissions-requirements/"
+    }
+  },
+  {
+    "id": "career-outcomes",
+    "slug": "career-outcomes",
+    "title": "Career Outcomes",
+    "navLabel": "Career Outcomes",
+    "icon": "chart",
+    "question": "What kinds of roles and industries do CSPB alumni move into?",
+    "summary": "Explore alumni role pathways, industry sectors, and career-support resources.",
+    "sourceSlides": [
+      5
+    ],
+    "statusTag": "Popular",
+    "primaryCta": {
+      "label": "Explore career support",
+      "url": "/modules/career-outcomes/"
+    }
+  },
+  {
+    "id": "curriculum",
+    "slug": "curriculum",
+    "title": "Curriculum",
+    "navLabel": "Curriculum",
+    "icon": "book-open",
+    "question": "What courses will I take?",
+    "summary": "Review required courses, electives, credit hours, and sample academic pathways.",
+    "sourceSlides": [
+      15
+    ],
+    "statusTag": "Core module",
+    "primaryCta": {
+      "label": "View curriculum",
+      "url": "/modules/curriculum/"
+    }
+  },
+  {
+    "id": "online-classes",
+    "slug": "online-classes",
+    "title": "What Online Classes Are Like",
+    "navLabel": "Online Classes",
+    "icon": "monitor",
+    "question": "How does online learning work in CSPB?",
+    "summary": "Learn about Canvas, asynchronous lectures, Piazza, online exams, office hours, and Mountain Time deadlines.",
+    "sourceSlides": [
+      7,
+      8
+    ],
+    "primaryCta": {
+      "label": "See the online format",
+      "url": "/modules/online-classes/"
+    }
+  },
+  {
+    "id": "student-support",
+    "slug": "student-support",
+    "title": "Student Support",
+    "navLabel": "Student Support",
+    "icon": "life-buoy",
+    "question": "What support will I have as an online CSPB student?",
+    "summary": "Review advising, faculty office hours, career services, tutoring, networking, and peer interaction.",
+    "sourceSlides": [
+      6
+    ],
+    "primaryCta": {
+      "label": "Explore support",
+      "url": "/modules/student-support/"
+    }
+  },
+  {
+    "id": "admissions-requirements",
+    "slug": "admissions-requirements",
+    "title": "Admissions Requirements",
+    "navLabel": "Admissions",
+    "icon": "clipboard-check",
+    "question": "What do I need to apply?",
+    "summary": "Review degree prerequisites, GPA, math preparation, application materials, and deadlines.",
+    "sourceSlides": [
+      9
+    ],
+    "statusTag": "High priority",
+    "primaryCta": {
+      "label": "Start your application",
+      "urlKey": "apply"
+    }
+  },
+  {
+    "id": "transfer-credit",
+    "slug": "transfer-credit",
+    "title": "Transfer Credit",
+    "navLabel": "Transfer Credit",
+    "icon": "repeat",
+    "question": "Can previous coursework count toward the degree?",
+    "summary": "Learn how transfer credit is evaluated and what limits apply.",
+    "sourceSlides": [
+      10
+    ],
+    "primaryCta": {
+      "label": "Ask about transfer credit",
+      "urlKey": "contactEmail"
+    }
+  },
+  {
+    "id": "non-degree-option",
+    "slug": "non-degree-option",
+    "title": "Non-Degree Option",
+    "navLabel": "Non-Degree",
+    "icon": "route",
+    "question": "Can I take CSPB courses before applying to the degree program?",
+    "summary": "Explore the non-degree option for trying courses, professional development, prerequisites, or GPA strengthening.",
+    "sourceSlides": [
+      11
+    ],
+    "primaryCta": {
+      "label": "Explore non-degree",
+      "urlKey": "nonDegree"
+    }
+  },
+  {
+    "id": "tuition-fees",
+    "slug": "tuition-fees",
+    "title": "Tuition & Fees",
+    "navLabel": "Tuition",
+    "icon": "dollar-sign",
+    "question": "What will the program cost?",
+    "summary": "Review tuition and fee categories, with links to official current information.",
+    "sourceSlides": [
+      12
+    ],
+    "primaryCta": {
+      "label": "View current tuition",
+      "urlKey": "tuition"
+    }
+  },
+  {
+    "id": "apply-talk-to-us",
+    "slug": "apply-talk-to-us",
+    "title": "Apply / Talk to Us",
+    "navLabel": "Apply",
+    "icon": "send",
+    "question": "What should I do next?",
+    "summary": "Apply, schedule an appointment, email the CSPB team, or attend a live information session.",
+    "sourceSlides": [
+      13
+    ],
+    "primaryCta": {
+      "label": "Apply now",
+      "urlKey": "apply"
+    }
+  }
+]

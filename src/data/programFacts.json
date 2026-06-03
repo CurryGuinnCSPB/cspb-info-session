@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lastReviewed": "TBD",
+    "reviewStatus": "Mockup data from current slide deck; verify before production."
+  },
+  "facts": [
+    {
+      "id": "part-time",
+      "value": "85%",
+      "label": "of students pursue the program part time",
+      "sourceSlides": [
+        4
+      ],
+      "riskLevel": "medium",
+      "reviewStatus": "verify before launch"
+    },
+    {
+      "id": "required-courses",
+      "value": "100%",
+      "label": "of required courses are offered every semester",
+      "sourceSlides": [
+        4
+      ],
+      "riskLevel": "high",
+      "reviewStatus": "verify before launch"
+    },
+    {
+      "id": "accelerated-masters",
+      "value": "4",
+      "label": "accelerated master’s opportunities for post-baccalaureate students",
+      "sourceSlides": [
+        4
+      ],
+      "riskLevel": "high",
+      "reviewStatus": "verify before launch"
+    },
+    {
+      "id": "pathways",
+      "value": "5",
+      "label": "pathways available, including graduate school, AI, and more",
+      "sourceSlides": [
+        4
+      ],
+      "riskLevel": "medium",
+      "reviewStatus": "verify before launch"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "lastReviewed": "TBD",
+    "source": "CSPB Virtual Information Session slide deck, page 15",
+    "reviewStatus": "Verify against official catalog before production."
+  },
+  "required": [
+    {
+      "courseNumber": "CSPB 1300",
+      "title": "Computer Science 1: Starting Computing",
+      "credits": 4,
+      "availability": "Available every semester"
+    },
+    {
+      "courseNumber": "CSPB 2270",
+      "title": "Computer Science 2: Data Structures",
+      "credits": 4,
+      "availability": "Available every semester"
+    },
+    {
+      "courseNumber": "CSPB 2400",
+      "title": "Computer Systems",
+      "credits": 4,
+      "availability": "Available every semester"
+    },
+    {
+      "courseNumber": "CSPB 2824",
+      "title": "Discrete Structures",
+      "credits": 3,
+      "availability": "Available every semester"
+    },
+    {
+      "courseNumber": "CSPB 3104",
+      "title": "Algorithms",
+      "credits": 4,
+      "availability": "Available every semester"
+    },
+    {
+      "courseNumber": "CSPB 3155",
+      "title": "Principles of Programming Languages",
+      "credits": 4,
+      "availability": "Available every semester"
+    },
+    {
+      "courseNumber": "CSPB 3308",
+      "title": "Software Development Methods and Tools",
+      "credits": 3,
+      "availability": "Available every semester"
+    }
+  ],
+  "electives": [
+    {
+      "courseNumber": "CSPB 2820",
+      "title": "Linear Algebra with Computer Science Applications",
+      "credits": 3
+    },
+    {
+      "courseNumber": "CSPB 3022",
+      "title": "Intro to Data Science with Probability and Statistics",
+      "credits": 3
+    },
+    {
+      "courseNumber": "CSPB 3202",
+      "title": "Intro to Artificial Intelligence",
+      "credits": 3
+    },
+    {
+      "courseNumber": "CSPB 3287",
+      "title": "Design and Analysis of Database Systems",
+      "credits": 3
+    },
+    {
+      "courseNumber": "CSPB 3403",
+      "title": "Introduction to Cybersecurity for a Converged World",
+      "credits": 4
+    },
+    {
+      "courseNumber": "CSPB 3702",
+      "title": "Cognitive Science",
+      "credits": 3
+    },
+    {
+      "courseNumber": "CSPB 3753",
+      "title": "Design and Analysis of Operating Systems",
+      "credits": 4
+    },
+    {
+      "courseNumber": "CSPB 4122",
+      "title": "Information Visualization",
+      "credits": 3
+    },
+    {
+      "courseNumber": "CSPB 4502",
+      "title": "Data Mining",
+      "credits": 3
+    },
+    {
+      "courseNumber": "CSPB 4622",
+      "title": "Machine Learning",
+      "credits": 3
+    },
+    {
+      "courseNumber": "CSPB 4830",
+      "title": "Natural Language Processing",
+      "credits": 3
+    }
+  ],
+  "electiveAvailabilityNote": "Most available at least every other semester."
+}

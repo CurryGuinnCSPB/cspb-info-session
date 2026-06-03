@@ -1,0 +1,63 @@
+[
+  {
+    "id": "degree-required",
+    "category": "Admissions",
+    "question": "Do I need to already have a bachelor's degree?",
+    "answer": "Yes. The CSPB degree program is designed for students who already hold a bachelor's degree.",
+    "relatedModules": [
+      "admissions-requirements"
+    ],
+    "riskLevel": "high"
+  },
+  {
+    "id": "part-time",
+    "category": "Pacing",
+    "question": "Can I complete the program part time?",
+    "answer": "Yes. Many CSPB students pursue the program part time, often taking one or two classes per semester.",
+    "relatedModules": [
+      "is-cspb-right-for-me",
+      "curriculum"
+    ],
+    "riskLevel": "medium"
+  },
+  {
+    "id": "online-format",
+    "category": "Online Learning",
+    "question": "Are courses asynchronous?",
+    "answer": "Courses use structured online modules and generally include asynchronous recorded lectures, with posted deadlines and opportunities for instructor interaction.",
+    "relatedModules": [
+      "online-classes"
+    ],
+    "riskLevel": "medium"
+  },
+  {
+    "id": "transfer-credit",
+    "category": "Transfer Credit",
+    "question": "Can prior coursework transfer into the degree?",
+    "answer": "Some prior coursework may be eligible, but transfer credit must meet program and registrar requirements and is officially evaluated after acceptance.",
+    "relatedModules": [
+      "transfer-credit"
+    ],
+    "riskLevel": "high"
+  },
+  {
+    "id": "non-degree",
+    "category": "Non-Degree",
+    "question": "Can I take CSPB courses before applying to the degree program?",
+    "answer": "The non-degree option allows students to take selected CSPB courses before entering the degree program, subject to current program rules.",
+    "relatedModules": [
+      "non-degree-option"
+    ],
+    "riskLevel": "high"
+  },
+  {
+    "id": "tuition-current",
+    "category": "Tuition",
+    "question": "Where should I check current tuition and fees?",
+    "answer": "Use the official CU Boulder or CU Online tuition pages for current tuition and fee information. The self-guided info session should be treated as a summary, not the final source of record.",
+    "relatedModules": [
+      "tuition-fees"
+    ],
+    "riskLevel": "high"
+  }
+]

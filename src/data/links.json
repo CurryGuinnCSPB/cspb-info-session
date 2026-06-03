@@ -1,0 +1,11 @@
+{
+  "apply": "https://online.colorado.edu/",
+  "scheduleAppointment": "https://example.com/schedule-appointment",
+  "contactEmail": "mailto:cspbonline@colorado.edu",
+  "admissions": "https://online.colorado.edu/applied-computer-science-bs/admissions",
+  "nonDegree": "https://online.colorado.edu/applied-computer-science-bs/nondegree-option",
+  "tuition": "https://online.colorado.edu/",
+  "careerServices": "https://www.colorado.edu/engineering/",
+  "qualtricsForm": "https://cuboulder.qualtrics.com/",
+  "liveSession": "https://example.com/live-info-session"
+}
