@@ -24,16 +24,14 @@
       "riskLevel": "high",
       "reviewStatus": "verify before launch"
     },
-    {
-      "id": "accelerated-masters",
-      "value": "4",
-      "label": "accelerated master’s opportunities for post-baccalaureate students",
-      "sourceSlides": [
-        4
-      ],
-      "riskLevel": "high",
-      "reviewStatus": "verify before launch"
-    },
+{
+  "id": "accelerated-masters",
+  "value": "",
+  "label": "accelerated master’s opportunities may be available for eligible post-baccalaureate students",
+  "sourceSlides": [4],
+  "riskLevel": "high",
+  "reviewStatus": "verify before launch"
+},
     {
       "id": "pathways",
       "value": "5",
