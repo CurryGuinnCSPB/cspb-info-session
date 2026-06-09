@@ -9,6 +9,7 @@ import OutcomePanel from "../../components/OutcomePanel.astro";
 import AdmissionsChecklist from "../../components/AdmissionsChecklist.astro";
 import SamplePacing from "../../components/SamplePacing.astro";
 import ReviewNote from "../../components/ReviewNote.astro";
+import { resolveLink } from "../../utils/resolveLink.js";
 
 import modules from "../../data/modules.json";
 import courses from "../../data/courses.json";
@@ -26,8 +27,7 @@ export function getStaticPaths() {
 }
 
 const { module } = Astro.props;
-const base = import.meta.env.BASE_URL || "/";
-const moduleImageSrc = module.image ? `${base}${module.image}` : "";
+const moduleImageSrc = module.image ? resolveLink(module.image) : "";
 const relatedFaqs = faqs.filter((faq) => faq.relatedModules?.includes(module.id));
 const isCareer = module.id === "career-outcomes";
 const isCurriculum = module.id === "curriculum";

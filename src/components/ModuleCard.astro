@@ -5,8 +5,7 @@ const { module } = Astro.props;
 const cta = module.primaryCta || {};
 const href = cta.urlKey ? cta.urlKey : (cta.url || `/modules/${module.slug}/`);
 const label = cta.label || "View module";
-const base = import.meta.env.BASE_URL || "/";
-const imageSrc = module.image ? `${base}${module.image}` : "";
+const imageSrc = module.image ? resolveLink(module.image) : "";
 
 const iconMap = {
   compass: "◎",

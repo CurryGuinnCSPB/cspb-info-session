@@ -62,7 +62,7 @@
     "sourceSlides": [
       5
     ],
-    "image": "images/generated/career-outcomes-thumbnail.png",
+    "image": "/images/generated/career-outcomes-thumbnail.png",
     "primaryCta": {
       "label": "Explore career support",
       "urlKey": "careerServices"
@@ -79,7 +79,7 @@
     "sourceSlides": [
       15
     ],
-    "image": "images/generated/curriculum-thumbnail.png",
+    "image": "/images/generated/curriculum-thumbnail.png",
     "primaryCta": {
       "label": "View curriculum",
       "urlKey": "academics"
@@ -97,7 +97,7 @@
       7,
       8
     ],
-    "image": "images/generated/online-classes-thumbnail.png",
+    "image": "/images/generated/online-classes-thumbnail.png",
     "primaryCta": {
       "label": "See learning details",
       "url": "/modules/online-classes/"
@@ -114,7 +114,7 @@
     "sourceSlides": [
       6
     ],
-    "image": "images/generated/student-support-thumbnail.png",
+    "image": "/images/generated/student-support-thumbnail.png",
     "primaryCta": {
       "label": "See support options",
       "url": "/modules/student-support/"
@@ -131,7 +131,7 @@
     "sourceSlides": [
       9
     ],
-    "image": "images/generated/admissions-thumbnail.png",
+    "image": "/images/generated/admissions-thumbnail.png",
     "primaryCta": {
       "label": "Official admissions page",
       "urlKey": "admissions"

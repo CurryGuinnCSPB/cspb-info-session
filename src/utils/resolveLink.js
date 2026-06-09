@@ -1,25 +1,30 @@
-import links from "../data/links.json";
+const rawBase = import.meta.env.BASE_URL || "/";
 
-export function resolveLink(value) {
-  if (!value) return "#";
+function normalizeBase(base) {
+  if (!base || base === "/") return "";
+  return `/${base.replace(/^\/+|\/+$/g, "")}`;
+}
 
-  const resolved = links[value] || value;
+const basePath = normalizeBase(rawBase);
+
+export function resolveLink(target) {
+  if (!target) return "#";
+
+  if (typeof target !== "string") return "#";
 
   if (
-    resolved.startsWith("http://") ||
-    resolved.startsWith("https://") ||
-    resolved.startsWith("mailto:") ||
-    resolved.startsWith("tel:") ||
-    resolved.startsWith("#")
+    target.startsWith("http://") ||
+    target.startsWith("https://") ||
+    target.startsWith("mailto:") ||
+    target.startsWith("tel:") ||
+    target.startsWith("#")
   ) {
-    return resolved;
+    return target;
   }
 
-  const base = import.meta.env.BASE_URL || "/";
+  const cleanTarget = target.startsWith("/")
+    ? target
+    : `/${target}`;
 
-  if (resolved.startsWith("/")) {
-    return `${base.replace(/\/$/, "")}${resolved}`;
-  }
-
-  return resolved;
+  return `${basePath}${cleanTarget}`;
 }
