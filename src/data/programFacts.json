@@ -26,8 +26,8 @@
     },
 {
   "id": "accelerated-masters",
-  "value": "",
-  "label": "accelerated master’s opportunities may be available for eligible post-baccalaureate students",
+  "value": "1",
+  "label": "Accelerated master’s opportunities may be available for eligible post-baccalaureate students",
   "sourceSlides": [4],
   "riskLevel": "high",
   "reviewStatus": "verify before launch"
