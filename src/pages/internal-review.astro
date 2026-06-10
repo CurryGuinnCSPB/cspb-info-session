@@ -1,0 +1,63 @@
+---
+import Layout from "../components/Layout.astro";
+import modules from "../data/modules.json";
+import programFacts from "../data/programFacts.json";
+---
+
+<Layout title="Internal Review | CSPB Info Session">
+  <section class="stack-lg">
+    <header class="card card-pad">
+      <p class="kicker">Internal page</p>
+      <h1 class="heading-xl mt-2">Content review checklist</h1>
+      <p class="lede mt-4">
+        This page keeps development-only source and review details out of the public module pages while preserving them for internal review.
+      </p>
+    </header>
+
+    <section class="card card-pad overflow-x-auto">
+      <h2 class="heading-lg">Program facts</h2>
+      <table class="mt-5 w-full min-w-[720px] text-left text-sm">
+        <thead class="border-b border-neutral-200 text-xs uppercase tracking-wide text-neutral-500">
+          <tr>
+            <th class="py-3 pr-4">Fact</th>
+            <th class="py-3 pr-4">Value</th>
+            <th class="py-3 pr-4">Review</th>
+            <th class="py-3 pr-4">Slides</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          {programFacts.map((fact) => (
+            <tr>
+              <td class="py-3 pr-4 font-bold text-neutral-900">{fact.label}</td>
+              <td class="py-3 pr-4">{fact.value}</td>
+              <td class="py-3 pr-4">{fact.reviewStatus || "review"}</td>
+              <td class="py-3 pr-4">{fact.sourceSlides?.join(", ")}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card card-pad overflow-x-auto">
+      <h2 class="heading-lg">Module source references</h2>
+      <table class="mt-5 w-full min-w-[720px] text-left text-sm">
+        <thead class="border-b border-neutral-200 text-xs uppercase tracking-wide text-neutral-500">
+          <tr>
+            <th class="py-3 pr-4">Module</th>
+            <th class="py-3 pr-4">Question</th>
+            <th class="py-3 pr-4">Slides</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          {modules.filter((module) => module.id !== "start-here").map((module) => (
+            <tr>
+              <td class="py-3 pr-4 font-bold text-neutral-900">{module.title}</td>
+              <td class="py-3 pr-4">{module.question}</td>
+              <td class="py-3 pr-4">{module.sourceSlides?.join(", ")}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  </section>
+</Layout>
