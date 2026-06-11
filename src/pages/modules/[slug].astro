@@ -10,6 +10,7 @@ import AdmissionsChecklist from "../../components/AdmissionsChecklist.astro";
 import SamplePacing from "../../components/SamplePacing.astro";
 import ProgramOverviewContent from "../../components/ProgramOverviewContent.astro";
 import ApplyNextStepsContent from "../../components/ApplyNextStepsContent.astro";
+import RightFitContent from "../../components/RightFitContent.astro";
 import { resolveLink } from "../../utils/resolveLink.js";
 
 import modules from "../../data/modules.json";
@@ -31,6 +32,7 @@ const { module } = Astro.props;
 const moduleImageSrc = module.image ? resolveLink(module.image) : "";
 const relatedFaqs = faqs.filter((faq) => faq.relatedModules?.includes(module.id));
 const isOverview = module.id === "program-overview";
+const isRightFit = module.id === "is-cspb-right-for-me";
 const isCareer = module.id === "career-outcomes";
 const isCurriculum = module.id === "curriculum";
 const isAdmissions = module.id === "admissions-requirements";
@@ -95,6 +97,8 @@ const isApply = module.id === "apply-next-steps";
 
     {isOverview && <ProgramOverviewContent />}
 
+    {isRightFit && <RightFitContent />}
+
     {isApply && <ApplyNextStepsContent />}
 
     {isCareer && (
@@ -131,7 +135,7 @@ const isApply = module.id === "apply-next-steps";
       </section>
     )}
 
-    {!isOverview && !isApply && !isCareer && !isCurriculum && !isAdmissions && (
+    {!isOverview && !isRightFit && !isApply && !isCareer && !isCurriculum && !isAdmissions && (
       <section class="card card-pad">
         <p class="kicker">About this module</p>
         <h2 class="heading-lg mt-2">A quick orientation</h2>

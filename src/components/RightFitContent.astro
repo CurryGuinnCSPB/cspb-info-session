@@ -1,0 +1,150 @@
+---
+import CTAButton from "./CTAButton.astro";
+
+const goodFitItems = [
+  {
+    title: "You already have a bachelor’s degree.",
+    body: "CSPB is a post-baccalaureate program. It is built for students who have already completed a bachelor’s degree and now want a formal computer science credential."
+  },
+  {
+    title: "You want a rigorous undergraduate CS foundation.",
+    body: "The program is designed around undergraduate computer science coursework. Students should expect programming, data structures, algorithms, systems, software development, theory, and electives that build on that foundation."
+  },
+  {
+    title: "You want a real CS credential, not scattered coursework.",
+    body: "Many students are looking for more than a few disconnected classes. CSPB leads to a Bachelor of Science in Applied Computer Science from the University of Colorado Boulder."
+  },
+  {
+    title: "You are prepared to learn remotely.",
+    body: "CSPB is an online program. Students should be ready to work through online course materials, follow deadlines, communicate with course staff, and manage their own weekly progress."
+  },
+  {
+    title: "You can manage regular deadlines.",
+    body: "The program is flexible in format, but it is still structured. Courses include assignments, projects, assessments, and due dates. Students who do well are usually able to create a steady routine."
+  },
+  {
+    title: "You may be working while studying.",
+    body: "Many CSPB students balance school with work or other responsibilities. The online format can help, but students still need to plan carefully around course expectations."
+  },
+  {
+    title: "You are preparing for graduate study in CS, data science, or a related field.",
+    body: "Some students use CSPB to build the undergraduate computer science background they need before considering graduate study in computer science, data science, computational linguistics, network engineering, or related areas."
+  }
+];
+
+const notBestFitItems = [
+  {
+    title: "You want a short bootcamp-style experience.",
+    body: "CSPB is a degree program, not a short intensive training course. It is better suited to students who want a broader and more durable computer science foundation."
+  },
+  {
+    title: "You want a master’s degree immediately.",
+    body: "CSPB awards a second bachelor’s degree. Some students later explore graduate options, but the first decision is whether this undergraduate post-baccalaureate path fits your goals."
+  },
+  {
+    title: "You cannot commit steady weekly time.",
+    body: "The online format provides flexibility, but courses still move on a schedule. Students need regular time for lectures, readings, programming work, projects, studying, and communication."
+  },
+  {
+    title: "You want all learning to happen live in scheduled meetings.",
+    body: "CSPB is designed for online learning. Some courses may include live or interactive elements, but students should not expect the program to function like a traditional in-person schedule."
+  },
+  {
+    title: "You want only applied coding with very little theory.",
+    body: "The degree includes practical programming, but it also includes deeper computer science ideas. Students should expect to work with concepts, abstractions, systems, and problem-solving techniques that go beyond coding syntax."
+  }
+];
+---
+
+<section class="stack">
+  <div>
+    <p class="kicker">Self-check</p>
+    <h2 class="heading-lg mt-2">A practical way to think about fit</h2>
+    <p class="lede mt-4">
+      The Computer Science Post-Baccalaureate Program (CSPB) is a strong option for some students, but it is not the right path for everyone. Use the questions below to think through whether the program matches your goals, schedule, and learning preferences.
+    </p>
+  </div>
+
+  <div class="grid gap-5 lg:grid-cols-2">
+    <section class="card card-pad">
+      <p class="kicker">Good fit signals</p>
+      <h3 class="heading-md mt-2">CSPB may be a good fit if...</h3>
+      <div class="mt-5 divide-y divide-neutral-100">
+        {goodFitItems.map((item) => (
+          <details class="group py-4">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-4 font-black text-neutral-950">
+              <span>{item.title}</span>
+              <span class="rounded-full bg-neutral-100 px-2.5 py-0.5 text-sm text-neutral-600 group-open:hidden">+</span>
+              <span class="hidden rounded-full bg-neutral-950 px-2.5 py-0.5 text-sm text-white group-open:inline">−</span>
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="card card-pad">
+      <p class="kicker">Possible mismatch signals</p>
+      <h3 class="heading-md mt-2">CSPB may not be the best fit if...</h3>
+      <div class="mt-5 divide-y divide-neutral-100">
+        {notBestFitItems.map((item) => (
+          <details class="group py-4">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-4 font-black text-neutral-950">
+              <span>{item.title}</span>
+              <span class="rounded-full bg-neutral-100 px-2.5 py-0.5 text-sm text-neutral-600 group-open:hidden">+</span>
+              <span class="hidden rounded-full bg-neutral-950 px-2.5 py-0.5 text-sm text-white group-open:inline">−</span>
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Decision points</p>
+    <h2 class="heading-lg mt-2">Three questions to ask next</h2>
+  </div>
+
+  <div class="auto-grid">
+    <article class="card card-pad">
+      <h3 class="heading-md">Does the curriculum match your goals?</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        Review the required courses, electives, and curriculum pathways. This is the best way to see whether CSPB gives you the computer science foundation you are looking for.
+      </p>
+      <div class="mt-5">
+        <CTAButton href="/modules/curriculum/" label="Explore the curriculum" variant="dark" />
+      </div>
+    </article>
+
+    <article class="card card-pad">
+      <h3 class="heading-md">Does the online format fit your life?</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        Think about how you learn, how you manage deadlines, and whether you can create a steady routine around online courses.
+      </p>
+      <div class="mt-5">
+        <CTAButton href="/modules/online-classes/" label="Review online classes" variant="dark" />
+      </div>
+    </article>
+
+    <article class="card card-pad">
+      <h3 class="heading-md">Are you ready to compare requirements?</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        Once the program seems like a possible fit, compare your background with the admissions requirements and official application guidance.
+      </p>
+      <div class="mt-5">
+        <CTAButton href="/modules/admissions-requirements/" label="Review admissions" variant="dark" />
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="card card-pad border-l-4 border-l-[#cfb87c]">
+  <p class="kicker">Bottom line</p>
+  <h2 class="heading-md mt-2">CSPB is strongest when the degree is part of your plan</h2>
+  <p class="mt-3 text-sm leading-6 text-neutral-600">
+    The program is most useful for students who value a structured undergraduate computer science curriculum, an online format, and a Bachelor of Science credential from CU Boulder. If that combination fits your goals, the next step is to look closely at the curriculum and admissions requirements.
+  </p>
+</section>
