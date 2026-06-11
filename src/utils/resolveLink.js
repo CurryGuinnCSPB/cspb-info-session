@@ -1,3 +1,5 @@
+import links from "../data/links.json";
+
 const rawBase = import.meta.env.BASE_URL || "/";
 
 function normalizeBase(base) {
@@ -12,19 +14,21 @@ export function resolveLink(target) {
 
   if (typeof target !== "string") return "#";
 
+  const resolvedTarget = links[target] || target;
+
   if (
-    target.startsWith("http://") ||
-    target.startsWith("https://") ||
-    target.startsWith("mailto:") ||
-    target.startsWith("tel:") ||
-    target.startsWith("#")
+    resolvedTarget.startsWith("http://") ||
+    resolvedTarget.startsWith("https://") ||
+    resolvedTarget.startsWith("mailto:") ||
+    resolvedTarget.startsWith("tel:") ||
+    resolvedTarget.startsWith("#")
   ) {
-    return target;
+    return resolvedTarget;
   }
 
-  const cleanTarget = target.startsWith("/")
-    ? target
-    : `/${target}`;
+  const cleanTarget = resolvedTarget.startsWith("/")
+    ? resolvedTarget
+    : `/${resolvedTarget}`;
 
   return `${basePath}${cleanTarget}`;
 }
