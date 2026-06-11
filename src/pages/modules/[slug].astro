@@ -8,6 +8,7 @@ import CTAButton from "../../components/CTAButton.astro";
 import OutcomePanel from "../../components/OutcomePanel.astro";
 import AdmissionsChecklist from "../../components/AdmissionsChecklist.astro";
 import SamplePacing from "../../components/SamplePacing.astro";
+import ProgramOverviewContent from "../../components/ProgramOverviewContent.astro";
 import { resolveLink } from "../../utils/resolveLink.js";
 
 import modules from "../../data/modules.json";
@@ -28,6 +29,7 @@ export function getStaticPaths() {
 const { module } = Astro.props;
 const moduleImageSrc = module.image ? resolveLink(module.image) : "";
 const relatedFaqs = faqs.filter((faq) => faq.relatedModules?.includes(module.id));
+const isOverview = module.id === "program-overview";
 const isCareer = module.id === "career-outcomes";
 const isCurriculum = module.id === "curriculum";
 const isAdmissions = module.id === "admissions-requirements";
@@ -89,6 +91,8 @@ const isAdmissions = module.id === "admissions-requirements";
       </article>
     </section>
 
+    {isOverview && <ProgramOverviewContent />}
+
     {isCareer && (
       <section class="stack">
         <div>
@@ -123,7 +127,7 @@ const isAdmissions = module.id === "admissions-requirements";
       </section>
     )}
 
-    {!isCareer && !isCurriculum && !isAdmissions && (
+    {!isOverview && !isCareer && !isCurriculum && !isAdmissions && (
       <section class="card card-pad">
         <p class="kicker">About this module</p>
         <h2 class="heading-lg mt-2">A quick orientation</h2>
