@@ -9,6 +9,7 @@ import OutcomePanel from "../../components/OutcomePanel.astro";
 import AdmissionsChecklist from "../../components/AdmissionsChecklist.astro";
 import SamplePacing from "../../components/SamplePacing.astro";
 import ProgramOverviewContent from "../../components/ProgramOverviewContent.astro";
+import ApplyNextStepsContent from "../../components/ApplyNextStepsContent.astro";
 import { resolveLink } from "../../utils/resolveLink.js";
 
 import modules from "../../data/modules.json";
@@ -33,6 +34,7 @@ const isOverview = module.id === "program-overview";
 const isCareer = module.id === "career-outcomes";
 const isCurriculum = module.id === "curriculum";
 const isAdmissions = module.id === "admissions-requirements";
+const isApply = module.id === "apply-next-steps";
 ---
 
 <Layout title={`${module.title} | CSPB Info Session`} active={module.id}>
@@ -93,6 +95,8 @@ const isAdmissions = module.id === "admissions-requirements";
 
     {isOverview && <ProgramOverviewContent />}
 
+    {isApply && <ApplyNextStepsContent />}
+
     {isCareer && (
       <section class="stack">
         <div>
@@ -127,7 +131,7 @@ const isAdmissions = module.id === "admissions-requirements";
       </section>
     )}
 
-    {!isOverview && !isCareer && !isCurriculum && !isAdmissions && (
+    {!isOverview && !isApply && !isCareer && !isCurriculum && !isAdmissions && (
       <section class="card card-pad">
         <p class="kicker">About this module</p>
         <h2 class="heading-lg mt-2">A quick orientation</h2>

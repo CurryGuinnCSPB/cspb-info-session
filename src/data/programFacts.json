@@ -20,14 +20,16 @@
     "reviewStatus": "verify before launch"
   },
   {
-    "id": "accelerated-masters",
-    "value": "4",
-    "label": "accelerated master’s pathways for eligible post-bacc students",
+    "id": "bs-degree",
+    "value": "BS degree",
+    "label": "Bachelor of Science in Applied Computer Science from CU Boulder",
     "sourceSlides": [
-      4
+      1,
+      2,
+      3
     ],
-    "riskLevel": "medium",
-    "reviewStatus": "verify PBAM wording before launch"
+    "riskLevel": "low",
+    "reviewStatus": "review before launch"
   },
   {
     "id": "online-format",
