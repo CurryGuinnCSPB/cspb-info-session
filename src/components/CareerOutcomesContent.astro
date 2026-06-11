@@ -1,0 +1,249 @@
+---
+import CTAButton from "./CTAButton.astro";
+
+const outcomeStats = [
+  {
+    value: "180",
+    label: "graduates in the LinkedIn-based alumni dataset",
+    detail: "The review included alumni who graduated in May 2025 or earlier."
+  },
+  {
+    value: "166",
+    label: "graduates with identifiable current LinkedIn-visible status",
+    detail: "These were the profiles with enough visible information to classify current outcomes."
+  },
+  {
+    value: "92.2%",
+    label: "in clearly or probably CS-related roles",
+    detail: "153 of 166 identifiable outcomes were classified as clearly or probably CS-related."
+  },
+  {
+    value: "49.4%",
+    label: "in software engineering or closely related roles",
+    detail: "Software engineering was the largest single pathway, but it was not the only one."
+  }
+];
+
+const careerDirections = [
+  "Software engineering and application development",
+  "Web, full-stack, and product development",
+  "Data analytics, data science, AI, machine learning, and NLP-related work",
+  "Systems, cloud, cybersecurity, technical operations, and network engineering",
+  "Research computing, bioinformatics, education, consulting, and public-sector technical work",
+  "Technical leadership, founder roles, and hybrid technical roles"
+];
+
+const supportItems = [
+  {
+    title: "Career services",
+    body: "CSPB students can use CU Boulder career resources, including resume and interview support, Handshake, career events, and employer-facing services."
+  },
+  {
+    title: "Projects and portfolio evidence",
+    body: "Course projects, team projects, GitHub repositories, technical writing, and workplace projects can help students show what they can actually build and explain."
+  },
+  {
+    title: "Prior experience as an asset",
+    body: "Many post-bacc students bring experience from another field. That prior domain knowledge can become part of a stronger technical story, especially in areas such as healthcare, finance, education, research, engineering, media, government, or business."
+  },
+  {
+    title: "Graduate-study planning",
+    body: "Some students use CSPB to prepare for graduate study in computer science, data science, computational linguistics, network engineering, or related areas."
+  }
+];
+
+const changerStats = [
+  {
+    value: "59.1%",
+    label: "appear to be career switchers into CS",
+    detail: "104 of 176 reviewed profiles appeared to represent clear or likely career switches into CS."
+  },
+  {
+    value: "34.1%",
+    label: "were already in or adjacent to the field",
+    detail: "This includes alumni already in CS, software, IT, CS-adjacent roles, or using CSPB for advancement, credentialing, or further study."
+  },
+  {
+    value: "76.0%",
+    label: "began their first visible technical role before or during graduation year",
+    detail: "Among classifiable cases, many alumni began internships, apprenticeships, or technical roles while still completing the degree."
+  }
+];
+---
+
+<section class="stack">
+  <div>
+    <p class="kicker">LinkedIn-based alumni snapshot</p>
+    <h2 class="heading-lg mt-2">CSPB outcomes are broader than one job title</h2>
+    <p class="lede mt-4">
+      A LinkedIn-based review of CSPB alumni gives a useful picture of where graduates go after the Computer Science Post-Baccalaureate Program. The data should be read as a hand-reviewed snapshot, not an official university placement report, but the pattern is still useful: alumni show up in software, data, systems, research, education, consulting, public-sector work, graduate study, and other CS-related areas.
+    </p>
+  </div>
+
+  <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    {outcomeStats.map((stat) => (
+      <article class="card card-pad">
+        <p class="text-3xl font-black tracking-tight text-neutral-950">{stat.value}</p>
+        <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">{stat.label}</p>
+        <p class="mt-2 text-xs leading-5 text-neutral-500">{stat.detail}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Role directions</p>
+    <h2 class="heading-lg mt-2">Common directions alumni pursue</h2>
+    <p class="lede mt-4">
+      Software engineering is the largest single pathway in the reviewed LinkedIn dataset, but it is not the whole story. CSPB alumni use computing across many kinds of organizations and roles.
+    </p>
+  </div>
+
+  <div class="grid gap-3 md:grid-cols-2">
+    {careerDirections.map((direction) => (
+      <article class="rounded-[1.25rem] border border-neutral-200 bg-white p-4 shadow-sm">
+        <p class="font-black text-neutral-950">{direction}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Career movement</p>
+    <h2 class="heading-lg mt-2">Many alumni appear to be career changers</h2>
+    <p class="lede mt-4">
+      CSPB serves students who arrive from many first-degree backgrounds and professional fields. Some were already in or near computing. Many others appear to have used the program as a bridge into software, data, systems, cybersecurity, research, or other technical roles.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {changerStats.map((stat) => (
+      <article class="card card-pad">
+        <p class="text-3xl font-black tracking-tight text-neutral-950">{stat.value}</p>
+        <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">{stat.label}</p>
+        <p class="mt-2 text-xs leading-5 text-neutral-500">{stat.detail}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">Industries</p>
+      <h2 class="heading-lg mt-2">Computing work is not limited to technology companies</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        In the reviewed dataset, technology and software was the largest industry sector, but it represented only about one quarter of identifiable alumni outcomes. Alumni also appeared in education and research, energy, transportation, manufacturing, aerospace, finance, business services, healthcare, biotechnology, consulting, government, startups, and other settings.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        That range is important for post-bacc students. Many students bring a first degree and prior work experience into CSPB, then combine that background with computing.
+      </p>
+    </div>
+
+    <div class="rounded-[1.25rem] bg-neutral-950 p-5 text-white">
+      <p class="text-4xl font-black text-[#cfb87c]">24.1%</p>
+      <p class="mt-2 text-sm font-bold leading-6 text-white/80">
+        of identifiable outcomes were in the technology and software sector
+      </p>
+      <p class="mt-3 text-xs leading-5 text-white/60">
+        That means most identifiable outcomes were in other sectors where computing is also used.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Career preparation</p>
+    <h2 class="heading-lg mt-2">The degree is strongest when paired with visible evidence of ability</h2>
+    <p class="lede mt-4">
+      CSPB gives students a structured CS foundation and a CU Boulder credential. Career preparation also depends on the evidence students build while they are in the program.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {supportItems.map((item) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{item.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+    <div>
+      <p class="kicker">Graduate study</p>
+      <h2 class="heading-lg mt-2">Graduate school can also be an outcome</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Some students use the Computer Science Post-Baccalaureate Program to prepare for graduate study in computer science, data science, computational linguistics, network engineering, or related fields. For eligible students, post-baccalaureate accelerated master’s options may also be worth discussing with advising.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        PBAM options are not the main purpose of CSPB, and some graduate work is expected to be completed on the Boulder campus. Students considering that route should review the Apply / Next Steps module and speak with advising.
+      </p>
+      <div class="mt-5">
+        <CTAButton href="/modules/apply-next-steps/" label="Review graduate planning notes" variant="dark" />
+      </div>
+    </div>
+
+    <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+      <p class="kicker">Possible next step</p>
+      <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">
+        Use CSPB to strengthen your undergraduate CS foundation before evaluating graduate programs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="card card-pad border-l-4 border-l-[#cfb87c]">
+  <p class="kicker">Job market note</p>
+  <h2 class="heading-md mt-2">The market changes, but the foundation still matters</h2>
+  <p class="mt-3 text-sm leading-6 text-neutral-600">
+    The software and computing job market changes over time. AI tools, hiring cycles, entry-level competition, and regional labor markets all affect what students experience. A CS degree can strengthen a student’s foundation and credentials, but the strongest career story usually combines the degree with projects, internships, workplace experience, GitHub repositories, technical communication, and interview preparation.
+  </p>
+  <p class="mt-3 text-sm leading-6 text-neutral-600">
+    For many CSPB students, the distinctive advantage is not starting from zero. It is adding computer science to a previous degree, prior work experience, and a developing portfolio of technical work.
+  </p>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Next steps</p>
+    <h2 class="heading-lg mt-2">Explore how the program supports your goals</h2>
+  </div>
+
+  <div class="auto-grid">
+    <article class="card card-pad">
+      <h3 class="heading-md">Review the curriculum</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        Start with the courses and curriculum pathways to see how the degree builds technical foundations.
+      </p>
+      <div class="mt-5">
+        <CTAButton href="/modules/curriculum/" label="Explore curriculum" variant="dark" />
+      </div>
+    </article>
+
+    <article class="card card-pad">
+      <h3 class="heading-md">Use student support</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        Review advising, career resources, tutoring, course support, and community resources.
+      </p>
+      <div class="mt-5">
+        <CTAButton href="/modules/student-support/" label="Review support" variant="dark" />
+      </div>
+    </article>
+
+    <article class="card card-pad">
+      <h3 class="heading-md">Think about fit</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        If you are still deciding, compare your goals with the right-fit module.
+      </p>
+      <div class="mt-5">
+        <CTAButton href="/modules/is-cspb-right-for-me/" label="Check fit" variant="dark" />
+      </div>
+    </article>
+  </div>
+</section>

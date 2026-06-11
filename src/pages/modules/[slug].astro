@@ -11,6 +11,7 @@ import SamplePacing from "../../components/SamplePacing.astro";
 import ProgramOverviewContent from "../../components/ProgramOverviewContent.astro";
 import ApplyNextStepsContent from "../../components/ApplyNextStepsContent.astro";
 import RightFitContent from "../../components/RightFitContent.astro";
+import CareerOutcomesContent from "../../components/CareerOutcomesContent.astro";
 import { resolveLink } from "../../utils/resolveLink.js";
 
 import modules from "../../data/modules.json";
@@ -101,17 +102,7 @@ const isApply = module.id === "apply-next-steps";
 
     {isApply && <ApplyNextStepsContent />}
 
-    {isCareer && (
-      <section class="stack">
-        <div>
-          <p class="kicker">Career outcomes</p>
-          <h2 class="heading-lg mt-2">Outcome areas</h2>
-        </div>
-        <div class="auto-grid">
-          {outcomes.panels.map((panel) => <OutcomePanel panel={panel} />)}
-        </div>
-      </section>
-    )}
+    {isCareer && <CareerOutcomesContent />}
 
     {isCurriculum && (
       <section class="stack">
