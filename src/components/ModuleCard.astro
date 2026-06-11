@@ -2,9 +2,12 @@
 import { resolveLink } from "../utils/resolveLink.js";
 
 const { module } = Astro.props;
-const cta = module.primaryCta || {};
-const href = cta.urlKey ? cta.urlKey : (cta.url || `/modules/${module.slug}/`);
-const label = cta.label || "View module";
+
+// Dashboard/module-grid cards should always take visitors to the internal
+// information-session module page. Official CU links belong inside the module
+// page as next-step CTAs.
+const href = `/modules/${module.slug}/`;
+const label = "View module";
 const imageSrc = module.image ? resolveLink(module.image) : "";
 
 const iconMap = {
