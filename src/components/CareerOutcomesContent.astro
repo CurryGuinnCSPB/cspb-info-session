@@ -1,26 +1,26 @@
 ---
 import CTAButton from "./CTAButton.astro";
 
-const outcomeStats = [
-  {
-    value: "180",
-    label: "graduates in the LinkedIn-based alumni dataset",
-    detail: "The review included alumni who graduated in May 2025 or earlier."
-  },
-  {
-    value: "166",
-    label: "graduates with identifiable current LinkedIn-visible status",
-    detail: "These were the profiles with enough visible information to classify current outcomes."
-  },
+const headlineStats = [
   {
     value: "92.2%",
-    label: "in clearly or probably CS-related roles",
-    detail: "153 of 166 identifiable outcomes were classified as clearly or probably CS-related."
+    label: "of identifiable alumni outcomes were clearly or probably CS-related",
+    detail: "153 of 166 identifiable current outcomes were classified as clearly or probably CS-related."
   },
   {
     value: "49.4%",
-    label: "in software engineering or closely related roles",
-    detail: "Software engineering was the largest single pathway, but it was not the only one."
+    label: "were in software engineering or closely related roles",
+    detail: "Software engineering was the single largest outcome area in the LinkedIn-based review."
+  },
+  {
+    value: "59.1%",
+    label: "appear to be career switchers into CS",
+    detail: "104 of 176 reviewed profiles appeared to represent clear or likely career switches into computing."
+  },
+  {
+    value: "76.0%",
+    label: "began a first visible technical role before or during graduation year",
+    detail: "Among classifiable cases, many alumni reached internships, apprenticeships, or technical roles while still completing the degree."
   }
 ];
 
@@ -31,6 +31,46 @@ const careerDirections = [
   "Systems, cloud, cybersecurity, technical operations, and network engineering",
   "Research computing, bioinformatics, education, consulting, and public-sector technical work",
   "Technical leadership, founder roles, and hybrid technical roles"
+];
+
+const industrySectors = [
+  { name: "Technology and Software", count: 40, percent: "24.1%" },
+  { name: "Education and Research", count: 20, percent: "12.0%" },
+  { name: "Energy, Transportation, and Manufacturing", count: 19, percent: "11.4%" },
+  { name: "Aerospace, Defense, and Engineering", count: 17, percent: "10.2%" },
+  { name: "Finance and Business Services", count: 17, percent: "10.2%" },
+  { name: "Retail, Consumer, and Media", count: 16, percent: "9.6%" },
+  { name: "Healthcare and Biotechnology", count: 13, percent: "7.8%" },
+  { name: "Consulting and Professional Services", count: 11, percent: "6.6%" },
+  { name: "Government and Public Sector", count: 7, percent: "4.2%" },
+  { name: "Startups and Innovation", count: 6, percent: "3.6%" }
+];
+
+const employerGroups = [
+  {
+    title: "Technology and Software",
+    employers: ["Amazon", "Google", "Microsoft", "Salesforce", "Handshake", "CrowdStrike", "Canonical", "Workiva"]
+  },
+  {
+    title: "Aerospace, Defense, and Engineering",
+    employers: ["Lockheed Martin", "Northrop Grumman", "Boeing", "Blue Origin", "Raytheon", "United Launch Alliance", "Maxar Technologies"]
+  },
+  {
+    title: "Finance, Business, and Consulting",
+    employers: ["Charles Schwab", "Capital One", "American Express", "Deloitte", "RSM", "Publicis Sapient", "Slalom Build"]
+  },
+  {
+    title: "Education, Research, and Healthcare",
+    employers: ["University of Colorado Boulder", "Carnegie Mellon University", "University of Utah", "Michigan Medicine", "Roche", "AbbVie", "Cleveland Clinic"]
+  },
+  {
+    title: "Consumer, Media, and Other Industries",
+    employers: ["Nike", "DIRECTV", "Chewy", "PGA Tour", "Ibotta", "Levi Strauss & Co", "Hudl"]
+  },
+  {
+    title: "Government, Public Sector, and Civic Tech",
+    employers: ["NOAA", "City of Grand Junction", "City of Burlington, Vermont", "Hack for LA", "BI Incorporated"]
+  }
 ];
 
 const supportItems = [
@@ -51,24 +91,6 @@ const supportItems = [
     body: "Some students use CSPB to prepare for graduate study in computer science, data science, computational linguistics, network engineering, or related areas."
   }
 ];
-
-const changerStats = [
-  {
-    value: "59.1%",
-    label: "appear to be career switchers into CS",
-    detail: "104 of 176 reviewed profiles appeared to represent clear or likely career switches into CS."
-  },
-  {
-    value: "34.1%",
-    label: "were already in or adjacent to the field",
-    detail: "This includes alumni already in CS, software, IT, CS-adjacent roles, or using CSPB for advancement, credentialing, or further study."
-  },
-  {
-    value: "76.0%",
-    label: "began their first visible technical role before or during graduation year",
-    detail: "Among classifiable cases, many alumni began internships, apprenticeships, or technical roles while still completing the degree."
-  }
-];
 ---
 
 <section class="stack">
@@ -76,12 +98,12 @@ const changerStats = [
     <p class="kicker">LinkedIn-based alumni snapshot</p>
     <h2 class="heading-lg mt-2">CSPB outcomes are broader than one job title</h2>
     <p class="lede mt-4">
-      A LinkedIn-based review of CSPB alumni gives a useful picture of where graduates go after the Computer Science Post-Baccalaureate Program. The data should be read as a hand-reviewed snapshot, not an official university placement report, but the pattern is still useful: alumni show up in software, data, systems, research, education, consulting, public-sector work, graduate study, and other CS-related areas.
+      This page draws on a LinkedIn-based review of 180 CSPB graduates, with 166 profiles that had identifiable current LinkedIn-visible status. It should be read as a hand-reviewed alumni snapshot rather than an official university placement report, but the overall pattern is still useful: alumni show up in software, data, systems, research, education, consulting, public-sector work, graduate study, and other CS-related areas.
     </p>
   </div>
 
   <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-    {outcomeStats.map((stat) => (
+    {headlineStats.map((stat) => (
       <article class="card card-pad">
         <p class="text-3xl font-black tracking-tight text-neutral-950">{stat.value}</p>
         <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">{stat.label}</p>
@@ -111,44 +133,79 @@ const changerStats = [
 
 <section class="stack">
   <div>
-    <p class="kicker">Career movement</p>
-    <h2 class="heading-lg mt-2">Many alumni appear to be career changers</h2>
+    <p class="kicker">Industry sectors</p>
+    <h2 class="heading-lg mt-2">Alumni work across many sectors</h2>
     <p class="lede mt-4">
-      CSPB serves students who arrive from many first-degree backgrounds and professional fields. Some were already in or near computing. Many others appear to have used the program as a bridge into software, data, systems, cybersecurity, research, or other technical roles.
+      Technology and software is the largest single sector in the dataset, but most identifiable alumni outcomes appear outside that category. That is part of what makes post-baccalaureate outcomes interesting: many students combine computing with prior professional or disciplinary experience.
     </p>
   </div>
 
-  <div class="auto-grid">
-    {changerStats.map((stat) => (
-      <article class="card card-pad">
-        <p class="text-3xl font-black tracking-tight text-neutral-950">{stat.value}</p>
-        <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">{stat.label}</p>
-        <p class="mt-2 text-xs leading-5 text-neutral-500">{stat.detail}</p>
-      </article>
+  <div class="card overflow-hidden">
+    <div class="grid grid-cols-[minmax(0,1fr)_auto_auto] gap-x-4 border-b border-neutral-200 bg-neutral-50 px-5 py-3 text-sm font-black text-neutral-700">
+      <div>Industry sector</div>
+      <div>Alumni</div>
+      <div>Percent</div>
+    </div>
+
+    {industrySectors.map((sector) => (
+      <div class="grid grid-cols-[minmax(0,1fr)_auto_auto] gap-x-4 border-b border-neutral-100 px-5 py-4 text-sm last:border-b-0">
+        <div class="font-bold text-neutral-900">{sector.name}</div>
+        <div class="text-neutral-600">{sector.count}</div>
+        <div class="font-black text-neutral-900">{sector.percent}</div>
+      </div>
     ))}
   </div>
 </section>
 
+<section class="stack">
+  <div>
+    <p class="kicker">Selected employers</p>
+    <h2 class="heading-lg mt-2">The employer list makes the outcomes concrete</h2>
+    <p class="lede mt-4">
+      The reviewed dataset includes alumni in roles across major technology firms, aerospace and defense, finance, education, healthcare, consumer companies, and public-sector organizations.
+    </p>
+  </div>
+
+  <div class="grid gap-4 xl:grid-cols-2">
+    {employerGroups.map((group) => (
+      <section class="card card-pad">
+        <h3 class="heading-md">{group.title}</h3>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {group.employers.map((employer) => (
+            <span class="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm font-bold text-neutral-800">
+              {employer}
+            </span>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <section class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 px-5 py-4 text-sm leading-6 text-neutral-600">
+    Selected employers are drawn from LinkedIn-visible roles in this hand-collected dataset. Presence does not imply employer endorsement, partnership, or guaranteed placement.
+  </section>
+</section>
+
 <section class="card card-pad">
-  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+  <div class="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
     <div>
-      <p class="kicker">Industries</p>
-      <h2 class="heading-lg mt-2">Computing work is not limited to technology companies</h2>
+      <p class="kicker">Career changers and career advancers</p>
+      <h2 class="heading-lg mt-2">The program serves more than one kind of student</h2>
       <p class="mt-4 text-sm leading-6 text-neutral-600">
-        In the reviewed dataset, technology and software was the largest industry sector, but it represented only about one quarter of identifiable alumni outcomes. Alumni also appeared in education and research, energy, transportation, manufacturing, aerospace, finance, business services, healthcare, biotechnology, consulting, government, startups, and other settings.
+        Many alumni appear to be career changers moving into software, data, systems, or related technical work. Others were already in or near the field and used CSPB to strengthen credentials, formalize their background, broaden their options, or prepare for graduate study.
       </p>
       <p class="mt-4 text-sm leading-6 text-neutral-600">
-        That range is important for post-bacc students. Many students bring a first degree and prior work experience into CSPB, then combine that background with computing.
+        That mix matters. The degree does not serve only one outcome story. For some students, it is a bridge into a first technical role. For others, it is a way to deepen capability, make a role shift inside a company, or become a stronger candidate for the next step.
       </p>
     </div>
 
     <div class="rounded-[1.25rem] bg-neutral-950 p-5 text-white">
-      <p class="text-4xl font-black text-[#cfb87c]">24.1%</p>
+      <p class="text-4xl font-black text-[#cfb87c]">34.1%</p>
       <p class="mt-2 text-sm font-bold leading-6 text-white/80">
-        of identifiable outcomes were in the technology and software sector
+        were already in or adjacent to the field
       </p>
       <p class="mt-3 text-xs leading-5 text-white/60">
-        That means most identifiable outcomes were in other sectors where computing is also used.
+        This includes alumni already in CS, software, IT, CS-adjacent roles, or using CSPB for advancement, credentialing, or further study.
       </p>
     </div>
   </div>
