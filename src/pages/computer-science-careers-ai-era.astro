@@ -1,0 +1,192 @@
+---
+import Layout from "../components/Layout.astro";
+import CTAButton from "../components/CTAButton.astro";
+
+const skillCards = [
+  {
+    title: "Build the foundation",
+    items: ["Programming", "Algorithms and data structures", "Databases", "Computer systems", "Software engineering", "Testing and debugging"]
+  },
+  {
+    title: "Add the modern layers",
+    items: ["AI literacy", "Machine learning basics", "Natural language processing", "Data science", "Cloud and systems awareness", "Security awareness"]
+  },
+  {
+    title: "Show evidence of ability",
+    items: ["Course projects", "GitHub repositories", "Team projects", "Internships or workplace projects", "Technical writing", "Interview preparation"]
+  }
+];
+
+const relatedLinks = [
+  {
+    title: "AI, Natural Language Processing and the Future of Computer Science Careers",
+    href: "https://online.colorado.edu/2026/05/15/ai-natural-language-processing-and-future-computer-science-careers/",
+    description: "CU Boulder Online article on AI, NLP, CS foundations, and careers."
+  },
+  {
+    title: "Will AI Replace Software Engineers?",
+    href: "https://curryguinncspb.github.io/will-ai-replace-software-engineers/",
+    description: "A longer discussion of why code generation is not the same as software engineering."
+  },
+  {
+    title: "Computer Science Jobs in 2026",
+    href: "https://curryguinncspb.github.io/computer-science-jobs-2026-turning-up-again/",
+    description: "A data-informed look at recent software job postings, AI skill demand, and hiring signals."
+  },
+  {
+    title: "Programming After Programmers?",
+    href: "https://curryguinncspb.github.io/programming-after-programmers/",
+    description: "A discussion of AI coding tools, systems thinking, and interdisciplinary developers."
+  }
+];
+---
+
+<Layout title="Computer Science Careers in the AI Era | CSPB Info Session" active="career-outcomes">
+  <article class="stack-lg">
+    <header class="hero-panel">
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Career context</p>
+          <h1 class="heading-xl mt-4">Computer Science Careers in the AI Era</h1>
+          <p class="lede mt-4">
+            AI is changing software work, but the simple story that computer science is disappearing does not fit the evidence very well. A better way to think about the moment is this: the work is changing, and the skill mix is changing with it.
+          </p>
+          <div class="hero-actions">
+            <CTAButton href="/modules/career-outcomes/" label="Back to career outcomes" variant="gold" />
+            <CTAButton href="/modules/curriculum/" label="Review curriculum" variant="secondary" />
+          </div>
+        </div>
+
+        <div class="rounded-[1.5rem] border border-white/10 bg-black/20 p-6 shadow-xl">
+          <p class="text-5xl font-black text-[#cfb87c]">AI</p>
+          <p class="mt-4 text-lg font-black leading-7 text-white">
+            Code generation is getting easier. Building reliable systems still requires foundations, judgment, and domain understanding.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card card-pad">
+      <p class="kicker">The short version</p>
+      <h2 class="heading-lg mt-2">The market is changing, not vanishing</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Students are right to ask hard questions about the software job market. Hiring cooled after the pandemic surge, entry-level roles became more competitive, and AI tools changed what employers expect. Those changes are real.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        The overly simple version is that AI will replace programmers and make computer science unnecessary. That version misses too much. Recent workforce discussions point to a more complicated picture: software-related roles remain important, while expectations increasingly include AI literacy, data work, cloud systems, security, and stronger project evidence.
+      </p>
+    </section>
+
+    <section class="stack">
+      <div>
+        <p class="kicker">AI and software work</p>
+        <h2 class="heading-lg mt-2">AI can generate code. Software engineering is larger than code generation.</h2>
+        <p class="lede mt-4">
+          AI coding tools can draft functions, generate tests, explain errors, translate examples across frameworks, and help students get unstuck. Those are useful abilities. They do not remove the need for people who understand requirements, architecture, data, testing, security, performance, maintainability, and users.
+        </p>
+      </div>
+
+      <div class="auto-grid">
+        <article class="card card-pad">
+          <h3 class="heading-md">Code is easier to produce</h3>
+          <p class="mt-3 text-sm leading-6 text-neutral-600">
+            AI tools make it easier to create plausible code quickly. That can help students and professionals experiment, prototype, and automate routine work.
+          </p>
+        </article>
+
+        <article class="card card-pad">
+          <h3 class="heading-md">Judgment becomes more important</h3>
+          <p class="mt-3 text-sm leading-6 text-neutral-600">
+            When code is cheap to generate, the hard questions move to correctness, fit, security, maintainability, and whether the software should be built that way at all.
+          </p>
+        </article>
+
+        <article class="card card-pad">
+          <h3 class="heading-md">Systems still need people</h3>
+          <p class="mt-3 text-sm leading-6 text-neutral-600">
+            Real software has users, old data, edge cases, dependencies, costs, privacy rules, performance constraints, and long-term maintenance needs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card card-pad">
+      <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <div>
+          <p class="kicker">Skills</p>
+          <h2 class="heading-lg mt-2">The shift is happening inside the roles</h2>
+          <p class="mt-4 text-sm leading-6 text-neutral-600">
+            Many job titles still look familiar: software engineer, developer, data analyst, systems engineer, data engineer, QA engineer, security analyst. The expectations inside those roles are shifting.
+          </p>
+          <p class="mt-4 text-sm leading-6 text-neutral-600">
+            Students still need the core ideas behind reliable software. They also need to understand how AI tools fit into technical workflows, how to evaluate outputs, and how to connect software to real problems.
+          </p>
+        </div>
+
+        <div class="rounded-[1.25rem] bg-neutral-950 p-5 text-white">
+          <p class="text-4xl font-black text-[#cfb87c]">CS + AI</p>
+          <p class="mt-3 text-sm font-bold leading-6 text-white/80">
+            The strongest preparation combines computer science foundations with modern AI literacy and concrete project work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack">
+      <div>
+        <p class="kicker">Student preparation</p>
+        <h2 class="heading-lg mt-2">What students should build</h2>
+      </div>
+
+      <div class="auto-grid">
+        {skillCards.map((card) => (
+          <article class="card card-pad">
+            <h3 class="heading-md">{card.title}</h3>
+            <ul class="mt-4 space-y-2 text-sm leading-6 text-neutral-600">
+              {card.items.map((item) => <li>• {item}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="card card-pad">
+      <p class="kicker">Post-bacc advantage</p>
+      <h2 class="heading-lg mt-2">CSPB students often bring another field into computing</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Many CSPB students already have a degree and experience in another area before studying computer science. In an AI-shaped software world, that prior background can become part of a student’s technical strength.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Healthcare software needs people who understand healthcare. Financial systems need people who understand finance. Educational technology needs people who understand teaching and learning. Scientific computing needs people who understand the science. The goal is to add computing to real problems, not to learn syntax in isolation.
+      </p>
+    </section>
+
+    <section class="card card-pad border-l-4 border-l-[#cfb87c]">
+      <p class="kicker">Bottom line</p>
+      <h2 class="heading-md mt-2">Study computer science with AI in view</h2>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        Students should learn AI tools because those tools are becoming part of professional technical work. But they should treat those tools as accelerators inside a larger craft. The goal is to become someone who can understand the problem, design the system, evaluate the output, explain the tradeoffs, and keep learning as the field changes.
+      </p>
+    </section>
+
+    <section class="stack">
+      <div>
+        <p class="kicker">Related reading</p>
+        <h2 class="heading-lg mt-2">Go deeper on AI, CS, and the job market</h2>
+        <p class="lede mt-4">
+          These pieces give the longer version of the argument behind this page.
+        </p>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        {relatedLinks.map((link) => (
+          <a class="card card-pad block transition hover:-translate-y-1 hover:shadow-xl" href={link.href}>
+            <h3 class="heading-md">{link.title}</h3>
+            <p class="mt-3 text-sm leading-6 text-neutral-600">{link.description}</p>
+            <p class="mt-4 text-sm font-black text-neutral-950">Read more →</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </article>
+</Layout>
