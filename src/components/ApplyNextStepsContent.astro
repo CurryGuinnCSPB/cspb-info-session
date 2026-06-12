@@ -83,16 +83,20 @@ const afterAdmission = [
     </p>
   </div>
 
-  <div class="card card-pad bg-neutral-950 text-white">
-    <p class="kicker text-[#cfb87c]">Ready to apply?</p>
-    <h3 class="mt-2 text-2xl font-black text-white">Start the CSPB degree application</h3>
-    <p class="mt-3 text-sm leading-6 text-white/75">
-      Use the official CU Boulder application system to begin or continue your application for the Computer Science Post-Baccalaureate Program.
-    </p>
-    <div class="mt-5 flex flex-wrap gap-3">
-      <a class="btn btn-gold" href={applyUrl}>Apply now</a>
-      <a class="btn btn-secondary" href={admissionsUrl}>Review admissions first</a>
-      <a class="btn btn-secondary" href={deadlinesUrl}>Check deadlines</a>
+  <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div>
+        <p class="kicker">Ready to apply?</p>
+        <h3 class="heading-md mt-2">Start the CSPB degree application</h3>
+        <p class="mt-2 text-sm leading-6 text-neutral-600">
+          Begin or continue your application for the Computer Science Post-Baccalaureate Program.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a class="btn btn-dark" href={applyUrl}>Apply now</a>
+        <a class="btn btn-secondary" href={admissionsUrl}>Admissions</a>
+        <a class="btn btn-secondary" href={deadlinesUrl}>Deadlines</a>
+      </div>
     </div>
   </div>
 </section>
@@ -194,7 +198,7 @@ const afterAdmission = [
   </div>
 </section>
 
-<section class="card card-pad">
+<section class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
   <p class="kicker">Later planning</p>
   <h2 class="heading-md mt-2">Accelerated master’s options</h2>
   <p class="mt-3 text-sm leading-6 text-neutral-600">
