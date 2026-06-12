@@ -1,0 +1,253 @@
+---
+import CTAButton from "./CTAButton.astro";
+
+const eligibilityRules = [
+  {
+    title: "Degree-seeking students only",
+    body: "Transfer credit is only available to degree-seeking students in the CSPB program."
+  },
+  {
+    title: "Course equivalency",
+    body: "The previous course must be equivalent to a course in the CSPB curriculum."
+  },
+  {
+    title: "C- or better",
+    body: "The course must have been passed with a C- or better."
+  },
+  {
+    title: "Taken within 10 years",
+    body: "The course must have been taken within the last 10 years."
+  },
+  {
+    title: "Official transcript required",
+    body: "Students must provide an official transcript to be eligible to receive transfer credit."
+  },
+  {
+    title: "Official evaluation after acceptance",
+    body: "As part of the admissions process, the Office of the Registrar officially evaluates credits approximately 2 weeks after acceptance into the program."
+  }
+];
+
+const creditLimits = [
+  {
+    value: "9",
+    label: "credit hours from outside institutions",
+    body: "Degree-seeking students may be eligible to transfer up to 9 credit hours from outside institutions."
+  },
+  {
+    value: "15",
+    label: "credit hours from CU Boulder",
+    body: "Degree-seeking students may be eligible to apply up to 15 credit hours from CU Boulder coursework."
+  }
+];
+
+const advisingTopics = [
+  "Which previous courses may align with the CSPB curriculum",
+  "Whether a course is likely to need a syllabus review",
+  "How transfer credit could affect course sequencing",
+  "Whether non-degree coursework may later apply to the degree",
+  "How transfer limits apply to the student’s plan",
+  "What is still uncertain until the official evaluation is complete"
+];
+
+const prepareItems = [
+  "Unofficial transcripts for early planning",
+  "Official transcripts when required for evaluation",
+  "Syllabi from previous courses, especially CS, math, data, systems, or programming courses",
+  "Course descriptions from the institution where the course was taken",
+  "A list of CSPB courses the student thinks may match previous coursework",
+  "Questions about how transfer credit would affect pacing and graduation planning"
+];
+
+const transferExamples = [
+  {
+    title: "Course titles are only a starting point",
+    body: "A course may transfer if its content and learning outcomes match a CSPB course. The title alone is not enough to determine equivalency."
+  },
+  {
+    title: "Syllabi are often needed",
+    body: "A syllabus from the original course will typically need to be provided so the course content, topics, assignments, and learning outcomes can be reviewed."
+  },
+  {
+    title: "Old coursework may not apply",
+    body: "Even strong previous coursework may not be eligible if it falls outside the 10-year window or does not match the CSPB curriculum."
+  },
+  {
+    title: "Transfer credit can affect planning",
+    body: "Transfer credit may change which courses a student needs, but it may also affect prerequisites, sequencing, and the best order for future courses."
+  }
+];
+---
+
+<section class="stack">
+  <div>
+    <p class="kicker">Transfer credit</p>
+    <h2 class="heading-lg mt-2">Start with advising before building a transfer-credit plan</h2>
+    <p class="lede mt-4">
+      Transfer credit can be valuable, but it depends on course equivalency, grade earned, age of coursework, transcript documentation, and how the credit fits into the CSPB curriculum. Students should talk with CSPB advising early so they understand what is likely, what still needs review, and how transfer credit may affect their course plan.
+    </p>
+  </div>
+
+  <div class="card card-pad border-l-4 border-l-[#cfb87c]">
+    <p class="kicker">Advising first</p>
+    <h3 class="heading-md mt-2">Do not build a degree plan around assumed transfer credit</h3>
+    <p class="mt-3 text-sm leading-6 text-neutral-600">
+      The Office of the Registrar makes the official evaluation after acceptance, and the CSPB advising team can help students prepare for that process. The best next step is to discuss previous coursework with advising before assuming a course will or will not apply.
+    </p>
+    <div class="mt-5 flex flex-wrap gap-3">
+      <CTAButton href="scheduleAppointment" label="Schedule an appointment" variant="dark" />
+      <a class="btn btn-secondary" href="mailto:cspbonline@colorado.edu">Email cspbonline@colorado.edu</a>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Eligibility rules</p>
+    <h2 class="heading-lg mt-2">Basic transfer-credit requirements</h2>
+    <p class="lede mt-4">
+      Transfer credit is available only for degree-seeking students. Previous coursework must meet program and university requirements before it can apply to the degree.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {eligibilityRules.map((rule) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{rule.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{rule.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+    <div>
+      <p class="kicker">Equivalency</p>
+      <h2 class="heading-lg mt-2">Content and learning outcomes are more important than the course title</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        A previous course may transfer if its content and learning outcomes match a course in the CSPB curriculum. Similar titles can be helpful, but the title is not the deciding factor.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Students should be ready to provide a syllabus from the original course. The syllabus helps reviewers understand the topics covered, assignments completed, level of rigor, tools used, and learning outcomes.
+      </p>
+    </div>
+
+    <div class="rounded-[1.25rem] bg-neutral-950 p-5 text-white">
+      <p class="text-4xl font-black text-[#cfb87c]">Match</p>
+      <p class="mt-3 text-sm font-bold leading-6 text-white/80">
+        Transfer credit depends on what the course covered and how it aligns with CSPB requirements.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Credit limits</p>
+    <h2 class="heading-lg mt-2">How many credits may apply</h2>
+  </div>
+
+  <div class="grid gap-4 md:grid-cols-2">
+    {creditLimits.map((limit) => (
+      <article class="rounded-[1.5rem] bg-neutral-950 p-6 text-white">
+        <p class="text-5xl font-black text-[#cfb87c]">{limit.value}</p>
+        <p class="mt-2 text-sm font-black uppercase tracking-[0.2em] text-white/60">credit hours</p>
+        <h3 class="mt-4 text-lg font-black text-white">{limit.label}</h3>
+        <p class="mt-3 text-sm leading-6 text-white/70">{limit.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">What advising can help with</p>
+    <h2 class="heading-lg mt-2">Bring your questions early</h2>
+    <p class="lede mt-4">
+      Advising is especially useful because transfer credit can affect more than one course. It can change pacing, prerequisites, registration choices, and graduation planning.
+    </p>
+  </div>
+
+  <div class="card card-pad">
+    <ul class="grid gap-3 md:grid-cols-2">
+      {advisingTopics.map((topic) => (
+        <li class="rounded-[1rem] border border-neutral-200 bg-neutral-50 p-4 text-sm font-bold leading-6 text-neutral-700">
+          {topic}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">Preparing for review</p>
+      <h2 class="heading-lg mt-2">What to gather before talking with advising</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Students can make the conversation more useful by gathering information about previous coursework before meeting with advising.
+      </p>
+    </div>
+
+    <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+      <ul class="space-y-2 text-sm leading-6 text-neutral-700">
+        {prepareItems.map((item) => <li>• {item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Common transfer-credit issues</p>
+    <h2 class="heading-lg mt-2">What students should understand</h2>
+  </div>
+
+  <div class="auto-grid">
+    {transferExamples.map((item) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{item.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">Non-degree coursework</p>
+      <h2 class="heading-lg mt-2">CU Boulder non-degree coursework may later apply</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Some students take CSPB courses as non-degree students before applying to the degree program. If admitted later, students may be able to apply up to 15 credits of CU coursework toward the degree.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        This can be useful for students who want to try program courses, complete graduate-school prerequisites, build confidence, or take selected courses before deciding whether to pursue the full degree.
+      </p>
+      <div class="mt-5">
+        <CTAButton href="/modules/non-degree-option/" label="Review non-degree option" variant="dark" />
+      </div>
+    </div>
+
+    <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+      <p class="kicker">Important distinction</p>
+      <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">
+        Non-degree students do not receive transfer credit into the degree unless they are later admitted as degree-seeking students and the credits are approved to apply.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="card card-pad border-l-4 border-l-[#cfb87c]">
+  <p class="kicker">Next steps</p>
+  <h2 class="heading-md mt-2">Talk with advising before making assumptions</h2>
+  <p class="mt-3 text-sm leading-6 text-neutral-600">
+    If previous coursework may apply, contact the CSPB team or schedule an appointment. Bring transcripts, course descriptions, syllabi, and questions about how transfer credit could affect your course plan.
+  </p>
+  <div class="mt-5 flex flex-wrap gap-3">
+    <CTAButton href="scheduleAppointment" label="Schedule an appointment" variant="dark" />
+    <a class="btn btn-secondary" href="mailto:cspbonline@colorado.edu">Email cspbonline@colorado.edu</a>
+    <CTAButton href="/modules/curriculum/" label="Review curriculum" variant="secondary" />
+  </div>
+</section>
