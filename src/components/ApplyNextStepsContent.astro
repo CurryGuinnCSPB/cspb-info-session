@@ -1,115 +1,218 @@
 ---
 import CTAButton from "./CTAButton.astro";
+
+const applyUrl = "https://ce.apply.colorado.edu/apply/?sr=0b535717-b75f-406d-885a-149dd79faa94";
+const admissionsUrl = "https://online.colorado.edu/applied-computer-science-bs/admissions";
+const deadlinesUrl = "https://online.colorado.edu/applied-computer-science-bs-post-baccalaureate/dates-and-deadlines";
+const nonDegreeUrl = "https://online.colorado.edu/applied-computer-science-bs/nondegree-option";
+const costUrl = "https://online.colorado.edu/applied-computer-science-bs/cost";
+
+const pathCards = [
+  {
+    title: "Apply to the degree program",
+    body: "Choose this path if your goal is to earn the BS in Applied Computer Science through CSPB.",
+    cta: "Start application",
+    href: applyUrl,
+    variant: "dark"
+  },
+  {
+    title: "Explore non-degree enrollment",
+    body: "Choose this path if you want to take selected courses without entering the degree program.",
+    cta: "Review non-degree option",
+    href: nonDegreeUrl,
+    variant: "secondary"
+  },
+  {
+    title: "Talk with the CSPB team",
+    body: "Choose this path if you want help deciding whether degree-seeking or non-degree enrollment fits your goals.",
+    cta: "Schedule an appointment",
+    href: "scheduleAppointment",
+    variant: "secondary"
+  }
+];
+
+const beforeApply = [
+  {
+    title: "Confirm the bachelor’s degree requirement",
+    body: "CSPB is a post-baccalaureate program, so students must already have a bachelor’s degree before entering the degree program."
+  },
+  {
+    title: "Review admissions requirements",
+    body: "Check GPA, math prerequisite, transcript, questionnaire, and personal essay guidance.",
+    link: admissionsUrl,
+    linkLabel: "Review admissions requirements"
+  },
+  {
+    title: "Check dates and deadlines",
+    body: "Application deadlines vary by term. All application materials must be submitted by the posted deadline.",
+    link: deadlinesUrl,
+    linkLabel: "View dates and deadlines"
+  },
+  {
+    title: "Gather transcripts",
+    body: "Students should prepare transcripts from all higher-education institutions attended."
+  },
+  {
+    title: "Decide whether to write the optional essay",
+    body: "The optional personal essay may be beneficial for students below the required GPA or students whose academic record needs additional context."
+  },
+  {
+    title: "Review tuition and fees",
+    body: "Costs differ by student status and residency. Review tuition, fees, COF, and non-degree cost differences before applying.",
+    link: costUrl,
+    linkLabel: "Review tuition and fees"
+  }
+];
+
+const afterAdmission = [
+  "Connect with advising.",
+  "Review transfer-credit questions.",
+  "Plan an initial course schedule.",
+  "Discuss pacing and workload.",
+  "Prepare for Canvas, Piazza, GitHub, Zoom, and other course tools.",
+  "Register for courses when eligible."
+];
 ---
 
 <section class="stack">
   <div>
     <p class="kicker">Apply / next steps</p>
-    <h2 class="heading-lg mt-2">Move from interest to a concrete plan</h2>
+    <h2 class="heading-lg mt-2">Choose your path and take the next step</h2>
     <p class="lede mt-4">
-      When CSPB looks like a possible fit, the next step is to compare your background and goals with the official admissions requirements, deadlines, cost information, and advising guidance.
+      This page helps you move from information gathering to action. If your goal is the BS in Applied Computer Science, apply to the degree program. If your goal is to take selected courses, review the non-degree option. If you are unsure, talk with the CSPB team before choosing a path.
     </p>
   </div>
 
-  <div class="auto-grid">
-    <article class="card card-pad">
-      <p class="kicker">First</p>
-      <h3 class="heading-md mt-2">Confirm admissions requirements</h3>
-      <p class="mt-3 text-sm leading-6 text-neutral-600">
-        Review degree requirements, prerequisite expectations, application materials, deadlines, and any official policy language before making decisions.
-      </p>
-      <div class="mt-5">
-        <CTAButton href="admissions" label="Official admissions page" variant="dark" />
-      </div>
-    </article>
-
-    <article class="card card-pad">
-      <p class="kicker">Then</p>
-      <h3 class="heading-md mt-2">Review cost and timing</h3>
-      <p class="mt-3 text-sm leading-6 text-neutral-600">
-        Check current tuition, fees, course availability, and application timing. These details can change and should be confirmed on official CU Boulder pages.
-      </p>
-      <div class="mt-5">
-        <CTAButton href="tuition" label="Official cost page" variant="dark" />
-      </div>
-    </article>
-
-    <article class="card card-pad">
-      <p class="kicker">When needed</p>
-      <h3 class="heading-md mt-2">Talk with advising</h3>
-      <p class="mt-3 text-sm leading-6 text-neutral-600">
-        Advising is especially useful if you are comparing CSPB with another program, thinking about transfer credit, planning around work, or considering graduate options later.
-      </p>
-      <div class="mt-5">
-        <CTAButton href="scheduleAppointment" label="Contact advising" variant="dark" />
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="card card-pad">
-  <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-    <div>
-      <p class="kicker">Accelerated master’s options</p>
-      <h2 class="heading-lg mt-2">A later planning topic for eligible students</h2>
-      <p class="mt-4 text-sm leading-6 text-neutral-600">
-        Some eligible CSPB students may be able to begin graduate coursework before completing the BS in Applied Computer Science. These post-baccalaureate accelerated master’s options have separate admissions requirements and require careful planning.
-      </p>
-      <p class="mt-4 text-sm leading-6 text-neutral-600">
-        Students should note that some graduate work is expected to be completed on the Boulder campus. For that reason, these options are most relevant to students who are able to meet any in-person requirements. Students should discuss eligibility, timing, financial implications, and relocation considerations with an advisor.
-      </p>
-    </div>
-
-    <div class="rounded-[1.25rem] bg-neutral-950 p-5 text-white">
-      <p class="text-4xl font-black text-[#cfb87c]">4</p>
-      <p class="mt-2 text-sm font-bold leading-6 text-white/80">
-        PBAM options are listed for eligible post-bacc students
-      </p>
+  <div class="card card-pad bg-neutral-950 text-white">
+    <p class="kicker text-[#cfb87c]">Ready to apply?</p>
+    <h3 class="mt-2 text-2xl font-black text-white">Start the CSPB degree application</h3>
+    <p class="mt-3 text-sm leading-6 text-white/75">
+      Use the official CU Boulder application system to begin or continue your application for the Computer Science Post-Baccalaureate Program.
+    </p>
+    <div class="mt-5 flex flex-wrap gap-3">
+      <a class="btn btn-gold" href={applyUrl}>Apply now</a>
+      <a class="btn btn-secondary" href={admissionsUrl}>Review admissions first</a>
+      <a class="btn btn-secondary" href={deadlinesUrl}>Check deadlines</a>
     </div>
   </div>
 </section>
 
 <section class="stack">
   <div>
-    <p class="kicker">Listed PBAM options</p>
-    <h2 class="heading-lg mt-2">Programs to discuss with advising</h2>
+    <p class="kicker">Choose a path</p>
+    <h2 class="heading-lg mt-2">Which next step fits your goal?</h2>
   </div>
 
   <div class="auto-grid">
-    <article class="card card-pad">
-      <h3 class="heading-md">MS in Computer Science</h3>
-      <p class="mt-3 text-sm leading-6 text-neutral-600">
-        A graduate option for eligible students who want to continue into computer science after the BS in Applied Computer Science.
-      </p>
-    </article>
-
-    <article class="card card-pad">
-      <h3 class="heading-md">MS in Data Science</h3>
-      <p class="mt-3 text-sm leading-6 text-neutral-600">
-        A graduate option for eligible students interested in data-focused computing and analytics.
-      </p>
-    </article>
-
-    <article class="card card-pad">
-      <h3 class="heading-md">MS in CLASIC</h3>
-      <p class="mt-3 text-sm leading-6 text-neutral-600">
-        A graduate option connected to computational linguistics, analytics, search, and informatics.
-      </p>
-    </article>
-
-    <article class="card card-pad">
-      <h3 class="heading-md">MS in Network Engineering</h3>
-      <p class="mt-3 text-sm leading-6 text-neutral-600">
-        A graduate option for eligible students interested in network engineering.
-      </p>
-    </article>
+    {pathCards.map((card) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{card.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{card.body}</p>
+        <div class="mt-5">
+          {card.href.startsWith("http") ? (
+            <a class={`btn ${card.variant === "dark" ? "btn-dark" : "btn-secondary"}`} href={card.href}>{card.cta}</a>
+          ) : (
+            <CTAButton href={card.href} label={card.cta} variant={card.variant} />
+          )}
+        </div>
+      </article>
+    ))}
   </div>
 </section>
 
-<section class="card card-pad border-l-4 border-l-[#cfb87c]">
-  <p class="kicker">Important note</p>
-  <h2 class="heading-md mt-2">Use official requirements for decisions</h2>
+<section class="stack">
+  <div>
+    <p class="kicker">Before you apply</p>
+    <h2 class="heading-lg mt-2">A short checklist</h2>
+    <p class="lede mt-4">
+      Before starting the application, make sure you understand the admissions requirements, deadline, materials, and cost structure.
+    </p>
+  </div>
+
+  <div class="grid gap-4">
+    {beforeApply.map((item) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{item.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+        {item.link && (
+          <p class="mt-4">
+            <a class="text-sm font-black text-neutral-950 underline decoration-[#cfb87c] decoration-2 underline-offset-4" href={item.link}>
+              {item.linkLabel}
+            </a>
+          </p>
+        )}
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">Degree or non-degree?</p>
+      <h2 class="heading-lg mt-2">Use the option that matches your goal</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Students who want to earn the BS in Applied Computer Science should apply to the degree program. Students who only want selected courses should investigate non-degree enrollment.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Non-degree enrollment can be useful for professional development, graduate-school prerequisites, trying CSPB coursework, or taking selected courses without pursuing the full degree.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a class="btn btn-dark" href={applyUrl}>Apply to CSPB</a>
+        <a class="btn btn-secondary" href={nonDegreeUrl}>Review non-degree option</a>
+      </div>
+    </div>
+
+    <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+      <p class="kicker">Unsure?</p>
+      <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">
+        If you are unsure which route fits your goal, schedule an appointment or email the CSPB team before applying.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <CTAButton href="scheduleAppointment" label="Schedule appointment" variant="dark" />
+        <a class="btn btn-secondary" href="mailto:cspbonline@colorado.edu">Email CSPB</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-start">
+    <div>
+      <p class="kicker">After admission</p>
+      <h2 class="heading-lg mt-2">What happens next</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        After admission, students work with advising on course planning, transfer-credit questions, registration, and pacing. Advising helps students turn admission into a workable first-term plan.
+      </p>
+    </div>
+
+    <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+      <ul class="space-y-2 text-sm leading-6 text-neutral-700">
+        {afterAdmission.map((item) => <li>• {item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="card card-pad">
+  <p class="kicker">Later planning</p>
+  <h2 class="heading-md mt-2">Accelerated master’s options</h2>
   <p class="mt-3 text-sm leading-6 text-neutral-600">
-    The accelerated master’s information here is an orientation only. Eligibility, GPA thresholds, prerequisite courses, application timing, financial impacts, and campus expectations should be confirmed with official CU Boulder sources and advising.
+    Some eligible CSPB students may later explore post-baccalaureate accelerated master’s options. This is a later advising topic after students understand CSPB itself, their course plan, eligibility requirements, and whether any graduate coursework would require Boulder-campus participation.
   </p>
+</section>
+
+<section class="card card-pad border-l-4 border-l-[#cfb87c]">
+  <p class="kicker">Take action</p>
+  <h2 class="heading-md mt-2">Apply, review details, or ask a question</h2>
+  <p class="mt-3 text-sm leading-6 text-neutral-600">
+    The best next step depends on your goal. Use the degree application if you are ready to apply to CSPB. Use the official pages to check admissions, deadlines, cost, or non-degree enrollment.
+  </p>
+  <div class="mt-5 flex flex-wrap gap-3">
+    <a class="btn btn-dark" href={applyUrl}>Apply now</a>
+    <a class="btn btn-secondary" href={admissionsUrl}>Admissions</a>
+    <a class="btn btn-secondary" href={deadlinesUrl}>Dates and deadlines</a>
+    <a class="btn btn-secondary" href={costUrl}>Tuition and fees</a>
+    <a class="btn btn-secondary" href="mailto:cspbonline@colorado.edu">Email cspbonline@colorado.edu</a>
+  </div>
 </section>
