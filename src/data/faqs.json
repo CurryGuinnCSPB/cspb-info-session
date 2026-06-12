@@ -1,63 +1,796 @@
 [
   {
-    "id": "degree-required",
-    "category": "Admissions",
-    "question": "Do I need to already have a bachelor's degree?",
-    "answer": "Yes. The CSPB degree program is designed for students who already hold a bachelor's degree.",
-    "relatedModules": [
-      "admissions-requirements"
+    "id": "what-is-cspb",
+    "category": "About CSPB",
+    "topQuestion": true,
+    "question": "What is CSPB?",
+    "answer": "CSPB is the Computer Science Post-Baccalaureate Program. It is an online path for students who already have a bachelor’s degree and want to earn the BS in Applied Computer Science from CU Boulder.",
+    "relatedLinks": [
+      {
+        "label": "Program overview",
+        "href": "/modules/program-overview/"
+      }
     ],
-    "riskLevel": "high"
+    "relatedModules": [
+      "program-overview"
+    ]
   },
   {
-    "id": "part-time",
-    "category": "Pacing",
-    "question": "Can I complete the program part time?",
-    "answer": "Yes. Many CSPB students pursue the program part time, often taking one or two classes per semester.",
-    "relatedModules": [
-      "is-cspb-right-for-me",
-      "curriculum"
+    "id": "degree-name",
+    "category": "About CSPB",
+    "question": "What degree do students earn?",
+    "answer": "Students who complete the degree program earn the Bachelor of Science in Applied Computer Science from CU Boulder.",
+    "relatedLinks": [
+      {
+        "label": "Program overview",
+        "href": "/modules/program-overview/"
+      }
     ],
-    "riskLevel": "medium"
+    "relatedModules": [
+      "program-overview"
+    ]
   },
   {
-    "id": "online-format",
-    "category": "Online Learning",
-    "question": "Are courses asynchronous?",
-    "answer": "Courses use structured online modules and generally include asynchronous recorded lectures, with posted deadlines and opportunities for instructor interaction.",
+    "id": "who-is-cspb-for",
+    "category": "About CSPB",
+    "topQuestion": true,
+    "question": "Who is CSPB designed for?",
+    "answer": "CSPB is designed for students who already have a bachelor’s degree and want a rigorous undergraduate computer science foundation. Students may be career changers, working professionals, people already in technical roles, or students preparing for graduate study.",
+    "relatedLinks": [
+      {
+        "label": "Is CSPB right for me?",
+        "href": "/modules/is-cspb-right-for-me/"
+      }
+    ],
+    "relatedModules": [
+      "is-cspb-right-for-me"
+    ]
+  },
+  {
+    "id": "certificate-or-degree",
+    "category": "About CSPB",
+    "question": "Is CSPB a certificate, bootcamp, or degree program?",
+    "answer": "CSPB is a degree program. Students who complete the program earn a BS in Applied Computer Science. It is different from a short certificate or bootcamp.",
+    "relatedLinks": [
+      {
+        "label": "Program overview",
+        "href": "/modules/program-overview/"
+      }
+    ],
+    "relatedModules": [
+      "program-overview"
+    ]
+  },
+  {
+    "id": "fully-online",
+    "category": "About CSPB",
+    "topQuestion": true,
+    "question": "Can the program be completed online?",
+    "answer": "Yes. CSPB is designed for online students. Courses use Canvas, recorded lectures, posted deadlines, online discussions, and live Zoom office hours.",
+    "relatedLinks": [
+      {
+        "label": "Online classes",
+        "href": "/modules/online-classes/"
+      }
+    ],
     "relatedModules": [
       "online-classes"
-    ],
-    "riskLevel": "medium"
+    ]
   },
   {
-    "id": "transfer-credit",
-    "category": "Transfer Credit",
-    "question": "Can prior coursework transfer into the degree?",
-    "answer": "Some prior coursework may be eligible, but transfer credit must meet program and registrar requirements and is officially evaluated after acceptance.",
+    "id": "bachelors-required",
+    "category": "Admissions",
+    "topQuestion": true,
+    "question": "Do I need to already have a bachelor’s degree?",
+    "answer": "Yes. CSPB is a post-baccalaureate program, so students must already have a bachelor’s degree before entering the degree program.",
+    "relatedLinks": [
+      {
+        "label": "Admissions requirements",
+        "href": "/modules/admissions-requirements/"
+      }
+    ],
+    "relatedModules": [
+      "admissions-requirements"
+    ]
+  },
+  {
+    "id": "minimum-gpa",
+    "category": "Admissions",
+    "question": "What is the GPA requirement?",
+    "answer": "The standard minimum GPA requirement is 2.75. Students below the requirement should review the admissions page and consider whether the optional personal essay can help explain their academic preparation.",
+    "relatedLinks": [
+      {
+        "label": "Admissions requirements",
+        "href": "/modules/admissions-requirements/"
+      }
+    ],
+    "relatedModules": [
+      "admissions-requirements"
+    ]
+  },
+  {
+    "id": "essay-required",
+    "category": "Admissions",
+    "question": "Is the personal essay required?",
+    "answer": "No. The personal essay is optional. It may be helpful for students below the required GPA or students whose academic record would benefit from additional context.",
+    "relatedLinks": [
+      {
+        "label": "Admissions requirements",
+        "href": "/modules/admissions-requirements/"
+      }
+    ],
+    "relatedModules": [
+      "admissions-requirements"
+    ]
+  },
+  {
+    "id": "application-free",
+    "category": "Admissions",
+    "question": "Is the application free?",
+    "answer": "Applications are currently free. Students should still submit all required materials by the posted deadline.",
+    "relatedLinks": [
+      {
+        "label": "Apply / next steps",
+        "href": "/modules/apply-next-steps/"
+      }
+    ],
+    "relatedModules": [
+      "apply-next-steps"
+    ]
+  },
+  {
+    "id": "application-materials",
+    "category": "Admissions",
+    "question": "What materials do I submit?",
+    "answer": "Students typically submit transcripts from all higher-education institutions, the program questionnaire, and any optional materials they choose to include.",
+    "relatedLinks": [
+      {
+        "label": "Admissions requirements",
+        "href": "/modules/admissions-requirements/"
+      }
+    ],
+    "relatedModules": [
+      "admissions-requirements"
+    ]
+  },
+  {
+    "id": "deadlines",
+    "category": "Admissions",
+    "topQuestion": true,
+    "question": "Where do I check application deadlines?",
+    "answer": "Application deadlines vary by term. Use the Admissions Requirements page or Apply / Next Steps page to reach the official dates and deadlines page.",
+    "relatedLinks": [
+      {
+        "label": "Admissions requirements",
+        "href": "/modules/admissions-requirements/"
+      },
+      {
+        "label": "Apply / next steps",
+        "href": "/modules/apply-next-steps/"
+      }
+    ],
+    "relatedModules": [
+      "admissions-requirements",
+      "apply-next-steps"
+    ]
+  },
+  {
+    "id": "math-prerequisite",
+    "category": "Math prerequisite / CU ALEKS",
+    "topQuestion": true,
+    "question": "How do I satisfy the math prerequisite?",
+    "answer": "Students must satisfy the math prerequisite before entering the degree program. Current options include CU ALEKS College Algebra or qualifying calculus / AP Calculus coursework with the required grade.",
+    "relatedLinks": [
+      {
+        "label": "Admissions requirements",
+        "href": "/modules/admissions-requirements/"
+      }
+    ],
+    "relatedModules": [
+      "admissions-requirements"
+    ]
+  },
+  {
+    "id": "what-is-aleks",
+    "category": "Math prerequisite / CU ALEKS",
+    "question": "What is CU ALEKS?",
+    "answer": "CU ALEKS is one way students may satisfy the math prerequisite. Students should review the math-prerequisite section linked from the Admissions Requirements page before making a plan.",
+    "relatedLinks": [
+      {
+        "label": "Admissions requirements",
+        "href": "/modules/admissions-requirements/"
+      }
+    ],
+    "relatedModules": [
+      "admissions-requirements"
+    ]
+  },
+  {
+    "id": "calculus-counts",
+    "category": "Math prerequisite / CU ALEKS",
+    "question": "Can calculus or AP Calculus satisfy the math requirement?",
+    "answer": "Qualifying calculus or AP Calculus coursework with the required grade may satisfy the math prerequisite. Students should review the Admissions Requirements page for current details.",
+    "relatedLinks": [
+      {
+        "label": "Admissions requirements",
+        "href": "/modules/admissions-requirements/"
+      }
+    ],
+    "relatedModules": [
+      "admissions-requirements"
+    ]
+  },
+  {
+    "id": "math-before-apply",
+    "category": "Math prerequisite / CU ALEKS",
+    "question": "Should I complete the math requirement before applying?",
+    "answer": "Students should understand how they will satisfy the math prerequisite before applying and should leave enough time to complete it before the relevant deadline.",
+    "relatedLinks": [
+      {
+        "label": "Admissions requirements",
+        "href": "/modules/admissions-requirements/"
+      },
+      {
+        "label": "Apply / next steps",
+        "href": "/modules/apply-next-steps/"
+      }
+    ],
+    "relatedModules": [
+      "admissions-requirements",
+      "apply-next-steps"
+    ]
+  },
+  {
+    "id": "can-transfer",
+    "category": "Transfer credit",
+    "topQuestion": true,
+    "question": "Can previous courses transfer into CSPB?",
+    "answer": "Some previous coursework may transfer if it meets program and university requirements. Transfer credit depends on course equivalency, grade, age of coursework, documentation, and how the course fits the CSPB curriculum.",
+    "relatedLinks": [
+      {
+        "label": "Transfer credit",
+        "href": "/modules/transfer-credit/"
+      }
+    ],
     "relatedModules": [
       "transfer-credit"
-    ],
-    "riskLevel": "high"
+    ]
   },
   {
-    "id": "non-degree",
-    "category": "Non-Degree",
-    "question": "Can I take CSPB courses before applying to the degree program?",
-    "answer": "The non-degree option allows students to take selected CSPB courses before entering the degree program, subject to current program rules.",
+    "id": "transfer-degree-only",
+    "category": "Transfer credit",
+    "question": "Can non-degree students receive transfer credit?",
+    "answer": "Transfer credit into the degree is available only for degree-seeking students. Non-degree students take selected courses without being admitted to the degree program.",
+    "relatedLinks": [
+      {
+        "label": "Transfer credit",
+        "href": "/modules/transfer-credit/"
+      },
+      {
+        "label": "Non-degree option",
+        "href": "/modules/non-degree-option/"
+      }
+    ],
+    "relatedModules": [
+      "transfer-credit",
+      "non-degree-option"
+    ]
+  },
+  {
+    "id": "transfer-title",
+    "category": "Transfer credit",
+    "question": "Does a similar course title mean a course will transfer?",
+    "answer": "Course titles are only a starting point. A course may transfer if its content and learning outcomes match a course in the CSPB curriculum.",
+    "relatedLinks": [
+      {
+        "label": "Transfer credit",
+        "href": "/modules/transfer-credit/"
+      }
+    ],
+    "relatedModules": [
+      "transfer-credit"
+    ]
+  },
+  {
+    "id": "transfer-syllabus",
+    "category": "Transfer credit",
+    "question": "Will I need a syllabus for transfer-credit review?",
+    "answer": "Often, yes. A syllabus helps reviewers understand topics, assignments, tools, rigor, and learning outcomes from the original course.",
+    "relatedLinks": [
+      {
+        "label": "Transfer credit",
+        "href": "/modules/transfer-credit/"
+      }
+    ],
+    "relatedModules": [
+      "transfer-credit"
+    ]
+  },
+  {
+    "id": "transfer-advisor",
+    "category": "Transfer credit",
+    "question": "Should I talk with advising about transfer credit?",
+    "answer": "Yes. Students should talk with CSPB advising before building a degree plan around expected transfer credit.",
+    "relatedLinks": [
+      {
+        "label": "Transfer credit",
+        "href": "/modules/transfer-credit/"
+      }
+    ],
+    "relatedModules": [
+      "transfer-credit"
+    ]
+  },
+  {
+    "id": "non-degree-purpose",
+    "category": "Non-degree option",
+    "topQuestion": true,
+    "question": "What is the non-degree option?",
+    "answer": "The non-degree option allows students to take selected CSPB courses without entering the degree program.",
+    "relatedLinks": [
+      {
+        "label": "Non-degree option",
+        "href": "/modules/non-degree-option/"
+      }
+    ],
     "relatedModules": [
       "non-degree-option"
-    ],
-    "riskLevel": "high"
+    ]
   },
   {
-    "id": "tuition-current",
-    "category": "Tuition",
-    "question": "Where should I check current tuition and fees?",
-    "answer": "Use the official CU Boulder or CU Online tuition pages for current tuition and fee information. The self-guided info session should be treated as a summary, not the final source of record.",
+    "id": "non-degree-for-few-courses",
+    "category": "Non-degree option",
+    "question": "What if I only want to take a few courses?",
+    "answer": "Students who only want selected courses should investigate non-degree enrollment. It can be useful for professional development, graduate-school prerequisites, or trying CSPB coursework.",
+    "relatedLinks": [
+      {
+        "label": "Non-degree option",
+        "href": "/modules/non-degree-option/"
+      }
+    ],
+    "relatedModules": [
+      "non-degree-option"
+    ]
+  },
+  {
+    "id": "non-degree-credits-later",
+    "category": "Non-degree option",
+    "question": "Can non-degree credits later apply to the degree?",
+    "answer": "If later admitted to the degree program, students may be able to apply up to 15 credits of CU Boulder non-degree coursework toward the degree.",
+    "relatedLinks": [
+      {
+        "label": "Non-degree option",
+        "href": "/modules/non-degree-option/"
+      }
+    ],
+    "relatedModules": [
+      "non-degree-option"
+    ]
+  },
+  {
+    "id": "non-degree-services",
+    "category": "Non-degree option",
+    "question": "Do non-degree students have the same student services?",
+    "answer": "No. Non-degree students do not pay the same semester fees and do not have access to the same services as degree-seeking students. For example, they do not have access to CU Boulder Career Services.",
+    "relatedLinks": [
+      {
+        "label": "Non-degree option",
+        "href": "/modules/non-degree-option/"
+      },
+      {
+        "label": "Tuition and fees",
+        "href": "/modules/tuition-fees/"
+      }
+    ],
+    "relatedModules": [
+      "non-degree-option",
+      "tuition-fees"
+    ]
+  },
+  {
+    "id": "non-degree-admission",
+    "category": "Non-degree option",
+    "question": "Does taking non-degree courses admit me to the degree program?",
+    "answer": "No. Non-degree enrollment and degree admission are separate. Students who want the BS in Applied Computer Science must apply to the degree program and be admitted.",
+    "relatedLinks": [
+      {
+        "label": "Non-degree option",
+        "href": "/modules/non-degree-option/"
+      },
+      {
+        "label": "Apply / next steps",
+        "href": "/modules/apply-next-steps/"
+      }
+    ],
+    "relatedModules": [
+      "non-degree-option",
+      "apply-next-steps"
+    ]
+  },
+  {
+    "id": "tuition-rates",
+    "category": "Tuition and fees",
+    "topQuestion": true,
+    "question": "How much does CSPB cost?",
+    "answer": "CSPB tuition is charged by the credit hour. The Tuition and Fees page gives the current 2025–2026 rates and links to the official CU Boulder cost page.",
+    "relatedLinks": [
+      {
+        "label": "Tuition and fees",
+        "href": "/modules/tuition-fees/"
+      }
+    ],
     "relatedModules": [
       "tuition-fees"
+    ]
+  },
+  {
+    "id": "resident-tuition",
+    "category": "Tuition and fees",
+    "question": "Is tuition different for Colorado residents?",
+    "answer": "Yes. Degree-seeking Colorado residents have a different per-credit rate after the College Opportunity Fund, when applicable.",
+    "relatedLinks": [
+      {
+        "label": "Tuition and fees",
+        "href": "/modules/tuition-fees/"
+      }
     ],
-    "riskLevel": "high"
+    "relatedModules": [
+      "tuition-fees"
+    ]
+  },
+  {
+    "id": "what-is-cof",
+    "category": "Tuition and fees",
+    "question": "What is COF?",
+    "answer": "COF is the College Opportunity Fund. It is a state stipend for eligible Colorado resident undergraduate students at Colorado public institutions.",
+    "relatedLinks": [
+      {
+        "label": "Tuition and fees",
+        "href": "/modules/tuition-fees/"
+      }
+    ],
+    "relatedModules": [
+      "tuition-fees"
+    ]
+  },
+  {
+    "id": "semester-fees",
+    "category": "Tuition and fees",
+    "question": "What do semester fees support?",
+    "answer": "Degree-seeking semester fees help support services such as academic advising, career services, technology, and other student resources.",
+    "relatedLinks": [
+      {
+        "label": "Tuition and fees",
+        "href": "/modules/tuition-fees/"
+      },
+      {
+        "label": "Student support",
+        "href": "/modules/student-support/"
+      }
+    ],
+    "relatedModules": [
+      "tuition-fees",
+      "student-support"
+    ]
+  },
+  {
+    "id": "async",
+    "category": "Online courses",
+    "question": "Are CSPB courses asynchronous?",
+    "answer": "Courses can be completed asynchronously, with recorded lectures, Canvas modules, posted deadlines, and online discussion. Live office hours are available through Zoom.",
+    "relatedLinks": [
+      {
+        "label": "Online classes",
+        "href": "/modules/online-classes/"
+      }
+    ],
+    "relatedModules": [
+      "online-classes"
+    ]
+  },
+  {
+    "id": "live-office-hours",
+    "category": "Online courses",
+    "question": "Are there live meetings?",
+    "answer": "Courses include live Zoom office hours. Many courses offer both daytime and evening office-hour options.",
+    "relatedLinks": [
+      {
+        "label": "Online classes",
+        "href": "/modules/online-classes/"
+      }
+    ],
+    "relatedModules": [
+      "online-classes"
+    ]
+  },
+  {
+    "id": "course-tools",
+    "category": "Online courses",
+    "question": "What tools do CSPB courses use?",
+    "answer": "Courses commonly use Canvas, Zoom, Piazza, GitHub, and Gradescope, depending on the course.",
+    "relatedLinks": [
+      {
+        "label": "Online classes",
+        "href": "/modules/online-classes/"
+      }
+    ],
+    "relatedModules": [
+      "online-classes"
+    ]
+  },
+  {
+    "id": "piazza-required",
+    "category": "Online courses",
+    "question": "Do courses use discussion forums?",
+    "answer": "Yes. Many courses use Piazza for required discussion. These forums support student-instructor and student-student interaction.",
+    "relatedLinks": [
+      {
+        "label": "Online classes",
+        "href": "/modules/online-classes/"
+      }
+    ],
+    "relatedModules": [
+      "online-classes"
+    ]
+  },
+  {
+    "id": "teamwork",
+    "category": "Online courses",
+    "question": "Will I work with other students?",
+    "answer": "Some courses include team work or peer interaction. CSPB also has an active student-led Discord community.",
+    "relatedLinks": [
+      {
+        "label": "Online classes",
+        "href": "/modules/online-classes/"
+      },
+      {
+        "label": "Student support",
+        "href": "/modules/student-support/"
+      }
+    ],
+    "relatedModules": [
+      "online-classes",
+      "student-support"
+    ]
+  },
+  {
+    "id": "advising",
+    "category": "Student support",
+    "question": "Does CSPB have advising?",
+    "answer": "Yes. CSPB has dedicated advising for degree-seeking students. Advising can help with course planning, transfer credit, pacing, and program questions.",
+    "relatedLinks": [
+      {
+        "label": "Student support",
+        "href": "/modules/student-support/"
+      }
+    ],
+    "relatedModules": [
+      "student-support"
+    ]
+  },
+  {
+    "id": "faculty-led",
+    "category": "Student support",
+    "question": "Are courses led by faculty?",
+    "answer": "Yes. CSPB courses are faculty-led, with instructor interaction through course tools and live office hours.",
+    "relatedLinks": [
+      {
+        "label": "Student support",
+        "href": "/modules/student-support/"
+      },
+      {
+        "label": "Online classes",
+        "href": "/modules/online-classes/"
+      }
+    ],
+    "relatedModules": [
+      "student-support",
+      "online-classes"
+    ]
+  },
+  {
+    "id": "tutoring",
+    "category": "Student support",
+    "question": "Is tutoring available?",
+    "answer": "Online tutoring is available through Brainfuse on a variety of topics.",
+    "relatedLinks": [
+      {
+        "label": "Student support",
+        "href": "/modules/student-support/"
+      }
+    ],
+    "relatedModules": [
+      "student-support"
+    ]
+  },
+  {
+    "id": "career-services",
+    "category": "Student support",
+    "question": "Do CSPB students have access to career services?",
+    "answer": "Degree-seeking students have access to CU Boulder career services and the Engineering Career Hub. Non-degree students do not have access to the same services.",
+    "relatedLinks": [
+      {
+        "label": "Student support",
+        "href": "/modules/student-support/"
+      },
+      {
+        "label": "Non-degree option",
+        "href": "/modules/non-degree-option/"
+      }
+    ],
+    "relatedModules": [
+      "student-support",
+      "non-degree-option"
+    ]
+  },
+  {
+    "id": "career-outcomes",
+    "category": "Career outcomes and job market",
+    "question": "What kinds of roles do CSPB alumni pursue?",
+    "answer": "CSPB alumni pursue roles in software engineering, data, AI and machine learning, cloud, systems, cybersecurity, research computing, bioinformatics, technical operations, and related areas.",
+    "relatedLinks": [
+      {
+        "label": "Career outcomes",
+        "href": "/modules/career-outcomes/"
+      }
+    ],
+    "relatedModules": [
+      "career-outcomes"
+    ]
+  },
+  {
+    "id": "career-changers",
+    "category": "Career outcomes and job market",
+    "question": "Is CSPB useful for career changers?",
+    "answer": "Yes. Many CSPB students and alumni use the program to move into computing from another field. Prior professional experience can become a strength when combined with CS training.",
+    "relatedLinks": [
+      {
+        "label": "Career outcomes",
+        "href": "/modules/career-outcomes/"
+      },
+      {
+        "label": "Is CSPB right for me?",
+        "href": "/modules/is-cspb-right-for-me/"
+      }
+    ],
+    "relatedModules": [
+      "career-outcomes",
+      "is-cspb-right-for-me"
+    ]
+  },
+  {
+    "id": "already-technical",
+    "category": "Career outcomes and job market",
+    "question": "Is CSPB useful if I already work in tech?",
+    "answer": "Yes. Some students already work in or near computing and use CSPB to strengthen fundamentals, fill gaps, earn a CS credential, or prepare for more technical work.",
+    "relatedLinks": [
+      {
+        "label": "Career outcomes",
+        "href": "/modules/career-outcomes/"
+      },
+      {
+        "label": "Program overview",
+        "href": "/modules/program-overview/"
+      }
+    ],
+    "relatedModules": [
+      "career-outcomes",
+      "program-overview"
+    ]
+  },
+  {
+    "id": "ai-job-market",
+    "category": "Career outcomes and job market",
+    "question": "How does AI affect the value of studying computer science?",
+    "answer": "AI is changing software work, but it also raises the value of strong CS foundations, problem formulation, system design, evaluation, data literacy, and the ability to use AI tools responsibly.",
+    "relatedLinks": [
+      {
+        "label": "Careers in the AI era",
+        "href": "/computer-science-careers-ai-era/"
+      },
+      {
+        "label": "Career outcomes",
+        "href": "/modules/career-outcomes/"
+      }
+    ],
+    "relatedModules": [
+      "career-outcomes"
+    ]
+  },
+  {
+    "id": "portfolio",
+    "category": "Career outcomes and job market",
+    "question": "Will CSPB help me build a portfolio?",
+    "answer": "Many CSPB courses include projects and technical work that students can use to build evidence of skills. Students should treat course projects as part of their professional portfolio when appropriate.",
+    "relatedLinks": [
+      {
+        "label": "Career outcomes",
+        "href": "/modules/career-outcomes/"
+      },
+      {
+        "label": "Curriculum",
+        "href": "/modules/curriculum/"
+      }
+    ],
+    "relatedModules": [
+      "career-outcomes",
+      "curriculum"
+    ]
+  },
+  {
+    "id": "ready-apply",
+    "category": "Apply / next steps",
+    "question": "What should I do when I am ready to apply?",
+    "answer": "Use the Apply / Next Steps page. It links to the application, admissions requirements, deadlines, tuition and fees, and contact options.",
+    "relatedLinks": [
+      {
+        "label": "Apply / next steps",
+        "href": "/modules/apply-next-steps/"
+      }
+    ],
+    "relatedModules": [
+      "apply-next-steps"
+    ]
+  },
+  {
+    "id": "which-path",
+    "category": "Apply / next steps",
+    "topQuestion": true,
+    "question": "Should I apply to the degree program or use the non-degree option?",
+    "answer": "Apply to the degree program if your goal is the BS in Applied Computer Science. Use the non-degree option if you want selected courses without entering the degree program.",
+    "relatedLinks": [
+      {
+        "label": "Apply / next steps",
+        "href": "/modules/apply-next-steps/"
+      },
+      {
+        "label": "Non-degree option",
+        "href": "/modules/non-degree-option/"
+      }
+    ],
+    "relatedModules": [
+      "apply-next-steps",
+      "non-degree-option"
+    ]
+  },
+  {
+    "id": "after-admission",
+    "category": "Apply / next steps",
+    "question": "What happens after admission?",
+    "answer": "After admission, students work with advising on course planning, transfer-credit questions, registration, pacing, and first-term preparation.",
+    "relatedLinks": [
+      {
+        "label": "Apply / next steps",
+        "href": "/modules/apply-next-steps/"
+      },
+      {
+        "label": "Student support",
+        "href": "/modules/student-support/"
+      }
+    ],
+    "relatedModules": [
+      "apply-next-steps",
+      "student-support"
+    ]
+  },
+  {
+    "id": "ask-questions",
+    "category": "Apply / next steps",
+    "question": "Who should I contact if I am unsure?",
+    "answer": "Students who are unsure about fit, admissions, transfer credit, non-degree enrollment, or the application process should contact the CSPB team or schedule an appointment.",
+    "relatedLinks": [
+      {
+        "label": "Apply / next steps",
+        "href": "/modules/apply-next-steps/"
+      },
+      {
+        "label": "Student support",
+        "href": "/modules/student-support/"
+      }
+    ],
+    "relatedModules": [
+      "apply-next-steps",
+      "student-support"
+    ]
   }
 ]
