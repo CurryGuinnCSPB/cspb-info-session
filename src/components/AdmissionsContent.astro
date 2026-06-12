@@ -1,24 +1,22 @@
 ---
 import CTAButton from "./CTAButton.astro";
-import AdmissionsChecklist from "./AdmissionsChecklist.astro";
-import admissions from "../data/admissions.json";
 
-const beforeApply = [
+const requirements = [
   {
-    title: "Existing bachelor’s degree",
-    body: "Applicants must already have a bachelor’s degree before entering the degree program."
+    title: "Bachelor’s degree",
+    body: "You must already have a bachelor’s degree before entering the degree program."
   },
   {
     title: "Minimum GPA",
-    body: "The standard minimum GPA requirement is 2.75. Students below that threshold should review the admissions guidance carefully and consider whether the optional personal essay can help explain their academic context."
+    body: "The standard minimum GPA requirement is 2.75. If your GPA is below the requirement, the optional personal essay may help you explain your academic record, preparation, and readiness for the program."
   },
   {
     title: "Math prerequisite",
-    body: "Students must satisfy the math prerequisite. Current options include CU ALEKS College Algebra or qualifying calculus / AP Calculus coursework with the required grade."
+    body: "You must satisfy the math prerequisite. Current options include CU ALEKS College Algebra or qualifying calculus / AP Calculus coursework with the required grade."
   },
   {
-    title: "Application materials",
-    body: "Students should be ready to submit all higher-education transcripts and complete the program questionnaire. All application materials must be submitted by the posted deadline."
+    title: "Transcripts",
+    body: "You will need to submit transcripts from all higher-education institutions you have attended."
   }
 ];
 
@@ -29,53 +27,48 @@ const applicationMaterials = [
   "Math prerequisite documentation when needed"
 ];
 
-const processSteps = [
+const steps = [
   {
-    title: "1. Confirm eligibility",
-    body: "Start with the bachelor’s degree requirement, GPA requirement, and math prerequisite."
+    title: "1. Confirm the degree requirement",
+    body: "Make sure you have already completed a bachelor’s degree or will have completed one before beginning the program."
   },
   {
-    title: "2. Check dates and deadlines",
-    body: "Application deadlines can change by term. Students should use the official dates and deadlines page to confirm current deadlines."
+    title: "2. Check the GPA and math requirements",
+    body: "Review the GPA requirement and make sure you understand how you will satisfy the math prerequisite."
   },
   {
-    title: "3. Gather materials",
-    body: "Collect transcripts and prepare the program questionnaire. The optional personal essay may be useful for students whose GPA is below the standard requirement or whose record needs additional context."
+    title: "3. Review the official deadline page",
+    body: "Application deadlines vary by term. Use the official dates and deadlines page to confirm the deadline for the term you want to enter."
   },
   {
-    title: "4. Submit the application",
-    body: "Applications are currently free. Students should still make sure all required materials are submitted by the deadline."
+    title: "4. Gather your materials",
+    body: "Prepare transcripts, complete the program questionnaire, and decide whether the optional personal essay would strengthen your application."
   },
   {
-    title: "5. Ask questions early",
-    body: "Students with questions about eligibility, application timing, or fit should contact the CSPB team or schedule an appointment."
+    title: "5. Submit the application",
+    body: "Applications are currently free. Submit all required materials by the posted deadline."
   }
+];
+
+const essayUses = [
+  "Your GPA is below the standard requirement.",
+  "Your academic record needs context.",
+  "You had extenuating circumstances that affected your grades.",
+  "You want to explain preparation, motivation, and readiness for the program."
 ];
 ---
 
 <section class="stack">
   <div>
     <p class="kicker">Admissions requirements</p>
-    <h2 class="heading-lg mt-2">Admissions is straightforward: confirm eligibility, gather materials, and apply by the deadline</h2>
+    <h2 class="heading-lg mt-2">Confirm eligibility, gather materials, and apply by the deadline</h2>
     <p class="lede mt-4">
-      The Computer Science Post-Baccalaureate Program (CSPB) is designed for students who already have a bachelor’s degree and want to earn the BS in Applied Computer Science from CU Boulder. The admissions process starts with a few core requirements: an existing bachelor’s degree, the GPA requirement, the math prerequisite, transcripts, and the program questionnaire.
-    </p>
-  </div>
-
-  <AdmissionsChecklist admissions={admissions} />
-</section>
-
-<section class="stack">
-  <div>
-    <p class="kicker">Before you apply</p>
-    <h2 class="heading-lg mt-2">What to check first</h2>
-    <p class="lede mt-4">
-      Students should confirm these items before starting the application.
+      The Computer Science Post-Baccalaureate Program (CSPB) is for students who already have a bachelor’s degree and want to earn the BS in Applied Computer Science from CU Boulder. The application process focuses on a few core items: degree status, GPA, math preparation, transcripts, and the program questionnaire.
     </p>
   </div>
 
   <div class="auto-grid">
-    {beforeApply.map((item) => (
+    {requirements.map((item) => (
       <article class="card card-pad">
         <h3 class="heading-md">{item.title}</h3>
         <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
@@ -88,12 +81,12 @@ const processSteps = [
   <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
     <div>
       <p class="kicker">Dates and deadlines</p>
-      <h2 class="heading-lg mt-2">Use the official deadline page</h2>
+      <h2 class="heading-lg mt-2">Check the official deadline for your entry term</h2>
       <p class="mt-4 text-sm leading-6 text-neutral-600">
-        Application deadlines vary by term. Students should use the official CU Boulder dates and deadlines page to confirm the current deadline for the term they want to enter.
+        Application deadlines vary by term. Use the official CU Boulder dates and deadlines page to confirm the current deadline for the term you want to enter.
       </p>
       <p class="mt-4 text-sm leading-6 text-neutral-600">
-        All application materials must be submitted by the posted deadline. That includes transcripts, the program questionnaire, and any optional materials the student chooses to submit.
+        All application materials must be submitted by the posted deadline. That includes transcripts, the program questionnaire, and any optional materials you choose to submit.
       </p>
       <div class="mt-5">
         <a class="btn btn-dark" href="https://online.colorado.edu/applied-computer-science-bs-post-baccalaureate/dates-and-deadlines">
@@ -108,7 +101,7 @@ const processSteps = [
         Applications are currently free.
       </p>
       <p class="mt-3 text-xs leading-5 text-white/60">
-        Students should still verify current policies and submit all required materials by the posted deadline.
+        Students should still submit all required materials by the posted deadline.
       </p>
     </div>
   </div>
@@ -117,7 +110,7 @@ const processSteps = [
 <section class="stack">
   <div>
     <p class="kicker">Application materials</p>
-    <h2 class="heading-lg mt-2">What students submit</h2>
+    <h2 class="heading-lg mt-2">What you submit</h2>
   </div>
 
   <div class="grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
@@ -130,11 +123,15 @@ const processSteps = [
     <div class="card card-pad">
       <h3 class="heading-md">Personal essay</h3>
       <p class="mt-3 text-sm leading-6 text-neutral-600">
-        The personal essay is not required. It may be beneficial for students whose GPA is below the required threshold or whose academic record would benefit from additional explanation.
+        The personal essay is optional. It may be beneficial if your GPA is below the required threshold or if your academic record would benefit from additional explanation.
       </p>
-      <p class="mt-3 text-sm leading-6 text-neutral-600">
-        The essay is a place to explain context, preparation, motivation, and readiness for the program.
-      </p>
+      <div class="mt-4 grid gap-2">
+        {essayUses.map((item) => (
+          <div class="rounded-[1rem] border border-neutral-200 bg-neutral-50 p-3 text-sm font-bold leading-6 text-neutral-700">
+            {item}
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>
@@ -142,11 +139,11 @@ const processSteps = [
 <section class="stack">
   <div>
     <p class="kicker">Application path</p>
-    <h2 class="heading-lg mt-2">A simple sequence</h2>
+    <h2 class="heading-lg mt-2">A simple application sequence</h2>
   </div>
 
   <div class="grid gap-4">
-    {processSteps.map((step) => (
+    {steps.map((step) => (
       <article class="card card-pad">
         <h3 class="heading-md">{step.title}</h3>
         <p class="mt-3 text-sm leading-6 text-neutral-600">{step.body}</p>
@@ -159,9 +156,9 @@ const processSteps = [
   <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
     <div>
       <p class="kicker">Non-degree option</p>
-      <h2 class="heading-lg mt-2">Taking a few courses without pursuing the degree</h2>
+      <h2 class="heading-lg mt-2">Only want to take a few courses?</h2>
       <p class="mt-4 text-sm leading-6 text-neutral-600">
-        Students who are not intending to earn the degree and only want to take a few courses should investigate the non-degree option. This can be useful for students seeking graduate-school prerequisites, professional development, or a way to try CSPB courses before applying to the degree program.
+        If you are not intending to earn the degree and only want to take a few courses, investigate the non-degree option. This can be useful for students seeking graduate-school prerequisites, professional development, or a way to try CSPB courses before applying to the degree program.
       </p>
       <div class="mt-5">
         <CTAButton href="/modules/non-degree-option/" label="Review non-degree option" variant="dark" />
@@ -171,7 +168,7 @@ const processSteps = [
     <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
       <p class="kicker">Different goal</p>
       <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">
-        Degree-seeking admission is for students pursuing the BS in Applied Computer Science. Non-degree enrollment is a different path for students who want selected courses.
+        Degree-seeking admission is for students pursuing the BS in Applied Computer Science. Non-degree enrollment is for students who want selected courses.
       </p>
     </div>
   </div>
@@ -181,7 +178,7 @@ const processSteps = [
   <p class="kicker">Questions</p>
   <h2 class="heading-md mt-2">Talk with the CSPB team</h2>
   <p class="mt-3 text-sm leading-6 text-neutral-600">
-    Students with questions about admission, eligibility, application timing, or the right next step can contact the CSPB team or schedule an appointment.
+    If you have questions about admission, eligibility, application timing, or the right next step, contact the CSPB team or schedule an appointment.
   </p>
   <div class="mt-5 flex flex-wrap gap-3">
     <a class="btn btn-dark" href="https://online.colorado.edu/applied-computer-science-bs/admissions">Official admissions page</a>

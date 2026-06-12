@@ -96,19 +96,12 @@ const isApply = module.id === "apply-next-steps";
     </section>
 
     {isOverview && <ProgramOverviewContent />}
-
     {isRightFit && <RightFitContent />}
-
     {isApply && <ApplyNextStepsContent />}
-
     {isCareer && <CareerOutcomesContent />}
-
     {isCurriculum && <CurriculumContent />}
-
     {isOnlineClasses && <OnlineClassesContent />}
-
     {isStudentSupport && <StudentSupportContent />}
-
     {isAdmissions && <AdmissionsContent />}
 
     {!isOverview && !isRightFit && !isApply && !isCareer && !isCurriculum && !isOnlineClasses && !isStudentSupport && !isAdmissions && (
