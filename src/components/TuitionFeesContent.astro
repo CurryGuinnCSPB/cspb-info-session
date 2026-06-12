@@ -1,0 +1,204 @@
+---
+import CTAButton from "./CTAButton.astro";
+
+const costUrl = "https://online.colorado.edu/applied-computer-science-bs/cost";
+const cofUrl = "https://www.colorado.edu/registrar/students/state-residency/admitted/cof";
+const nonDegreeUrl = "https://online.colorado.edu/applied-computer-science-bs/nondegree-option";
+
+const tuitionRows = [
+  {
+    status: "Degree-seeking, non-resident",
+    rate: "$1,047 / credit",
+    fees: "~ $100 / semester",
+    note: "Degree-seeking students pay semester fees that support student services."
+  },
+  {
+    status: "Degree-seeking, Colorado resident",
+    rate: "$927 / credit after COF",
+    fees: "~ $100 / semester",
+    note: "Colorado resident tuition reflects the College Opportunity Fund when applicable."
+  },
+  {
+    status: "Non-degree",
+    rate: "$1,047 / credit",
+    fees: "$0",
+    note: "Non-degree students do not pay semester fees and do not have access to the same services."
+  }
+];
+
+const feeServices = [
+  "Career services",
+  "Academic advising",
+  "Technology fees",
+  "Other degree-seeking student resources"
+];
+
+const planningItems = [
+  {
+    title: "Student status",
+    body: "Costs differ for degree-seeking and non-degree students."
+  },
+  {
+    title: "Residency",
+    body: "Colorado resident degree-seeking students have a different rate than non-resident degree-seeking students."
+  },
+  {
+    title: "COF eligibility",
+    body: "Eligible Colorado residents may receive the College Opportunity Fund stipend, which reduces undergraduate tuition."
+  },
+  {
+    title: "Number of credits",
+    body: "Students can estimate term costs by multiplying the per-credit rate by the number of credits they plan to take, then adding any applicable fees."
+  },
+  {
+    title: "Course load",
+    body: "Many CSPB students attend part time, so total cost is often spread across multiple terms."
+  },
+  {
+    title: "Official updates",
+    body: "Tuition and fees can change. Students should use the official cost page for current numbers."
+  }
+];
+
+const comparisonCards = [
+  {
+    title: "Degree-seeking students",
+    body: "Degree-seeking students are admitted to the BS in Applied Computer Science. They pay the applicable per-credit tuition rate and semester fees, and they have access to the student services supported by those fees."
+  },
+  {
+    title: "Non-degree students",
+    body: "Non-degree students take selected courses without being admitted to the degree program. They do not pay the semester fees, and they do not have access to the same services as degree-seeking students."
+  }
+];
+---
+
+<section class="stack">
+  <div>
+    <p class="kicker">Tuition and fees</p>
+    <h2 class="heading-lg mt-2">Current tuition depends on student status and residency</h2>
+    <p class="lede mt-4">
+      CSPB tuition is charged by the credit hour. The current 2025–2026 rates differ for degree-seeking students, Colorado residents, non-residents, and non-degree students. Students should use this page as an orientation and check the official cost page for the current rates.
+    </p>
+    <div class="mt-5">
+      <a class="btn btn-dark" href={costUrl}>Official tuition and fees page</a>
+    </div>
+  </div>
+</section>
+
+<section class="card overflow-hidden">
+  <div class="grid grid-cols-[minmax(0,1fr)_auto_auto] gap-x-4 border-b border-neutral-200 bg-neutral-50 px-5 py-3 text-sm font-black text-neutral-700">
+    <div>Status</div>
+    <div>Tuition</div>
+    <div>Fees</div>
+  </div>
+
+  {tuitionRows.map((row) => (
+    <div class="grid gap-2 border-b border-neutral-100 px-5 py-5 text-sm last:border-b-0 md:grid-cols-[minmax(0,1fr)_auto_auto] md:gap-x-4">
+      <div>
+        <p class="font-black text-neutral-950">{row.status}</p>
+        <p class="mt-2 text-xs leading-5 text-neutral-500">{row.note}</p>
+      </div>
+      <div class="font-black text-neutral-950">{row.rate}</div>
+      <div class="font-black text-neutral-950">{row.fees}</div>
+    </div>
+  ))}
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">College Opportunity Fund</p>
+      <h2 class="heading-lg mt-2">What COF means for Colorado residents</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        COF stands for the College Opportunity Fund. It is a state stipend for eligible undergraduate students who are classified as Colorado residents and are attending a Colorado public institution such as CU Boulder.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        For CSPB degree-seeking Colorado residents, the listed resident rate reflects tuition after COF. Students should review CU Boulder’s COF page to understand eligibility, authorization, and current requirements.
+      </p>
+      <div class="mt-5">
+        <a class="btn btn-dark" href={cofUrl}>Review CU Boulder COF information</a>
+      </div>
+    </div>
+
+    <div class="rounded-[1.25rem] bg-neutral-950 p-5 text-white">
+      <p class="text-4xl font-black text-[#cfb87c]">COF</p>
+      <p class="mt-3 text-sm font-bold leading-6 text-white/80">
+        College Opportunity Fund support applies to eligible Colorado resident undergraduate students.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Fees and services</p>
+    <h2 class="heading-lg mt-2">Semester fees help support student services</h2>
+    <p class="lede mt-4">
+      Degree-seeking students pay semester fees of approximately $100 per semester. Those fees help support student services.
+    </p>
+  </div>
+
+  <div class="grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div class="card card-pad">
+      <h3 class="heading-md">Fees include support for</h3>
+      <ul class="mt-4 space-y-2 text-sm leading-6 text-neutral-700">
+        {feeServices.map((item) => <li>• {item}</li>)}
+      </ul>
+    </div>
+
+    <div class="card card-pad">
+      <h3 class="heading-md">Why non-degree fees are different</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        Non-degree students do not pay the same semester fees as degree-seeking students. Because those fees help pay for CU Boulder services, non-degree students do not have access to the same services. For example, non-degree students do not have access to CU Boulder Career Services.
+      </p>
+      <div class="mt-5">
+        <a class="btn btn-secondary" href={nonDegreeUrl}>Review non-degree option</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Degree-seeking and non-degree</p>
+    <h2 class="heading-lg mt-2">Tuition is only part of the difference</h2>
+  </div>
+
+  <div class="auto-grid">
+    {comparisonCards.map((card) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{card.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{card.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Planning questions</p>
+    <h2 class="heading-lg mt-2">What affects your cost</h2>
+  </div>
+
+  <div class="auto-grid">
+    {planningItems.map((item) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{item.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad border-l-4 border-l-[#cfb87c]">
+  <p class="kicker">Next steps</p>
+  <h2 class="heading-md mt-2">Use the official cost page for current numbers</h2>
+  <p class="mt-3 text-sm leading-6 text-neutral-600">
+    Tuition and fees can change. Use the official CU Boulder cost page for the current CSPB tuition and fee information, and contact the CSPB team if you have questions about degree-seeking or non-degree status.
+  </p>
+  <div class="mt-5 flex flex-wrap gap-3">
+    <a class="btn btn-dark" href={costUrl}>Official tuition and fees page</a>
+    <a class="btn btn-secondary" href="mailto:cspbonline@colorado.edu">Email cspbonline@colorado.edu</a>
+    <CTAButton href="/modules/non-degree-option/" label="Review non-degree option" variant="secondary" />
+  </div>
+</section>
