@@ -4,7 +4,6 @@ import VideoPlaceholder from "../../components/VideoPlaceholder.astro";
 import GlobalCTA from "../../components/GlobalCTA.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
 import CTAButton from "../../components/CTAButton.astro";
-import AdmissionsChecklist from "../../components/AdmissionsChecklist.astro";
 import ProgramOverviewContent from "../../components/ProgramOverviewContent.astro";
 import ApplyNextStepsContent from "../../components/ApplyNextStepsContent.astro";
 import RightFitContent from "../../components/RightFitContent.astro";
@@ -12,11 +11,11 @@ import CareerOutcomesContent from "../../components/CareerOutcomesContent.astro"
 import CurriculumContent from "../../components/CurriculumContent.astro";
 import OnlineClassesContent from "../../components/OnlineClassesContent.astro";
 import StudentSupportContent from "../../components/StudentSupportContent.astro";
+import AdmissionsContent from "../../components/AdmissionsContent.astro";
 import { resolveLink } from "../../utils/resolveLink.js";
 
 import modules from "../../data/modules.json";
 import faqs from "../../data/faqs.json";
-import admissions from "../../data/admissions.json";
 
 export function getStaticPaths() {
   return modules
@@ -110,15 +109,7 @@ const isApply = module.id === "apply-next-steps";
 
     {isStudentSupport && <StudentSupportContent />}
 
-    {isAdmissions && (
-      <section class="stack">
-        <div>
-          <p class="kicker">Admissions overview</p>
-          <h2 class="heading-lg mt-2">{admissions.headline}</h2>
-        </div>
-        <AdmissionsChecklist admissions={admissions} />
-      </section>
-    )}
+    {isAdmissions && <AdmissionsContent />}
 
     {!isOverview && !isRightFit && !isApply && !isCareer && !isCurriculum && !isOnlineClasses && !isStudentSupport && !isAdmissions && (
       <section class="card card-pad">
