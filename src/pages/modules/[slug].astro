@@ -10,6 +10,7 @@ import ApplyNextStepsContent from "../../components/ApplyNextStepsContent.astro"
 import RightFitContent from "../../components/RightFitContent.astro";
 import CareerOutcomesContent from "../../components/CareerOutcomesContent.astro";
 import CurriculumContent from "../../components/CurriculumContent.astro";
+import OnlineClassesContent from "../../components/OnlineClassesContent.astro";
 import { resolveLink } from "../../utils/resolveLink.js";
 
 import modules from "../../data/modules.json";
@@ -32,6 +33,7 @@ const isOverview = module.id === "program-overview";
 const isRightFit = module.id === "is-cspb-right-for-me";
 const isCareer = module.id === "career-outcomes";
 const isCurriculum = module.id === "curriculum";
+const isOnlineClasses = module.id === "online-classes";
 const isAdmissions = module.id === "admissions-requirements";
 const isApply = module.id === "apply-next-steps";
 ---
@@ -102,6 +104,8 @@ const isApply = module.id === "apply-next-steps";
 
     {isCurriculum && <CurriculumContent />}
 
+    {isOnlineClasses && <OnlineClassesContent />}
+
     {isAdmissions && (
       <section class="stack">
         <div>
@@ -112,7 +116,7 @@ const isApply = module.id === "apply-next-steps";
       </section>
     )}
 
-    {!isOverview && !isRightFit && !isApply && !isCareer && !isCurriculum && !isAdmissions && (
+    {!isOverview && !isRightFit && !isApply && !isCareer && !isCurriculum && !isOnlineClasses && !isAdmissions && (
       <section class="card card-pad">
         <p class="kicker">About this module</p>
         <h2 class="heading-lg mt-2">A quick orientation</h2>
