@@ -1,0 +1,238 @@
+---
+import CTAButton from "./CTAButton.astro";
+
+const supportAreas = [
+  {
+    title: "Dedicated CSPB advising",
+    body: "CSPB has a dedicated advising team for the program. Students can use advising for course planning, pacing, requirements, transfer-credit questions, graduation planning, and questions about future options."
+  },
+  {
+    title: "Faculty-led courses",
+    body: "CSPB courses are led by faculty. Students interact with instructors and course staff through office hours, course announcements, Piazza, assignment feedback, and course communication."
+  },
+  {
+    title: "Live office hours",
+    body: "Each 3- or 4-credit course has two hours of live instructor office hours each week. These are usually split between a daytime hour and an evening hour to help accommodate different schedules."
+  },
+  {
+    title: "Brainfuse tutoring",
+    body: "Online tutoring is available through Brainfuse, including 24/7 support on a variety of topics."
+  }
+];
+
+const courseSupport = [
+  {
+    title: "Canvas keeps courses organized",
+    body: "Students use Canvas for course materials, announcements, schedules, assignments, grades, and links to course tools."
+  },
+  {
+    title: "Piazza supports course discussion",
+    body: "Most CSPB courses require Piazza participation. The forums support student-instructor interaction and substantial student-student interaction."
+  },
+  {
+    title: "GitHub supports technical work",
+    body: "Many courses use GitHub for repositories, version control, programming submissions, team workflows, and project evidence."
+  },
+  {
+    title: "Gradescope supports some submissions",
+    body: "Gradescope is used in some courses for assignment, quiz, exam, or programming submissions."
+  }
+];
+
+const discussionBenefits = [
+  "Students can ask clarifying questions and see answers to questions other students have asked.",
+  "Students compare approaches, explain ideas, and help each other debug.",
+  "Asynchronous discussion gives students time to reflect and compose useful questions and replies.",
+  "Required participation helps students stay connected to the course throughout the term."
+];
+
+const careerSupport = [
+  {
+    title: "CU Boulder Career Services",
+    body: "Students can use CU Boulder career services for career coaching, job-search preparation, resume support, interview preparation, events, and Handshake."
+  },
+  {
+    title: "Engineering Career Hub",
+    body: "The College of Engineering and Applied Science also provides career resources, events, employer connections, and engineering-focused career support."
+  },
+  {
+    title: "Project and portfolio guidance",
+    body: "Faculty and course projects help students build visible evidence of ability through GitHub repositories, technical documentation, demos, team projects, and final projects."
+  }
+];
+
+const communityItems = [
+  {
+    title: "Student-led Discord",
+    body: "CSPB has a very active student-led Discord community. For many students, that community becomes one of the most useful parts of the program experience."
+  },
+  {
+    title: "Peer interaction",
+    body: "Students interact through courses, Piazza, team projects, panels, events, and informal student communities."
+  },
+  {
+    title: "Team projects",
+    body: "Some courses require team work. Students practice remote coordination, shared repositories, technical communication, and collaborative software development."
+  }
+];
+
+const useSupportWell = [
+  "Meet with advising before course planning problems become urgent.",
+  "Use office hours early, especially when a programming assignment or concept is not clicking.",
+  "Participate actively in Piazza, both by asking questions and by helping other students.",
+  "Use Brainfuse when extra practice or outside tutoring support would help.",
+  "Treat course projects as portfolio opportunities.",
+  "Use career resources before the semester when you need them most."
+];
+---
+
+<section class="stack">
+  <div>
+    <p class="kicker">Student support</p>
+    <h2 class="heading-lg mt-2">CSPB combines online flexibility with a strong support structure</h2>
+    <p class="lede mt-4">
+      CSPB is designed for students who are learning remotely, often while balancing work, family, and other commitments. Support is built into the program through dedicated advising, faculty-led courses, live office hours, Piazza discussions, tutoring, career services, and an active student community.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {supportAreas.map((area) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{area.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{area.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">Advising</p>
+      <h2 class="heading-lg mt-2">Dedicated program advising</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        CSPB students work with a dedicated advising team that understands the structure of the post-baccalaureate program. Advising can help students think through course sequencing, pacing, degree requirements, transfer credit, non-degree coursework, graduation planning, and longer-term options.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Advising is especially useful before registration, before changing pace, after a difficult semester, when considering transfer credits, or when planning for graduate study.
+      </p>
+    </div>
+
+    <div class="rounded-[1.25rem] bg-neutral-950 p-5 text-white">
+      <p class="text-4xl font-black text-[#cfb87c]">Plan</p>
+      <p class="mt-3 text-sm font-bold leading-6 text-white/80">
+        A good course plan helps students balance prerequisites, workload, course availability, and long-term goals.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Course support</p>
+    <h2 class="heading-lg mt-2">Support inside the courses</h2>
+    <p class="lede mt-4">
+      Course support is one of the main ways students stay connected to instructors, course staff, and classmates.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {courseSupport.map((item) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{item.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <p class="kicker">Piazza and peer learning</p>
+  <h2 class="heading-lg mt-2">Course discussion is one of the strengths of the program</h2>
+  <p class="mt-4 text-sm leading-6 text-neutral-600">
+    Piazza discussions are among the most valuable parts of many CSPB courses. They give students a place to ask questions, explain what they have tried, read instructor responses, and learn from other students.
+  </p>
+
+  <div class="mt-6 grid gap-3">
+    {discussionBenefits.map((item) => (
+      <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-4 text-sm font-bold leading-6 text-neutral-700">
+        {item}
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Career support</p>
+    <h2 class="heading-lg mt-2">Career resources are part of the student experience</h2>
+    <p class="lede mt-4">
+      Degree-seeking CSPB students can use career resources through CU Boulder and the College of Engineering and Applied Science.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {careerSupport.map((item) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{item.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+      </article>
+    ))}
+  </div>
+
+  <div class="flex flex-wrap gap-3">
+    <a class="btn btn-dark" href="https://www.colorado.edu/career/">CU Boulder Career Services</a>
+    <a class="btn btn-secondary" href="https://www.colorado.edu/engineering/engineering-career-hub">Engineering Career Hub</a>
+    <CTAButton href="/modules/career-outcomes/" label="Review career outcomes" variant="secondary" />
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Community</p>
+    <h2 class="heading-lg mt-2">Students build connections across the program</h2>
+    <p class="lede mt-4">
+      A strong online program needs more than course content. CSPB students also connect through discussions, teams, events, panels, and student-led spaces.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {communityItems.map((item) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{item.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">Using support well</p>
+      <h2 class="heading-lg mt-2">The best time to use support is early</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Strong students use support before a small problem becomes a large one. That is true for advising, tutoring, office hours, Piazza, team work, and career preparation.
+      </p>
+    </div>
+
+    <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+      <ul class="space-y-2 text-sm leading-6 text-neutral-700">
+        {useSupportWell.map((item) => <li>• {item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="card card-pad border-l-4 border-l-[#cfb87c]">
+  <p class="kicker">Next steps</p>
+  <h2 class="heading-md mt-2">Use the support structure as part of your plan</h2>
+  <p class="mt-3 text-sm leading-6 text-neutral-600">
+    Student support is strongest when students use it intentionally. As you review the program, think about how advising, office hours, Piazza, tutoring, career support, and student community would fit into your own plan.
+  </p>
+  <div class="mt-5 flex flex-wrap gap-3">
+    <CTAButton href="/modules/online-classes/" label="Review online classes" variant="dark" />
+    <CTAButton href="/modules/curriculum/" label="Review curriculum" variant="secondary" />
+    <CTAButton href="/modules/apply-next-steps/" label="Review next steps" variant="secondary" />
+  </div>
+</section>
