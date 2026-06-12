@@ -1,6 +1,10 @@
 ---
 import CTAButton from "./CTAButton.astro";
 
+const admissionsUrl = "https://online.colorado.edu/applied-computer-science-bs/admissions";
+const deadlinesUrl = "https://online.colorado.edu/applied-computer-science-bs-post-baccalaureate/dates-and-deadlines";
+const aleksUrl = "https://online.colorado.edu/applied-computer-science-bs/admissions#ucb-accordion-id--4-content2";
+
 const requirements = [
   {
     title: "Bachelor’s degree",
@@ -12,7 +16,9 @@ const requirements = [
   },
   {
     title: "Math prerequisite",
-    body: "You must satisfy the math prerequisite. Current options include CU ALEKS College Algebra or qualifying calculus / AP Calculus coursework with the required grade."
+    body: "You must satisfy the math prerequisite. Current options include CU ALEKS College Algebra or qualifying calculus / AP Calculus coursework with the required grade.",
+    link: aleksUrl,
+    linkLabel: "Review the math prerequisite and CU ALEKS information"
   },
   {
     title: "Transcripts",
@@ -34,11 +40,15 @@ const steps = [
   },
   {
     title: "2. Check the GPA and math requirements",
-    body: "Review the GPA requirement and make sure you understand how you will satisfy the math prerequisite."
+    body: "Review the GPA requirement and make sure you understand how you will satisfy the math prerequisite.",
+    link: admissionsUrl,
+    linkLabel: "Review admissions requirements"
   },
   {
     title: "3. Review the official deadline page",
-    body: "Application deadlines vary by term. Use the official dates and deadlines page to confirm the deadline for the term you want to enter."
+    body: "Application deadlines vary by term. Use the official dates and deadlines page to confirm the deadline for the term you want to enter.",
+    link: deadlinesUrl,
+    linkLabel: "View dates and deadlines"
   },
   {
     title: "4. Gather your materials",
@@ -46,7 +56,9 @@ const steps = [
   },
   {
     title: "5. Submit the application",
-    body: "Applications are currently free. Submit all required materials by the posted deadline."
+    body: "Applications are currently free. Submit all required materials by the posted deadline.",
+    link: admissionsUrl,
+    linkLabel: "Go to the official admissions page"
   }
 ];
 
@@ -72,6 +84,13 @@ const essayUses = [
       <article class="card card-pad">
         <h3 class="heading-md">{item.title}</h3>
         <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+        {item.link && (
+          <p class="mt-4">
+            <a class="text-sm font-black text-neutral-950 underline decoration-[#cfb87c] decoration-2 underline-offset-4" href={item.link}>
+              {item.linkLabel}
+            </a>
+          </p>
+        )}
       </article>
     ))}
   </div>
@@ -83,13 +102,13 @@ const essayUses = [
       <p class="kicker">Dates and deadlines</p>
       <h2 class="heading-lg mt-2">Check the official deadline for your entry term</h2>
       <p class="mt-4 text-sm leading-6 text-neutral-600">
-        Application deadlines vary by term. Use the official CU Boulder dates and deadlines page to confirm the current deadline for the term you want to enter.
+        Application deadlines vary by term. Use the <a class="font-black text-neutral-950 underline decoration-[#cfb87c] decoration-2 underline-offset-4" href={deadlinesUrl}>official CU Boulder dates and deadlines page</a> to confirm the current deadline for the term you want to enter.
       </p>
       <p class="mt-4 text-sm leading-6 text-neutral-600">
         All application materials must be submitted by the posted deadline. That includes transcripts, the program questionnaire, and any optional materials you choose to submit.
       </p>
       <div class="mt-5">
-        <a class="btn btn-dark" href="https://online.colorado.edu/applied-computer-science-bs-post-baccalaureate/dates-and-deadlines">
+        <a class="btn btn-dark" href={deadlinesUrl}>
           View dates and deadlines
         </a>
       </div>
@@ -107,6 +126,33 @@ const essayUses = [
   </div>
 </section>
 
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">Math prerequisite</p>
+      <h2 class="heading-lg mt-2">CU ALEKS is one way to satisfy the math requirement</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Students must satisfy the math prerequisite before entering the degree program. One current option is CU ALEKS College Algebra. Students may also be able to use qualifying calculus or AP Calculus coursework with the required grade.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        The official admissions page includes the current math-prerequisite details. Review the <a class="font-black text-neutral-950 underline decoration-[#cfb87c] decoration-2 underline-offset-4" href={aleksUrl}>CU ALEKS and math prerequisite section</a> before making a plan.
+      </p>
+      <div class="mt-5">
+        <a class="btn btn-dark" href={aleksUrl}>
+          Review CU ALEKS information
+        </a>
+      </div>
+    </div>
+
+    <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+      <p class="kicker">Plan ahead</p>
+      <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">
+        Students who need CU ALEKS should leave enough time to complete the math requirement before the admissions deadline for their entry term.
+      </p>
+    </div>
+  </div>
+</section>
+
 <section class="stack">
   <div>
     <p class="kicker">Application materials</p>
@@ -118,6 +164,9 @@ const essayUses = [
       <ul class="space-y-3 text-sm leading-6 text-neutral-700">
         {applicationMaterials.map((item) => <li>• {item}</li>)}
       </ul>
+      <p class="mt-5 text-sm leading-6 text-neutral-600">
+        Review the <a class="font-black text-neutral-950 underline decoration-[#cfb87c] decoration-2 underline-offset-4" href={admissionsUrl}>official admissions page</a> for current application requirements.
+      </p>
     </div>
 
     <div class="card card-pad">
@@ -147,6 +196,13 @@ const essayUses = [
       <article class="card card-pad">
         <h3 class="heading-md">{step.title}</h3>
         <p class="mt-3 text-sm leading-6 text-neutral-600">{step.body}</p>
+        {step.link && (
+          <p class="mt-4">
+            <a class="text-sm font-black text-neutral-950 underline decoration-[#cfb87c] decoration-2 underline-offset-4" href={step.link}>
+              {step.linkLabel}
+            </a>
+          </p>
+        )}
       </article>
     ))}
   </div>
@@ -181,7 +237,7 @@ const essayUses = [
     If you have questions about admission, eligibility, application timing, or the right next step, contact the CSPB team or schedule an appointment.
   </p>
   <div class="mt-5 flex flex-wrap gap-3">
-    <a class="btn btn-dark" href="https://online.colorado.edu/applied-computer-science-bs/admissions">Official admissions page</a>
+    <a class="btn btn-dark" href={admissionsUrl}>Official admissions page</a>
     <a class="btn btn-secondary" href="mailto:cspbonline@colorado.edu">Email cspbonline@colorado.edu</a>
     <CTAButton href="scheduleAppointment" label="Schedule an appointment" variant="secondary" />
   </div>
