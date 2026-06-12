@@ -1,0 +1,218 @@
+---
+import CTAButton from "./CTAButton.astro";
+import CourseTable from "./CourseTable.astro";
+import SamplePacing from "./SamplePacing.astro";
+import courses from "../data/courses.json";
+
+const foundationAreas = [
+  {
+    title: "Programming foundation",
+    body: "Students build fluency in writing, reading, testing, and debugging code. This is the starting point for later work in data structures, systems, software engineering, and electives."
+  },
+  {
+    title: "Data structures and algorithms",
+    body: "Students learn how data can be organized and how computational problems can be solved efficiently. These ideas sit near the center of technical interviews, software performance, and graduate preparation."
+  },
+  {
+    title: "Computer systems",
+    body: "Systems courses help students understand what happens underneath the code: memory, processes, operating systems, networks, and the behavior of real computing platforms."
+  },
+  {
+    title: "Software development",
+    body: "Software courses help students move from isolated programs to larger systems, team workflows, version control, testing, design, documentation, and maintainability."
+  },
+  {
+    title: "Formal and theoretical foundations",
+    body: "Theory-oriented coursework helps students reason about computation, correctness, abstraction, and the deeper structure behind computer science."
+  },
+  {
+    title: "Project-oriented learning",
+    body: "Projects give students a way to apply ideas, practice technical communication, and build visible evidence of ability."
+  }
+];
+
+const pathways = [
+  {
+    title: "Data Science",
+    body: "A student interested in data-focused roles can use electives and projects to build strength in data analysis, statistics-adjacent work, databases, machine learning, and work with real datasets."
+  },
+  {
+    title: "AI, Machine Learning, and NLP",
+    body: "A student interested in AI can look for courses and projects involving machine learning, natural language processing, data, evaluation, and systems that use AI tools responsibly."
+  },
+  {
+    title: "Software Engineering",
+    body: "A student interested in software roles can emphasize software development, systems, databases, web or application work, testing, team projects, and maintainable code."
+  },
+  {
+    title: "Systems, Cloud, and Security",
+    body: "A student interested in infrastructure-oriented work can focus on computer systems, networks, operating systems, cybersecurity, cloud-oriented projects, and performance."
+  },
+  {
+    title: "Human-Centered and Applied Computing",
+    body: "A student interested in applied software can connect computing with prior domain knowledge, users, interfaces, accessibility, education, health, finance, media, public-interest technology, or other fields."
+  },
+  {
+    title: "Graduate Preparation",
+    body: "A student preparing for graduate school can use electives and projects to strengthen algorithms, systems, theory, data, AI, research-oriented work, and technical writing."
+  }
+];
+
+const electiveGuidance = [
+  {
+    title: "For software roles",
+    body: "Prioritize software engineering, systems, databases, web or application work, testing, and project-heavy courses that create visible evidence of ability."
+  },
+  {
+    title: "For data or AI roles",
+    body: "Prioritize data science, machine learning, natural language processing, statistics-adjacent work, databases, and projects that involve real data and careful evaluation."
+  },
+  {
+    title: "For systems or infrastructure roles",
+    body: "Prioritize computer systems, networks, operating systems, security, cloud-oriented projects, and courses that help you reason about performance and reliability."
+  },
+  {
+    title: "For graduate school preparation",
+    body: "Prioritize algorithms, systems, theory, math-adjacent work, AI or data courses when relevant, and projects that show careful technical thinking."
+  }
+];
+
+const pacingNotes = [
+  {
+    title: "One course at a time",
+    body: "A slower plan may fit students who are working full time, returning to technical coursework after a long break, or balancing school with family and other responsibilities."
+  },
+  {
+    title: "A steady part-time plan",
+    body: "Many students think in terms of a regular part-time rhythm. The key is to plan around prerequisites, course availability, and the amount of technical work each course requires."
+  },
+  {
+    title: "A more intensive term when life allows",
+    body: "Some students take on a heavier load in selected terms. That can work, but it should be planned carefully, especially around programming-heavy or project-heavy courses."
+  }
+];
+---
+
+<section class="stack">
+  <div>
+    <p class="kicker">Curriculum shape</p>
+    <h2 class="heading-lg mt-2">A shared CS foundation, then room to shape the degree</h2>
+    <p class="lede mt-4">
+      The Computer Science Post-Baccalaureate Program (CSPB) is organized around a shared undergraduate computer science foundation. Required courses build core skills in programming, data structures, algorithms, systems, software development, and formal CS ideas. Electives then let students shape the degree around goals such as software engineering, data science, AI, systems, security, human-centered computing, or graduate preparation.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {foundationAreas.map((area) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{area.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{area.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Course tables</p>
+    <h2 class="heading-lg mt-2">Required courses and electives</h2>
+    <p class="lede mt-4">
+      The course tables give a practical overview of the curriculum. Use them as an orientation, then confirm official requirements, prerequisites, and course availability on CU Boulder pages and with advising.
+    </p>
+  </div>
+
+  <CourseTable title="Required courses" courses={courses.required} />
+  <CourseTable title="Elective courses" courses={courses.electives} note="Elective availability may vary by term. Confirm details on the official curriculum page." />
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Curriculum pathways</p>
+    <h2 class="heading-lg mt-2">Use electives to tell a coherent story</h2>
+    <p class="lede mt-4">
+      These pathways are useful ways to think about elective choices and project work. They should not be read as formal transcripted concentrations unless an official CU Boulder page says otherwise.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {pathways.map((pathway) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{pathway.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{pathway.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <p class="kicker">Choosing electives</p>
+  <h2 class="heading-lg mt-2">Choose electives based on the story you want the degree to support</h2>
+  <p class="mt-4 text-sm leading-6 text-neutral-600">
+    Electives are most useful when they fit together. A random collection of interesting courses may still be valuable, but a coherent set of electives and projects can help students explain what they are building toward.
+  </p>
+
+  <div class="mt-6 grid gap-4 md:grid-cols-2">
+    {electiveGuidance.map((item) => (
+      <article class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+        <h3 class="text-base font-black text-neutral-950">{item.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Pacing</p>
+    <h2 class="heading-lg mt-2">Plan around life, prerequisites, and course availability</h2>
+    <p class="lede mt-4">
+      CSPB students often balance school with work and other responsibilities. The online format helps with flexibility, but the curriculum still requires steady technical work.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {pacingNotes.map((note) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{note.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{note.body}</p>
+      </article>
+    ))}
+  </div>
+
+  <SamplePacing />
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">Portfolio connection</p>
+      <h2 class="heading-lg mt-2">Courses can also create evidence of ability</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        The curriculum is not only a list of requirements. It is also a source of portfolio evidence. Students should think about course projects, team projects, GitHub repositories, technical documentation, demos, and final projects as part of the career story they are building.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        This is especially useful for post-bacc students. A strong project can connect computer science with a student’s earlier degree, prior work experience, or target field.
+      </p>
+    </div>
+
+    <div class="rounded-[1.25rem] bg-neutral-950 p-5 text-white">
+      <p class="text-4xl font-black text-[#cfb87c]">CS + evidence</p>
+      <p class="mt-3 text-sm font-bold leading-6 text-white/80">
+        The strongest student story usually combines the degree with visible technical work.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="card card-pad border-l-4 border-l-[#cfb87c]">
+  <p class="kicker">Important note</p>
+  <h2 class="heading-md mt-2">Confirm official requirements before making decisions</h2>
+  <p class="mt-3 text-sm leading-6 text-neutral-600">
+    This page is an orientation. Course requirements, prerequisites, elective options, curriculum pathways, course availability, transfer rules, and policies can change. Students should confirm official requirements on CU Boulder pages and with CSPB advising.
+  </p>
+  <div class="mt-5 flex flex-wrap gap-3">
+    <CTAButton href="academics" label="Official curriculum page" variant="dark" />
+    <CTAButton href="scheduleAppointment" label="Contact advising" variant="secondary" />
+    <CTAButton href="/modules/career-outcomes/" label="Connect curriculum to careers" variant="secondary" />
+  </div>
+</section>

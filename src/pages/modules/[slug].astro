@@ -2,22 +2,18 @@
 import Layout from "../../components/Layout.astro";
 import VideoPlaceholder from "../../components/VideoPlaceholder.astro";
 import GlobalCTA from "../../components/GlobalCTA.astro";
-import CourseTable from "../../components/CourseTable.astro";
 import FAQAccordion from "../../components/FAQAccordion.astro";
 import CTAButton from "../../components/CTAButton.astro";
-import OutcomePanel from "../../components/OutcomePanel.astro";
 import AdmissionsChecklist from "../../components/AdmissionsChecklist.astro";
-import SamplePacing from "../../components/SamplePacing.astro";
 import ProgramOverviewContent from "../../components/ProgramOverviewContent.astro";
 import ApplyNextStepsContent from "../../components/ApplyNextStepsContent.astro";
 import RightFitContent from "../../components/RightFitContent.astro";
 import CareerOutcomesContent from "../../components/CareerOutcomesContent.astro";
+import CurriculumContent from "../../components/CurriculumContent.astro";
 import { resolveLink } from "../../utils/resolveLink.js";
 
 import modules from "../../data/modules.json";
-import courses from "../../data/courses.json";
 import faqs from "../../data/faqs.json";
-import outcomes from "../../data/outcomes.json";
 import admissions from "../../data/admissions.json";
 
 export function getStaticPaths() {
@@ -104,17 +100,7 @@ const isApply = module.id === "apply-next-steps";
 
     {isCareer && <CareerOutcomesContent />}
 
-    {isCurriculum && (
-      <section class="stack">
-        <div>
-          <p class="kicker">Curriculum overview</p>
-          <h2 class="heading-lg mt-2">Courses and pacing</h2>
-        </div>
-        <CourseTable title="Required courses" courses={courses.required} />
-        <CourseTable title="Elective courses" courses={courses.electives} note="Elective availability may vary by term. Confirm details on the official curriculum page." />
-        <SamplePacing />
-      </section>
-    )}
+    {isCurriculum && <CurriculumContent />}
 
     {isAdmissions && (
       <section class="stack">
