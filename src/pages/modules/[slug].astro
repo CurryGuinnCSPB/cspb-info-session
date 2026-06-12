@@ -13,6 +13,7 @@ import OnlineClassesContent from "../../components/OnlineClassesContent.astro";
 import StudentSupportContent from "../../components/StudentSupportContent.astro";
 import AdmissionsContent from "../../components/AdmissionsContent.astro";
 import TransferCreditContent from "../../components/TransferCreditContent.astro";
+import NonDegreeContent from "../../components/NonDegreeContent.astro";
 import { resolveLink } from "../../utils/resolveLink.js";
 
 import modules from "../../data/modules.json";
@@ -38,6 +39,7 @@ const isOnlineClasses = module.id === "online-classes";
 const isStudentSupport = module.id === "student-support";
 const isAdmissions = module.id === "admissions-requirements";
 const isTransferCredit = module.id === "transfer-credit";
+const isNonDegree = module.id === "non-degree-option";
 const isApply = module.id === "apply-next-steps";
 ---
 
@@ -106,8 +108,9 @@ const isApply = module.id === "apply-next-steps";
     {isStudentSupport && <StudentSupportContent />}
     {isAdmissions && <AdmissionsContent />}
     {isTransferCredit && <TransferCreditContent />}
+    {isNonDegree && <NonDegreeContent />}
 
-    {!isOverview && !isRightFit && !isApply && !isCareer && !isCurriculum && !isOnlineClasses && !isStudentSupport && !isAdmissions && !isTransferCredit && (
+    {!isOverview && !isRightFit && !isApply && !isCareer && !isCurriculum && !isOnlineClasses && !isStudentSupport && !isAdmissions && !isTransferCredit && !isNonDegree && (
       <section class="card card-pad">
         <p class="kicker">About this module</p>
         <h2 class="heading-lg mt-2">A quick orientation</h2>

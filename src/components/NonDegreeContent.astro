@@ -1,0 +1,258 @@
+---
+import CTAButton from "./CTAButton.astro";
+
+const nonDegreeUrl = "https://online.colorado.edu/applied-computer-science-bs/nondegree-option";
+const admissionsUrl = "https://online.colorado.edu/applied-computer-science-bs/admissions";
+
+const fitCards = [
+  {
+    title: "You want to take a few courses",
+    body: "The non-degree option can work well for students who want selected CSPB courses without committing to the full degree program."
+  },
+  {
+    title: "You want to try the program",
+    body: "Some students use non-degree enrollment to experience CSPB coursework before deciding whether to apply to the degree program."
+  },
+  {
+    title: "You need graduate-school prerequisites",
+    body: "Students preparing for graduate study may use selected CS courses to meet prerequisites or strengthen their academic preparation."
+  },
+  {
+    title: "You want professional development",
+    body: "Students already in the workforce may take selected courses to build technical knowledge, refresh skills, or support a career goal."
+  },
+  {
+    title: "You want to strengthen a future application",
+    body: "Students who need to strengthen their academic record may use non-degree coursework as one way to show readiness for CSPB coursework."
+  },
+  {
+    title: "You missed a degree deadline",
+    body: "Students who are not ready to complete the degree application by a deadline may be able to begin with non-degree coursework."
+  }
+];
+
+const creditNotes = [
+  {
+    title: "Full-credit CU Boulder courses",
+    body: "CSPB courses taken through the non-degree option are CU Boulder courses for academic credit."
+  },
+  {
+    title: "Possible later application to the degree",
+    body: "If later admitted to the degree program, students may be able to apply up to 15 credits of CU Boulder non-degree coursework toward the degree."
+  },
+  {
+    title: "Course choice matters",
+    body: "Students who may later apply to the degree should choose courses carefully and understand how those courses may fit the degree requirements."
+  },
+  {
+    title: "Admission is still separate",
+    body: "Taking courses as a non-degree student does not automatically admit a student to the degree program."
+  }
+];
+
+const differences = [
+  {
+    title: "Different student status",
+    body: "Non-degree students are not degree-seeking students. They are taking selected courses without being admitted to the BS in Applied Computer Science."
+  },
+  {
+    title: "Different access to services",
+    body: "Non-degree students do not have access to the same resources as fee-paying degree-seeking students. For example, they do not have access to CU Boulder Career Services."
+  },
+  {
+    title: "No semester fees",
+    body: "Non-degree students do not pay the same semester fees as degree-seeking students. Those fees help pay for CU Boulder services, so students who do not pay them do not have access to the same services."
+  },
+  {
+    title: "Different planning needs",
+    body: "Students using non-degree courses as part of a possible degree plan should talk with the CSPB team before assuming how courses will apply later."
+  }
+];
+
+const actionSteps = [
+  {
+    title: "1. Decide what you want from the course",
+    body: "Are you trying the program, taking a prerequisite, building a skill, strengthening an application, or beginning a possible path toward the degree?"
+  },
+  {
+    title: "2. Review the official non-degree page",
+    body: "Check the current non-degree policies, application process, tuition, deadlines, and course options.",
+    link: nonDegreeUrl,
+    linkLabel: "Review the official non-degree page"
+  },
+  {
+    title: "3. Choose courses carefully",
+    body: "If you may later apply to the degree program, choose courses that fit the CSPB curriculum and your longer-term plan."
+  },
+  {
+    title: "4. Understand the service differences",
+    body: "Non-degree students do not pay the same semester fees and do not have access to the same resources as degree-seeking students."
+  },
+  {
+    title: "5. Apply to the degree program when ready",
+    body: "Students who want to earn the BS in Applied Computer Science must apply to the degree program and be admitted.",
+    link: admissionsUrl,
+    linkLabel: "Review degree admissions"
+  }
+];
+---
+
+<section class="stack">
+  <div>
+    <p class="kicker">Non-degree option</p>
+    <h2 class="heading-lg mt-2">Take selected CSPB courses without entering the degree program</h2>
+    <p class="lede mt-4">
+      The non-degree option is a flexible way to take selected Computer Science Post-Baccalaureate Program (CSPB) courses without immediately entering the BS in Applied Computer Science degree program. It can be useful for students who want a few courses, need prerequisites, want professional development, or want to try CSPB coursework before applying to the degree program.
+    </p>
+  </div>
+
+  <div class="card card-pad border-l-4 border-l-[#cfb87c]">
+    <p class="kicker">Key distinction</p>
+    <h3 class="heading-md mt-2">Non-degree enrollment is not the same as degree admission</h3>
+    <p class="mt-3 text-sm leading-6 text-neutral-600">
+      Non-degree students take individual courses. Degree-seeking students are admitted to the BS in Applied Computer Science and are working toward the degree. Students who want the full degree must apply to the degree program and be admitted.
+    </p>
+    <div class="mt-5 flex flex-wrap gap-3">
+      <a class="btn btn-dark" href={nonDegreeUrl}>Official non-degree page</a>
+      <a class="btn btn-secondary" href={admissionsUrl}>Official degree admissions page</a>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Who it fits</p>
+    <h2 class="heading-lg mt-2">When non-degree enrollment may make sense</h2>
+  </div>
+
+  <div class="auto-grid">
+    {fitCards.map((card) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{card.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{card.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Credits</p>
+    <h2 class="heading-lg mt-2">How non-degree credits may apply later</h2>
+    <p class="lede mt-4">
+      Non-degree CSPB courses carry CU Boulder academic credit. If a student is later admitted to the degree program, some non-degree coursework may be able to apply toward the degree.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {creditNotes.map((note) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{note.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{note.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+    <div>
+      <p class="kicker">Credit limit</p>
+      <h2 class="heading-lg mt-2">Up to 15 CU Boulder credits may be able to apply</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        If later admitted to the degree program, students may be able to apply up to 15 credits of CU Boulder non-degree coursework toward the degree. The courses still need to fit the degree requirements and current program policies.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Students who are considering non-degree coursework as a possible path toward the degree should choose courses carefully and contact the CSPB team with questions.
+      </p>
+    </div>
+
+    <div class="rounded-[1.25rem] bg-neutral-950 p-5 text-white">
+      <p class="text-5xl font-black text-[#cfb87c]">15</p>
+      <p class="mt-2 text-sm font-black uppercase tracking-[0.2em] text-white/60">credits</p>
+      <p class="mt-4 text-sm font-bold leading-6 text-white/80">
+        Possible maximum of CU Boulder non-degree coursework that may later apply toward the degree if admitted.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">Know the differences</p>
+    <h2 class="heading-lg mt-2">Non-degree students have a different status</h2>
+    <p class="lede mt-4">
+      The non-degree option gives students access to selected courses, but it does not include the full set of degree-seeking student services.
+    </p>
+  </div>
+
+  <div class="auto-grid">
+    {differences.map((item) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{item.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{item.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <div>
+      <p class="kicker">Tuition and fees</p>
+      <h2 class="heading-lg mt-2">Fees and services are connected</h2>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Non-degree students do not pay the same semester fees as degree-seeking students. Those fees help pay for services such as advising, career services, technology, and other student resources.
+      </p>
+      <p class="mt-4 text-sm leading-6 text-neutral-600">
+        Because non-degree students do not pay those fees, they do not have access to the same resources. For example, non-degree students do not have access to CU Boulder Career Services.
+      </p>
+      <div class="mt-5">
+        <CTAButton href="/modules/tuition-fees/" label="Review tuition and fees" variant="dark" />
+      </div>
+    </div>
+
+    <div class="rounded-[1.25rem] border border-neutral-200 bg-neutral-50 p-5">
+      <p class="kicker">Practical point</p>
+      <p class="mt-2 text-sm font-bold leading-6 text-neutral-700">
+        Non-degree can be a good option for selected courses. Degree-seeking status includes a broader program structure and access to more student services.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="stack">
+  <div>
+    <p class="kicker">How to proceed</p>
+    <h2 class="heading-lg mt-2">A simple decision path</h2>
+  </div>
+
+  <div class="grid gap-4">
+    {actionSteps.map((step) => (
+      <article class="card card-pad">
+        <h3 class="heading-md">{step.title}</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">{step.body}</p>
+        {step.link && (
+          <p class="mt-4">
+            <a class="text-sm font-black text-neutral-950 underline decoration-[#cfb87c] decoration-2 underline-offset-4" href={step.link}>
+              {step.linkLabel}
+            </a>
+          </p>
+        )}
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="card card-pad border-l-4 border-l-[#cfb87c]">
+  <p class="kicker">Next steps</p>
+  <h2 class="heading-md mt-2">Use the option that matches your goal</h2>
+  <p class="mt-3 text-sm leading-6 text-neutral-600">
+    If your goal is to earn the BS in Applied Computer Science, review degree admissions. If your goal is to take selected courses, review the official non-degree page.
+  </p>
+  <div class="mt-5 flex flex-wrap gap-3">
+    <a class="btn btn-dark" href={nonDegreeUrl}>Official non-degree page</a>
+    <a class="btn btn-secondary" href={admissionsUrl}>Degree admissions</a>
+    <a class="btn btn-secondary" href="mailto:cspbonline@colorado.edu">Email cspbonline@colorado.edu</a>
+  </div>
+</section>
